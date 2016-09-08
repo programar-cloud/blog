@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html class="no-js" lang="es-ES" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
     <meta charset="utf-8">
 
@@ -12,7 +12,7 @@
 
     {{ partial "head_includes.html" . }}
 </head>
-<body lang="en">
+<body lang="es">
 
 {{ partial "subheader.html" . }}
 
@@ -25,6 +25,12 @@
   </div>
 </section>
 
-<aside id="meta"> </aside>
+    <aside id="meta">
+        <ul id="all-tags">
+          {{ range $name, $taxonomy := .Site.Taxonomies.temas }}
+            <li><a href="{{ "/tags/" | relURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+          {{ end }}
+        </ul>
+    </aside>
 
 {{ partial "footer.html" . }}

@@ -1,14 +1,15 @@
-baseurl = "http://spf13.com/"
-title = "Hacking Management"
-languageCode = "en-us"
-disqusShortname = "spf13"
-copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+baseurl = "http://javier-moreno.com/"
+title = "Programar en cloud"
+languageCode = "es-ES"
+disqusShortname = "aprender"
+copyright = "Copyright (c) 2016, Javi Moreno; Creative Commons sobre el contenido creado."
 MetaDataFormat = "yaml"
 
 [author]
-    name = "Steve Francia"
+    name = "Javi Moreno"
 
-[indexes]
+[taxonomies]
     tag = "tags"
-    topic = "topics"
-
+    tema = "temas"
+    curso = "cursos"
+    nivel = "niveles"
