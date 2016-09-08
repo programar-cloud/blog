@@ -311,18 +311,6 @@ article>footer {
     line-height: 3em
 }
 
-#logolink {
-    color: #111;
-    text-decoration: none;
-    -webkit-transition: all 1.3s ease-in;
-    -moz-transition: all 1.3s ease-in;
-    -ms-transition: all 1.3s ease-in;
-    transition: all 1.3s ease-in
-}
-
-#logolink:hover {
-    color: #3498db
-}
 
 #outer_ribbon {
     position: relative;
@@ -860,6 +848,7 @@ aside,
     margin: 0 0
 }
 
+
 body>footer {
     margin-top: 2em
 }
@@ -944,36 +933,13 @@ footer>div,
 }
 
 #header figure {
-    width: 50%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-    float: left;
-    margin-left: 25%;
-    padding-bottom: 1em
-}
-/*
-***logo
-#header figure>img {
-    width: 8em;
-    margin: 0 auto
-}
-
-#logo {
-    background-color: red;
-    font-size: 8em;
-    line-height: .7em;
     text-align: center;
-    margin: .2em 0 .2em 0;
 }
 
-*/
-#byline {
-    display: none !important
+#logolink {
+    text-align: center;
 }
+
 
 #nav {
     text-align: center;
@@ -1198,17 +1164,6 @@ body>footer p {
     .twothirds {
         max-width: 20em !important
     }
-    #header figure {
-        width: 25%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        box-sizing: border-box;
-        display: inline-block;
-        float: left;
-        margin: 0
-    }
     #header figure>img {
         width: 8em
     }
@@ -1229,12 +1184,6 @@ body>footer p {
 @media screen and (min-width: 48em) {
     h1#title {
         margin: 0.25em 0 0.5em
-    }
-    #logo {
-        font-size: 10em;
-        line-height: .5em;
-        text-align: center;
-        margin: .2em
     }
     #nav {
         padding-top: 2.7em;
@@ -1281,15 +1230,7 @@ body>footer p {
         font-size: 1.1875em;
         line-height: 1.89474em
     }
-    #logo {
-        font-size: 12em;
-        line-height: .5em;
-        text-align: center;
-        margin: .2em
-    }
-    #header figure>img {
-        width: 10em
-    }
+        
     #nav {
         padding-top: 2.5em;
         font-size: 130%
@@ -1321,17 +1262,16 @@ body>footer p {
     #header:hover {
         opacity: 1
     }
+    #logolink {
+        display:block;
+        text-align: center;
+    }
+    
     #mainnav span.icon {
         font-size: 1.8em
     }
     #mainnav li {
         font-size: 100%
-    }
-    #logo {
-        font-size: 4em;
-        line-height: .7em;
-        text-align: center;
-        margin: .2em
     }
     #header {
         position: fixed;
@@ -1352,24 +1292,6 @@ body>footer p {
         -moz-transition: all 0.7s ease-out;
         -ms-transition: all 0.7s ease-out;
         transition: all 0.7s ease-out
-    }
-    #header>figure {
-        display: inline-block;
-        width: 25%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        box-sizing: border-box;
-        display: inline-block;
-        float: left;
-        margin-left: 8.33333%;
-        float: left;
-        margin-left: 4%;
-        margin-right: 1.2em
-    }
-    #header>figure>img {
-        width: 4em
     }
     #header nav {
         width: 100%;
@@ -1425,21 +1347,6 @@ body>footer p {
     #comments:after {
         clear: both
     }
-    #byline {
-        display: block !important;
-        width: 58.33333%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        box-sizing: border-box;
-        display: inline-block;
-        float: left;
-        text-align: center;
-        font-size: 1.1875em;
-        line-height: 1.89474em;
-        padding-top: .95em
-    }
     #nav {
         padding-top: 0em;
         margin-left: 8.33333%;
@@ -1455,10 +1362,6 @@ body>footer p {
 }
 
 @media screen and (min-width: 90em) {
-    #logo {
-        font-size: 5em;
-        line-height: .4em
-    }
     #mainnav li {
         font-size: 115%
     }
@@ -1467,11 +1370,6 @@ body>footer p {
 @media screen and (min-width: 100em) {
     #mainnav li {
         font-size: 130%
-    }
-    #byline {
-        font-size: 1.375em;
-        line-height: 1.63636em;
-        padding-top: .7em
     }
     #meta {
         right: 0;
@@ -1496,11 +1394,6 @@ body>footer p {
         -moz-transition: all 0.7s ease-out;
         -ms-transition: all 0.7s ease-out;
         transition: all 0.7s ease-out
-    }
-    #logo {
-        font-size: 6em;
-        line-height: .4em;
-        margin-right: .2em
     }
     #meta>div {
         width: 100%
@@ -1630,7 +1523,6 @@ body>footer p {
 .icon-facebook,
 .icon-share,
 .icon-rss,
-.icon-logo,
 .icon-quote-left,
 .icon-quote-right,
 .icon-tag,
