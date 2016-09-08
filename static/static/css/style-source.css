@@ -430,7 +430,8 @@ h2 {
 }
 
 h2 {
-    font-weight: normal
+    font-weight: normal;
+    text-align: center;
 }
 
 h3 {
@@ -931,6 +932,7 @@ footer>div,
 
 #logolink {
     display : inline-block;
+    float : left;
     margin-bottom: 1em;    
 }
 
@@ -1215,6 +1217,7 @@ body>footer p {
     }
     #logolink {
         display : inline-block;
+        float : none;
         margin-bottom: 0;    
     }
     
