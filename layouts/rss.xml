@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>{{ .Title }} on {{ .Site.Title }} </title>
+    <link>{{ .Permalink }}</link>
+    <language>es-ES</language>
+    <author>Javi Moreno</author>
+    <rights>Copyright (c) 2016, <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Algunos derechos reservados (pero no muchos)</a>.</rights>
+    <updated>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</updated>
+    {{ range first 15 .Data.Pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+      <author>Javi Moreno</author>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Content | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
