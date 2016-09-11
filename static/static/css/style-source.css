@@ -190,6 +190,14 @@ img {
     -ms-interpolation-mode: bicubic
 }
 
+.thumbnail {
+    display: block; 
+    max-width:50% !important;  
+    margin:1em auto; 
+    border : 1px solid silver; 
+    padding : 1em;    
+}
+
 body {
     font-size: 1em;
     line-height: 1.5em
@@ -866,7 +874,7 @@ footer>div,
 }
 
 #content>figure>img {
-    max-width: 100%
+    width: 100%
 }
 
 #content>figure>figcaption {

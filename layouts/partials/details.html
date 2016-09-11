@@ -6,11 +6,13 @@
           <h5 id="readtime"> Léelo en solo {{ .ReadingTime }} Min </h5>
           <h5 id="level">Nivel {{ range .Params.niveles }}{{.}}{{end}}</h5>
         </section>
+        <!--
         <ul id="categories">
           {{ range .Params.topics }}
             <li><a href="{{ $baseurl }}/topics/{{ . | urlize }}">{{ . }}</a> </li>
           {{ end }}
         </ul>
+        -->
         <ul id="tags">
           {{ range .Params.tags }}
             <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
