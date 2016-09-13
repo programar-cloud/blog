@@ -575,7 +575,7 @@ blockquote {
     font-family: Georgia, serif;
     font-style: italic;
     width: 80%;
-    margin: 0.25em auto;
+    margin: 2em auto 1em auto;
     padding: 0.25em 1em;
     line-height: 1.45;
     position: relative;
