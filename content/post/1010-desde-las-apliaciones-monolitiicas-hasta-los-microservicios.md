@@ -22,11 +22,9 @@ disqus_url: http://programar.cloud/posts/desde-monoliticas-hasta-microservicios
 {{% img src="/media/almacen.jpg" alt="almacén lleno de stock" %}}
 
 
-*TL;DR: Tenemos que conocer qué falla en nuestra forma de trabajar para poder evolucionar.*
+*TL;DR: Tenemos que ser conscientes de que seguimos pensando igual que hace unos años cuando las limitaciones tecnológicas son ahora otras.*
 
-Parece que fue ayer (casi) pero hace más de 20 años que apareció Java. La primera vez que utilicé esta plataforma fue en un 486 con 8MB de RAM: no era una máquina especialmente potente para la época pero conseguía ejecutar la máquina virtual. Un servidor típico tenía procesadores duales con 128MB y no era precisamente barato.
-
-Párate un momento a pensar sobre esto porque es importante: era difícil conseguir máquinas e incluso las que utilizábamos en producción tenían menos potencia que el teléfono que llevas en tu bolsillo. Además el acceso a internet era limitado y las aplicaciones que desarrollábamos solían trabajar en red local y soportar un número pequeño de usuarios. Teníamos que **aprovechar al máximo el hierro disponible** y no podíamos arrancar más de una máquina virtual en un ordenador (no teníamos suficiente RAM). Por ello nació el concepto de *servidor de aplicaciones* que básicamente  permitía ejecutar de forma más o menos aislada varios componentes dentro de la misma *jvm*.<!--more-->
+¿Cuánto tiempo llevas en el negocio? ¿Recuerdas cuando los servidores eran máquinas con dos procesadores y 128MB de RAM? Párate un momento a pensar sobre esto porque es importante: hace unos años era difícil conseguir máquinas e incluso las que utilizábamos en producción tenían menos potencia que el teléfono que llevas en tu bolsillo. Además el acceso a internet era limitado y las aplicaciones que desarrollábamos solían trabajar en red local y soportar un número pequeño de usuarios. Teníamos que **aprovechar al máximo el hierro disponible** y no podíamos arrancar más de una máquina virtual en un ordenador (no teníamos suficiente RAM). Por ello nació el concepto de *servidor de aplicaciones* que básicamente  permitía ejecutar de forma más o menos aislada varios componentes dentro de la misma *jvm*.<!--more-->
 
 > La parte buena era que podías escaparte a la cafetería sin remordimientos.
 
