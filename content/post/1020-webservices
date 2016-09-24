@@ -1,0 +1,50 @@
+---
+title: Webservices
+date: 2016-10-21T8:50:20+02:00
+description: "Cuatro notas sobre qué supone basar tu arquitectura en webservices."
+slug: webservices
+draft: false
+tags:
+- arquitectura
+- agilidad
+- microservicios
+- programación
+temas:
+- Arquitectura
+niveles:
+- Iniciaciación
+
+disqus_identifier: webservices
+disqus_title: Webservices
+disqus_url: http://programar.cloud/posts/webservices
+---
+
+{{% img src="/media/almacen.jpg" alt="El e-commerce de Amazon" %}}
+
+¿Sabes qué es una *aplicación distribuída*? Aquella en la que estás tratando unir los recursos de distintas máquinas de forma más o menos transparente para ejecutar lo que a nivel lógico (desde el punto de vista del programador) debería parecerte una única aplicación. Es decir, puedes tener una variable ```miCarritoDeLaCompra``` en el ordenador *A* y que el objeto apuntado por ella se encuentre físicamente en la máquina *B*. Obviamente entre dos máquinas no compartes ni memoria ni procesador así que debe de existir alguna magia intermedia para crear la ilusión de que ```miCarritoDeLaCompra.obtenerPrecioTotal()``` se ejecute transparentemente. Algunas tecnologías populares que permitían trabajar así eran [RMI](TODO) o [CORBA](todo). En este último caso se trataba de magia negra de la peor calaña. 
+
+Vale, déjame que hable de Amazon un rato. La compañía fue creada en 1996 como un ecommerce puro, nativo: no se trataba de añadir un canal de venta más a un negocio existente si no de crear un proyecto desde cero. Si has trabajado con retailers clásicos sabrás que el mayor problema que tienen para dar un buen servicio online es *desaprender* los mecanismos que durante años les ha funcionado perfectamente y entender hasta qué punto todo evoluciona de manera acelerada cuando hay bits de por medio. Amazon no tenía ese conocimiento, así que tampoco sufría ese lastre.
+
+Aún así
+
+¿Cuántos servicios implementan la landing? Te lo explico en el vídeo.
+
+Cuando Jeff Bezos empezó a contratar al equipo que iba a crear el mayor e-commerce que existe buscó a *ingenieros*. Y quizá ya sepas que a mi esta palabra aplicada al *software* me repele bastante pero en este caso es bastante adecuada: ya existía una versión de Amazon en marcha pero digamos que no acababa de funcionar correctamente. El nuevo equipo se puso a **pensar** en los problemas que se habían encontrado y en la mejor manera de poder solucionarlos. "Pensar". Qué loco ¿no?
+
+L
+
+http://apievangelist.com/2012/12/20/history-of-apis/
+
+http://www.businessinsider.com/amazon-jeff-bezos-facts-story-history-2014-5
+
+
+
+
+
+
+
+
+
+
+
+

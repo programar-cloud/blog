@@ -818,7 +818,8 @@ span.subcount {
 }
 
 .video-player {
-    padding: 60.15625% 0 0 0
+    padding: 60.15625% 0 0 0;
+    margin: 1.5em 0;
 }
 
 .embed {

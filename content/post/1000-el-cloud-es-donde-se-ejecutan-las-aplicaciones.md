@@ -21,7 +21,6 @@ disqus_url: http://programar.cloud/posts/el-cloud-es-donde-se-ejecutan-las-aplic
 
 {{% img src="/media/highway-by-fancycrave.jpg" alt="cloud es velocidad (por Fancy Crave)" %}}
 
-
 *TL;DR: con la generalización del cloud público la velocidad a la que nuestras aplicaciones evolucionan se dispara.*
 
 
@@ -36,10 +35,13 @@ En el blog vas a poder leer sobre lo importante que es integrar todas las etapas
 
 ![Haz caso de lo que dice Javi, Paulo Coelho](/media/paulo-do-what-javi-says.jpg)
 
-Muchas de las entradas del blog van a tener un vídeo asociado porque creo (bueno, sé) que es más fácil aprender viendo y escuchando que leyendo. Además grabándome puedo explicar más cosas en menos tiempo así que dale al play sin miedo. Y no te cortes a la hora de usar la sección de comentarios o de utilizar [twitter](http://twitter.com/ciberado) para ponerte en contacto conmigo: este es un proyecto vivo y evolucionará según tú lo necesites.
+Muchas de las entradas del blog van a tener un vídeo asociado porque creo (bueno, sé) que es más fácil aprender viendo y escuchando que leyendo. Además grabándome puedo explicar más cosas en menos tiempo así que dale al play sin miedo: en este caso te cuento qué es el *cloud* para mi y **con uno de los ejemplos más espectaculares que conozco**. Y no te cortes a la hora de usar la sección de comentarios o de utilizar [twitter](http://twitter.com/ciberado) para ponerte en contacto conmigo: este es un proyecto vivo y evolucionará según tú lo necesites.
+
+{{% youtube Mw3ATcB1PnU %}}
 
 Nos vemos muy pronto.
 
 jv
 
-pd: La primera imagen del post es de [Fancy Crave](https://pixabay.com/es/users/fancycrave1-1115284/). La segunda es de un tipo que lleva años viviendo del cuento. La música que sirve de cortinilla es de [Marcus](https://soundcloud.com/musicbymarcus/promo-music-inspiational) y me hace sonreír cada vez que la escucho.
+
+pd: La primera imagen del post es de [Fancy Crave](https://pixabay.com/es/users/fancycrave1-1115284/). La segunda es de un tipo que lleva años viviendo del cuento. La música que sirve de cortinilla del vídeo es de [Marcus](https://soundcloud.com/musicbymarcus/promo-music-inspiational) y me hace sonreír cada vez que la escucho.
