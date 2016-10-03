@@ -15,7 +15,7 @@ niveles:
 - Iniciaciación
 
 disqus_identifier: desde-las-aplicaciones-monoliticas-hasta-los-microservicios
-disqus_title: El Cloud es donde se ejecutan las aplicaciones
+disqus_title: Desde monolíticas hasta microservicios
 disqus_url: http://programar.cloud/posts/desde-monoliticas-hasta-microservicios
 ---
 
