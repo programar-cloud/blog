@@ -1,6 +1,6 @@
 ---
 title: ¿Quién es Javi?
-date: 2016-08-11T19:33:20+02:00
+date: 2016-10-18T8:50:20+02:00
 description: "Un rápido resumen para conocer al autor del Blog, Javi Moreno (@ciberado)."
 slug: quien-es-javi
 draft: false

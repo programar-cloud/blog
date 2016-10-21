@@ -1,6 +1,6 @@
 ---
 title: El Cloud es donde se ejecutan las aplicaciones
-date: 2016-08-20T19:33:20+02:00
+date: 2016-10-20T09:51:20+02:00
 description: "Lee acerca de cómo pasé de tener que confiscar servidores a crearlos bajo demanda programáticamente en el cloud."
 slug: cloud-es-donde-se-ejecutan-las-aplicaciones
 draft: false
@@ -8,8 +8,9 @@ tags:
 - cloud
 - agilidad
 - casos
+- conceptos
 temas:
-- Cloud
+- Conceptos
 niveles:
 - Iniciaciación
 
@@ -37,7 +38,7 @@ En el blog vas a poder leer sobre lo importante que es integrar todas las etapas
 
 Muchas de las entradas del blog van a tener un vídeo asociado porque creo (bueno, sé) que es más fácil aprender viendo y escuchando que leyendo. Además grabándome puedo explicar más cosas en menos tiempo así que dale al play sin miedo: en este caso te cuento qué es el *cloud* para mi y **con uno de los ejemplos más espectaculares que conozco**. Y no te cortes a la hora de usar la sección de comentarios o de utilizar [twitter](http://twitter.com/ciberado) para ponerte en contacto conmigo: este es un proyecto vivo y evolucionará según tú lo necesites.
 
-{{% youtube Mw3ATcB1PnU %}}
+{{% youtube NntUahITpvQ %}}
 
 Nos vemos muy pronto.
 

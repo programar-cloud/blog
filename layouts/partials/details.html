@@ -20,16 +20,16 @@
         </ul>
     </div>
 
-    <div>
-        <section id="prev">
-            &nbsp;{{if .Prev}}<a class="previous" href="{{.Prev.Permalink}}"><i class="icon-arrow-left"></i> {{.Prev.Title}}</a><br>{{end}}
-        </section><section id="next">
-            &nbsp;{{if .Next}}<a class="next" href="{{.Next.Permalink}}">{{.Next.Title}} <i class="icon-arrow-right"></i></a>{{end}}
-        </section>
+    <div class="otros-articulos">
+        <p>
+            {{if .Prev}}<span>Puedes seguir con:</span><a class="previous" href="{{.Prev.Permalink}}"><i class="icon-arrow-left"></i> {{.Prev.Title}}</a><br>{{end}}
+        </p><p>
+            {{if .Next}}<span>Anteriormente:</span><a class="next" href="{{.Next.Permalink}}">{{.Next.Title}} <i class="icon-arrow-right"></i></a>{{end}}
+        </p>
     </div>
 
     <div>
-        <section id="">
+        <section>
              <h4>Recuerda</h4> 
             <p>
                 Dejando comentarios en el blog o en el canal de youtube me ayudarás a conocer qué tipo

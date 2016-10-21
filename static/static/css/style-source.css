@@ -822,6 +822,10 @@ span.subcount {
     margin: 1.5em 0;
 }
 
+.audio-player {
+    height : 48px;
+}
+
 .embed {
     width: 100%;
     position: relative
@@ -1093,15 +1097,10 @@ body>footer p {
     padding-top: 2em
 }
 
-#next {
-    text-align: right
+.otros-articulos p span {
+    display: block;
 }
 
-#next,
-#prev {
-    width: 100% !important;
-    padding-top: 2em
-}
 
 @media screen and (min-width: 30em) {
     .half,

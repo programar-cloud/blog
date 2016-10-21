@@ -3,7 +3,7 @@ title: Desde monolíticas hasta microservicios
 date: 2016-09-12T8:10:20+02:00
 description: "Un recorrido rápido sobre la evolución que otras empresas han hecho (y que tú también harás) hacia microservicios."
 slug: desde-monoliticas-hasta-microservicios
-draft: false
+draft: true
 tags:
 - arquitectura
 - agilidad
