@@ -1,7 +1,7 @@
 baseurl = "http://programar.cloud/"
 title = "Programar en cloud"
 languageCode = "es-ES"
-disqusShortname = "aprender"
+disqusShortname = "programarcloud"
 copyright = "Copyright (c) 2016, Javi Moreno; Creative Commons sobre el contenido creado."
 MetaDataFormat = "yaml"
 
