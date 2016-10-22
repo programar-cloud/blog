@@ -18,7 +18,7 @@ niveles:
 
 disqus_identifier: microservicios-rest-en-10-minutos-con-springboot
 disqus_title: Microservicios REST en 10 minutos con SpringBoot
-disqus_url: http://programar.cloud/posts/microservicios-rest-en-10-minutos-con-springboot
+disqus_url: //programar.cloud/posts/microservicios-rest-en-10-minutos-con-springboot
 ---
 
 {{% img src="/media/cloud-money.jpg" alt="Dinero y poder en el cloud" %}}
@@ -27,7 +27,7 @@ disqus_url: http://programar.cloud/posts/microservicios-rest-en-10-minutos-con-s
 
 ¡Ha llegado el momento! Tenemos el *mindset* adecuado, hemos leído sobre las ventajas, estamos llenos y llenas de entusiasmo sobre microservicios basados en webapis. Así que vamos a crear uno, desde cero.
 
-Si no lo tienes ya instalado descarga el soporte para Java y un editor de código. Por ejemplo puedes usar el ([JDK de Sun y Netbeans de Apache](http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html)).
+Si no lo tienes ya instalado descarga el soporte para Java y un editor de código. Por ejemplo puedes usar el ([JDK de Sun y Netbeans de Apache](//www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html)).
 
 Recuerda que todas y cada una de las fases que vamos a ver las desarrollaremos más adelantes con ejemplos mucho más sofisticados y dedicándole más tiempo. Y que ahora sí, el contenido de los vídeos es imprescindible para seguir esta entrada. No dejes de verlos.
 
@@ -51,7 +51,7 @@ Rápidamente habrás detectado dos sustantivos: catálogo y producto. El primero
 
 Utilizaremos SpringBoot, el framework que ha convertido Java de nuevo en una plataforma sexy. Básicamente te proporcionará un montón de piezas prefabricadas y preconfiguradas y tú solo tienes que encajándolas y modificando los detalles que te convenga.
 
-Visita [Spring Start](http://start.spring.io) y crea un proyecto que incluya los módulos web (para crear el endpoint del web service), data-jpa (para manipular la base de datos), derby (una base de datos) y lombok (porque menos java es más). Descarga el *zip* generado y descomprímelo en la carpeta de trabajo que elijas: ahí tienes un proyecto basado en Maven, una herramienta que ayuda a gestionar las dependencias y el ciclo de vida del software.  Como *group id* puedes usar "cloud.programar" y como *artifactId* "microservicedemo".
+Visita [Spring Start](//start.spring.io) y crea un proyecto que incluya los módulos web (para crear el endpoint del web service), data-jpa (para manipular la base de datos), derby (una base de datos) y lombok (porque menos java es más). Descarga el *zip* generado y descomprímelo en la carpeta de trabajo que elijas: ahí tienes un proyecto basado en Maven, una herramienta que ayuda a gestionar las dependencias y el ciclo de vida del software.  Como *group id* puedes usar "cloud.programar" y como *artifactId* "microservicedemo".
 
 Usa Netbeans (o tu veneno preferido) para abrir el proyecto y compilarlo. Debería detectar que está basado en Maven y descargar automáticamente todas las librerías necesarias. 
 

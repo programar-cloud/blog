@@ -9,12 +9,12 @@ tags:
 
 disqus_identifier: quien-es-javi
 disqus_title: ¿Quién es Javi?
-disqus_url: http://programar.cloud/javi
+disqus_url: //programar.cloud/javi
 --- 
 
 
 {{% img src="/media/avatar-menorca.jpg" alt="Javi Moreno de Programar en Cloud" class="thumbnail" %}}
 
-Me llamo **Javi**. Soy profe y desarrollador, ahora mismo en ese orden. Tengo la suerte de trabajar con un grupo de gente brillante en [Capside](http://capside.com): me tienen adoptado en el equipo de evangelistas. Además de impartir formación me dedico a dar charlas, organizar workshops y crear webinars relacionados con el cloud. 
+Me llamo **Javi**. Soy profe y desarrollador, ahora mismo en ese orden. Tengo la suerte de trabajar con un grupo de gente brillante en [Capside](//capside.com): me tienen adoptado en el equipo de evangelistas. Además de impartir formación me dedico a dar charlas, organizar workshops y crear webinars relacionados con el cloud. 
 
-Tengo baja latencia respondiendo en Twitter ([@ciberado](http://twitter.com/ciberado)) pero de momento yo no lo considero un problema.<!--more-->
+Tengo baja latencia respondiendo en Twitter ([@ciberado](//twitter.com/ciberado)) pero de momento yo no lo considero un problema.<!--more-->

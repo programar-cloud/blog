@@ -44,7 +44,7 @@
     display: table;
     content: "";
     // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    // //nicolasgallagher.com/micro-clearfix-hack/#comment-36952
     line-height: 0;
   }
   &:after {

@@ -16,7 +16,7 @@ niveles:
 
 disqus_identifier: desde-las-aplicaciones-monoliticas-hasta-los-microservicios
 disqus_title: Desde monolíticas hasta microservicios
-disqus_url: http://programar.cloud/posts/desde-monoliticas-hasta-microservicios
+disqus_url: //programar.cloud/posts/desde-monoliticas-hasta-microservicios
 ---
 
 {{% img src="/media/almacen.jpg" alt="almacén lleno de stock" %}}

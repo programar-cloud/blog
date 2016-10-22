@@ -15,7 +15,7 @@ niveles:
 
 disqus_identifier: aprende-a-crear-aplicaciones-cloud
 disqus_title: Aprende a crear apliaciones cloud
-disqus_url: http://programar.cloud/posts/aprende-a-crear-aplicaciones-cloud
+disqus_url: //programar.cloud/posts/aprende-a-crear-aplicaciones-cloud
 ---
 
 {{% img src="/media/dontpanic.jpg" alt="Don't panic" %}}
@@ -24,7 +24,7 @@ disqus_url: http://programar.cloud/posts/aprende-a-crear-aplicaciones-cloud
 
 {{% archive 0000AprendeACrearAplicacionesCloud %}}
 
-Esto no es realmente un blog, no en el sentido tradicional: los posts que vas a encontrar aquí siguen un orden muy concreto porque después de tres años trabajando con [algunos de los mejores](http://capside.com) ingenieros e ingenieras cloud que puedes encontrar quiero explicar **cómo este tsunami de cambios que ya tenemos encima nos afecta a los que creamos y ponemos en marcha aplicaciones**. Es casi una necesidad física para mi mismo: sigo tan emocionado con las posibilidades que la nube ofrece que tengo que compartirlo.<!--more-->
+Esto no es realmente un blog, no en el sentido tradicional: los posts que vas a encontrar aquí siguen un orden muy concreto porque después de tres años trabajando con [algunos de los mejores](//capside.com) ingenieros e ingenieras cloud que puedes encontrar quiero explicar **cómo este tsunami de cambios que ya tenemos encima nos afecta a los que creamos y ponemos en marcha aplicaciones**. Es casi una necesidad física para mi mismo: sigo tan emocionado con las posibilidades que la nube ofrece que tengo que compartirlo.<!--more-->
 
 
 > Estos últimos años también he tenido contacto con muchas empresas. Y soy consciente de que un gran número de personas reaccionan a la defensiva

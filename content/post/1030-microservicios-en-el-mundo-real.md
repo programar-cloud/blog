@@ -15,7 +15,7 @@ niveles:
 
 disqus_identifier: microservicios-en-el-mundo-real
 disqus_title: Microservicios en el mundo real
-disqus_url: http://programar.cloud/posts/microservicios-en-el-mundo-real
+disqus_url: //programar.cloud/posts/microservicios-en-el-mundo-real
 ---
 
 {{% img src="/media/amazon-frontpage.jpg" alt="Amazon front page" %}}
@@ -46,7 +46,7 @@ En dos años rompieron ese gigantesco monolito y lo transformaron en decenas (y 
 
 Un punto especialmente interesante de esta empresa es que fueron pioneros en crear herramientas de automatización muy sofisticadas. De hecho, cuando se dieron cuenta de que la consola oficial de AWS no encajaba con sus necesidades (está más orientada a monitorización que a despliegue) crearon un sustituto llamado Asgard mucho más adaptado a su workflow. Y la publicaron como Open Source: en el vídeo que acompaña a este post te cuento más detalles sobre este tema.
 
-Otro ejemplo: en Soundcloud [pasaron de una monolítica escrita en Ruby on Rails a una mezcla de microservicios](http://philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html) desarrollados con Scala, Clojure y JRuby. En lugar de romper la aplicación original en porciones decidieron congelar sus funcionalidades y añadir las nuevas en forma de proyectos independientes. Les ayudó mucho el hecho de que ya estaban basando la comunicación con el exterior en un API bien definida con lo que desde el punto de vista de los clientes no supuso ninguna diferencia y solo más tarde empezaron a desgajar la aplicación original.
+Otro ejemplo: en Soundcloud [pasaron de una monolítica escrita en Ruby on Rails a una mezcla de microservicios](//philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html) desarrollados con Scala, Clojure y JRuby. En lugar de romper la aplicación original en porciones decidieron congelar sus funcionalidades y añadir las nuevas en forma de proyectos independientes. Les ayudó mucho el hecho de que ya estaban basando la comunicación con el exterior en un API bien definida con lo que desde el punto de vista de los clientes no supuso ninguna diferencia y solo más tarde empezaron a desgajar la aplicación original.
 
 Un detalle intereante de su arquitectura es que la invocación de algunos microservicios sigue un patrón asíncrono basado en eventos. Por ejemplo, el añadir un nuevo comentario en una canción hace que se genere un mensaje con dicho evento en una cola RabbitMQ y que esta activamente afecte a los servicios de comentarios y de notificaciones. Si mañana se necesita que el mismo evento tenga un tercer efecto solo hay que añadir un consumidor más a la cola.
 
