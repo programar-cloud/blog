@@ -1,6 +1,6 @@
 ---
 title: Microservicios REST en 10 minutos con SpringBoot
-date: 2016-09-12T8:10:20+02:00
+date: 2016-11-27T8:50:20+02:00
 description: "Una introducción de guerrilla a la programación de microservicios REST en java"
 slug: microservicios-rest-en-10-minutos-con-springboot
 draft: true

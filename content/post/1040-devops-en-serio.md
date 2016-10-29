@@ -1,6 +1,6 @@
 ---
 title: "Devops. No, en serio: Devops."
-date: 2016-10-21T8:50:20+02:00
+date: 2016-11-18T8:50:20+02:00
 description: "Cambios organizativos que tienen mucho más que ver con las personas que con la tecnología."
 slug: devops-en-serio
 draft: true

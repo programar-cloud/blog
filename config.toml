@@ -1,4 +1,5 @@
-baseurl = "/"
+baseurl = ""
+relativeurls=true
 title = "Programar en cloud"
 languageCode = "es-ES"
 disqusShortname = "programarcloud"

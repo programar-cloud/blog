@@ -1,6 +1,6 @@
 ---
 title: Microservicios en el mundo real
-date: 2016-10-21T8:50:20+02:00
+date: 2016-11-11T8:50:20+02:00
 description: "Algunos ejemplos de cómo las empresas están aplicando hoy en día arquitecturas orientadas a microservicios"
 slug: microservicios-en-el-mundo-real
 draft: true

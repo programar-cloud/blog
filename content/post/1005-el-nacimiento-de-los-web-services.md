@@ -1,14 +1,15 @@
 ---
 title: El nacimiento de los web services
-date: 2016-10-23T8:50:20+02:00
+date: 2016-10-30T8:50:20+02:00
 description: "Cómo el intercambio de documentos a través de HTTP se impuso como mecanismo de comuniación entre aplicaciones."
 slug: el-nacimiento-de-los-web-services
 draft: true
 tags:
-- arquitectura
+- cloud
+- conceptos
 - historia
 temas:
-- Arquitectura
+- Conceptos
 niveles:
 - Iniciaciación
 
@@ -21,9 +22,9 @@ disqus_url: //programar.cloud/posts/el-nacimiento-de-los-web-services
 
 *TL:DR; Hace 40 años que interconectamos aplicaciones pero el objetivo con el que lo hacíamos antes no tiene nada que ver con el que tenemos hoy en día.*
 
-Hoy en *programar.cloud* tenemos una historia de poder y dinero, *bromance*, revoluciones tecnológicas y peleas a cara de perro por el mercado. Y todo empieza con un adolescente llamado Marc con un Atari.<!--more-->
+Hoy en *programar.cloud* tenemos una historia de poder y dinero, *bromance*, revoluciones tecnológicas y peleas a cara de perro por el mercado. Y todo empieza con un adolescente llamado Marc que programaba con un Atari.<!--more-->
 
-El amigo Marc siempre había tenido lo que ahora definiríamos como un espíritu emprendedor. Ya sabes, quería hacer cosas y quería ganar dinero con ellas. En los 80, con 16 años, programaba [juegos](https://www.youtube.com/watch?v=d1obsZwaB04) para ordenadores de 8 bits. No es que fuesen los juegos más sofisticados de la década, pero hey, 16 años ¡y sin internet! En aquellos tiempos los ordenadores no se hablaban demasiado entre ellos y casi todas las aplicaciones se limitaban a guardar datos localmente o como mucho en el servidor de la oficina.
+El amigo Marc siempre había tenido lo que ahora definiríamos como un espíritu emprendedor. Ya sabes, quería hacer cosas y quería ganar dinero con ellas. En los 80 (con 16 años) programaba [juegos](https://www.youtube.com/watch?v=d1obsZwaB04) para ordenadores de 8 bits. No es que fuesen los juegos más sofisticados de la década, pero hey, 16 años ¡y sin internet! En aquellos tiempos los ordenadores no se hablaban demasiado entre ellos y casi todas las aplicaciones se limitaban a guardar datos localmente o como mucho en el servidor de la oficina.
 
 > En aquellos tiempos los ordenadores no se hablaban demasiado entre ellos.
 
@@ -79,14 +80,6 @@ jv
 
 
 ps: La imagen de de hoy la ceden los chiquitos de [401kcalculator.org](//401kcalculator.org). La música que sirve de cortinilla del vídeo es de [Marcus](https://soundcloud.com/musicbymarcus/promo-music-inspiational), como siempre.
-
-
-
-
-
-
-
-
 
 
 
