@@ -428,12 +428,12 @@ h1#title {
 
 h1,
 h2 {
-    font-size: 1.625em;
+    font-size: 1.8em;
     line-height: 1.38462em;
-    margin: 1em 0 0.25em;
+    margin: 1em 0 1em;
     text-shadow: 2px 2px 0px #FFF;
     text-transform: capitalize;
-    display: inline-block;
+    display: block;
     width: 100%
 }
 
@@ -443,7 +443,8 @@ h2 {
 }
 
 h3 {
-    margin: 1.5em 0 1.5em
+    margin: 1.5em 0 1.5em;
+    text-align: left;
 }
 
 h3,
@@ -810,7 +811,8 @@ span.subcount {
 
 .post-meta {
     color: #34495e;
-    font-size: 80%
+    font-size: 80%;
+    text-align: right;
 }
 
 .slideshare {
