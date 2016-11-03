@@ -187,7 +187,8 @@ figure video {
 
 img {
     border: 0;
-    -ms-interpolation-mode: bicubic
+    -ms-interpolation-mode: bicubic;
+    border-radius: 15px;
 }
 
 .thumbnail {
