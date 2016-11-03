@@ -15,8 +15,9 @@ niveles:
 
 disqus_identifier: el-nacimiento-de-los-web-services
 disqus_title: El nacimiento de los web services
-disqus_url: //programar.cloud/posts/el-nacimiento-de-los-web-services
----
+disqus_url: "//programar.cloud/posts/el-nacimiento-de-los-web-services"
+
+---                                
 
 {{% img src="/media/cloud-money.jpg" alt="Dinero y poder en el cloud" %}}
 

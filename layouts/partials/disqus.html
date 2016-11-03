@@ -1,4 +1,21 @@
 <aside id=comments>
-    <div><h2> Comentarios </h2></div>
-    {{ template "_internal/disqus.html" . }}
+    <div><h2> Comentarios</h2></div>
+    <div id="disqus_thread"></div>
 </aside>
+<script>
+    var disqus_config = function () {
+        this.page.url = '{{.Params.disqus_url}}';
+        this.page.identifier = '{{.Params.disqus_identifier}}';
+        this.page.title = '{{.Params.disqus_title}}';
+    };
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = '{{ .Site.DisqusShortname }}';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js'; 
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
