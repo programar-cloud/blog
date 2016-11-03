@@ -137,5 +137,6 @@ ppd: Aquí un [artículo](http://sdtimes.com/sd-times-blog-marc-benioff-vs-larry
 
 pppd: Por si no has tenido suficente dosis de chafardeo, [este artículo resume los mejores momentos de la relación entre Larry y Marc](http://www.businessinsider.com/larry-ellison-marc-benioff-relationship-2015-8). Para darle más morbo, está publicado en un medio propiedad de Jeff Bezos, el dueño de Amazon.
 
-pppd: En este enlace puedes ver [la infografía sobre la crisis .com](https://www.flickr.com/photos/gdsdigital/4443630014/in/photostream/). Desgraciadamente la fuente original parece no estar en línea.
+pppd: En este enlace puedes ver [la infografía sobre la crisis punto com](https://www.flickr.com/photos/gdsdigital/4443630014/in/photostream/). Desgraciadamente la fuente original parece no estar en línea.
 
+ppppd: Jodorowsky es otro vividor. Pero un grande, una cosa no quita la otra, al nivel de Charlie Sheen. Y [trabajó con Moebius](https://www.google.es/search?q=moebius+jodorowsky&client=firefox-b-ab&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwj4rtbR3o3QAhUGAxoKHdIUA2UQsAQIIw&biw=1440&bih=846).
