@@ -9,10 +9,10 @@
         this.page.title = '{{.Params.disqus_title}}';
     };
     
-    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+    (function() {  
         var d = document, s = d.createElement('script');
         var disqus_shortname = '{{ .Site.DisqusShortname }}';
-        s.src = '//' + disqus_shortname + '.disqus.com/embed.js'; 
+        s.src = 'https://' + disqus_shortname +'.disqus.com/embed.js'; 
         
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
