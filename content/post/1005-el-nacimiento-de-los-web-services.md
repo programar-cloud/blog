@@ -1,9 +1,9 @@
 ---
 title: El nacimiento de los web services
-date: 2016-11-04T8:50:20+02:00
+date: 2016-11-04T12:20:20+02:00
 description: "Cómo el intercambio de documentos a través de HTTP se impuso como mecanismo de comuniación entre aplicaciones."
 slug: el-nacimiento-de-los-web-services
-draft: true
+draft: false
 tags:
 - cloud
 - conceptos
@@ -21,7 +21,9 @@ disqus_url: "//programar.cloud/posts/el-nacimiento-de-los-web-services"
 
 {{% img src="/media/cloud-money.jpg" alt="Dinero y poder en el cloud" %}}
 
-*TL;DR: Hace 40 años que interconectamos aplicaciones pero el objetivo con el que lo hacíamos antes no tiene nada que ver con el que tenemos hoy en día.*
+*TL;DR: Estamos en la tercera generación de aplicaciones distribuídas. Curiosamente hoy priorizamos la simplicidad para poder crear arquitecturas complejas de verdad.*
+
+{{% archive "Programar.cloudElNacimientoDeLosWebServices" %}}
 
 *Disclaimer: no me digas que este post es largo, que luego bien que coges la [jotdown](http://jotdown.es) y la lees de arriba abajo. Pero vamos, que vas a necesitar buscar un rato en el que nadie te agobie para poder dedicarle un cuartito de hora. Y recuerda: en estas primeras entradas estamos montando un framework mental. No hace falta que te quedes con todos los detalles pero sí que reflexiones sobre cómo hemos llegado hasta aquí.*
 
@@ -53,7 +55,7 @@ Este tipo de tecnología floreció en la segunda mitad de los 90 y de alguna man
 
 En cualquier en esta primera generación de aplicaciones web corporativas se utilizaba HTTP para presentar las pantallas HTML a los usuarios pero internamente los nodos que componían el clúster servidor se comunicaban entre ellos usando referencias remotas.
 
-Si no te queda muy claro no te preocupes, **he montado un pequeño (screencast con una demo de RMI](TODO: enlace)**. No es que crea que vayas a utilizar mucho esta tecnología pero si te interesa Java necesitas conocerla por cultura general. Además sé que estás deseando coger el teclado y poder empezar a picar como si el mundo se terminase mañana así que cuando acabes de leer este post revisa el siguiente en el que incluyo el vídeo.
+Si no te queda muy claro no te preocupes, he montado un pequeño {{% ilink "programacion-distribuida-con-rmi" "screencast con una demo de RMI" %}}). No es que crea que vayas a utilizar mucho esta tecnología pero si te interesa Java necesitas conocerla por cultura general. Además sé que estás deseando coger el teclado y poder empezar a picar como si el mundo se terminase mañana así que cuando acabes de leer este post revisa el siguiente en el que incluyo el vídeo.
 
 No parece tan malo ¿no? O sea... ¿qué problema tienen las aplicaciones distribuídas? Bueno, [Muchos](//queue.acm.org/detail.cfm?id=1142044). Además de las incompatibilidades que había entre algunas implementaciones de la misma tecnología (helloooo CORBA, estoy mirándote a ti) también te encontrabas conque el despliegue de este tipo era complicado: un nodo con una versión incorrecta del código o una regla en **un firewall cortando el tráfico y tu sistema empezaba a lanzar excepciones como si el mundo se terminase**. A nivel de diseño de alguna manera el modelo de programación favorecía (gracias a su potencia) el acoplamiento entre componentes... algo que a esta alturas ya tenemos claro que solo trae problemas ¿verdad?. ¿VERDAD? Con una cerveza te cuento historias para no dormir sobre este tema.
 
@@ -124,9 +126,7 @@ Resumen de lo que quiero que te lleves de este post:
 - Nada de XML, nada de SOAP, nada de sobreingeniería, hazlo fácil, joga bonito
 - Si Marc y Larry parecen tristes, no te preocupes: siempre les quedará el yate
 
-¿Cómo, aún con ganas de más? Ok, segundo vídeo: con esté tendrás más clara la clasificación de clouds. Qué significa un IaaS, un PaaS y un SaaS (con algún detalle no totalmente obvio), qué es un cloud público, privado e híbrido y cuáles son las ofertas más relevantes actualmente. Enjoy. **Y dale al me gusta, y comparte en twitter, que es gratis**.
-
-[TODO youtube]
+¿Cómo, aún con ganas de más? Ok, segundo vídeo: con esté tendrás más clara la {{% ilink "taxonomia-cloud-iaas-paas-saas" "clasificación de clouds" %}}. Qué significa un IaaS, un PaaS y un SaaS (con algún detalle no totalmente obvio), qué es un cloud público, privado e híbrido y cuáles son las ofertas más relevantes actualmente. Enjoy. **Y dale al me gusta, y comparte en twitter, que no te cuesta ná**.
 
 jv
 

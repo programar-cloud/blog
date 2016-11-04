@@ -304,6 +304,8 @@ footer a {
     padding: 1px 3px 3px 3px
 }
 
+a.internal { background-color:#d3ffc2; }
+
 section a:hover,
 footer a:hover {
     background: #fafafa
