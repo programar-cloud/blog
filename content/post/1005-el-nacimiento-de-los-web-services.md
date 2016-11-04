@@ -49,7 +49,7 @@ Obviamente entre dos máquinas no compartes ni RAM ni procesador por lo que debe
 
 Este tipo de tecnología floreció en la segunda mitad de los 90 y de alguna manera prometían mejorar la arquitectura de aplicaciones síncronas (alguien pedía algo y se le contestaba inmediatamente) que solían utilizar variaciones de [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call#History_and_origins) porque (de nuevo, en teoría) se adaptaban mejor a la orientación a objetos y casi no tendríamos que hacer cambios en el código para incorporarlas. **Si llevas un tiempo en el negocio te sonarán productos como [RMI](https://es.wikipedia.org/wiki/Java_Remote_Method_Invocation), [DCOM](https://es.wikipedia.org/wiki/Modelo_de_Objetos_de_Componentes_Distribuidos) o [CORBA](//c2.com/cgi/wiki?WhatsWrongWithCorba)**. En este último caso se trataba de magia negra de la peor calaña y motivo suficiente para pedir la cuenta y buscar otra empresa. En serio, no quieres usar CORBA. 
 
-{{% img src="/media/batman-robin-corba.jpg" alt="batman enseña a robin a evitar corba" %}}
+{{% img src="/media/batman-robin-corba.jpg" alt="batman enseña a robin a evitar corba" small="true" %}}
 
 En cualquier en esta primera generación de aplicaciones web corporativas se utilizaba HTTP para presentar las pantallas HTML a los usuarios pero internamente los nodos que componían el clúster servidor se comunicaban entre ellos usando referencias remotas.
 
@@ -124,7 +124,7 @@ Resumen de lo que quiero que te lleves de este post:
 - Nada de XML, nada de SOAP, nada de sobreingeniería, hazlo fácil, joga bonito
 - Si Marc y Larry parecen tristes, no te preocupes: siempre les quedará el yate
 
-¿Cómo, otro vídeo más? Sí: con esté tendrás más clara la clasificación de clouds. Qué significa un IaaS, un PaaS y un SaaS (con algún detalle no totalmente obvio), qué es un cloud público, privado e híbrido y cuáles son las ofertas más relevantes actualmente. Enjoy. **Y dale al me gusta, y comparte en twitter, que es gratis**.
+¿Cómo, aún con ganas de más? Ok, segundo vídeo: con esté tendrás más clara la clasificación de clouds. Qué significa un IaaS, un PaaS y un SaaS (con algún detalle no totalmente obvio), qué es un cloud público, privado e híbrido y cuáles son las ofertas más relevantes actualmente. Enjoy. **Y dale al me gusta, y comparte en twitter, que es gratis**.
 
 [TODO youtube]
 
