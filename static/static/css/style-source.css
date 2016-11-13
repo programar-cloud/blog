@@ -189,6 +189,7 @@ img {
     border: 0;
     -ms-interpolation-mode: bicubic;
     border-radius: 15px;
+    margin : 1em 0;
 }
 
 .thumbnail {
