@@ -1,6 +1,6 @@
 ---
 title: Desde monolíticas hasta microservicios
-date: 2016-11-07T8:50:20+02:00
+date: 2016-11-11T8:50:20+02:00
 description: "Un recorrido rápido sobre la evolución que otras empresas han hecho (y que tú también harás) hacia microservicios."
 slug: desde-monoliticas-hasta-microservicios
 draft: false

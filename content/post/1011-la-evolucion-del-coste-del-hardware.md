@@ -1,6 +1,6 @@
 ---
 title: "¿Cuánto pagarías por este servidor?"
-date: 2016-11-07T7:50:20+02:00
+date: 2016-11-11T7:50:20+02:00
 description: "La evolución del coste de mantener una máquina desde los años noventa hasta la actualidad."
 slug: la-evolucion-del-coste-del-hardware
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "Magia desde la línea de comandos"
-date: 2016-11-07T8:20:20+02:00
+date: 2016-11-11T8:20:20+02:00
 description: "Una pequeña presentación de cómo se pueden hacer grandes cosas con pequeños programas."
 slug: magia-desde-la-linea-de-comandos
 draft: false
