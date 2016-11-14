@@ -192,6 +192,16 @@ img {
     margin : 1em 0;
 }
 
+.small {
+    width: 50% !important; 
+    margin-left: 25%;
+}
+
+.framed img {
+    border : 1px solid silver;
+    padding : 0 !important;
+}
+
 .thumbnail {
     display: block; 
     max-width:50% !important;  
