@@ -15,15 +15,24 @@ temas:
 niveles:
 - Iniciaciación
 
+episode : "6"
+audio : "https://ia801508.us.archive.org/10/items/desde-monoliticas-hasta-microservicios/audio-post.mp3"
+media_bytes : "12388824"
+media_duration : "14:52"
+images : ["https://programar.cloud/media/highway-by-fancycrave.jpg"]
+explicit : "no"
+
 disqus_identifier: desde-las-aplicaciones-monoliticas-hasta-los-microservicios
 disqus_title: Desde monolíticas hasta microservicios
-disqus_url: https://programar.cloud/posts/desde-monoliticas-hasta-microservicios
+disqus_url: https://programar.cloud/post/desde-monoliticas-hasta-microservicios
 ---
 
 {{% img src="/media/almacen.jpg" alt="almacén lleno de stock" %}}
 
 
 *TL;DR: Tenemos que ser conscientes de que seguimos pensando igual que hace unos años cuando las limitaciones tecnológicas son ahora otras.*
+
+{{% archive "desde-monoliticas-hasta-microservicios" %}}
 
 ¿Cuánto tiempo llevas en el negocio? ¿Recuerdas cuando los servidores eran máquinas con dos procesadores y 128MB de RAM? Párate un momento a pensar sobre esto porque es importante: hace unos años era difícil conseguir hardware e incluso el que utilizábamos en producción tenían menos potencia que el teléfono que llevas en tu bolsillo. Además el acceso a internet era limitado y las aplicaciones que desarrollábamos solían trabajar en red local y soportar un número pequeño de usuarios. Teníamos que **aprovechar al máximo el hierro disponible** y por ejemplo en entornos Java no podíamos arrancar más de una máquina virtual en un ordenador porque no teníamos suficiente RAM. Por ello nació el concepto de *servidor de aplicaciones* que básicamente  permitía ejecutar de forma más o menos aislada varios componentes dentro de la misma *java virtual machine*.<!--more-->
 

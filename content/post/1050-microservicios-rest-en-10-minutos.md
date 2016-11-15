@@ -18,7 +18,7 @@ niveles:
 
 disqus_identifier: microservicios-rest-en-10-minutos-con-springboot
 disqus_title: Microservicios REST en 10 minutos con SpringBoot
-disqus_url: //programar.cloud/posts/microservicios-rest-en-10-minutos-con-springboot
+disqus_url: //programar.cloud/post/microservicios-rest-en-10-minutos-con-springboot
 ---
 
 {{% img src="/media/cloud-money.jpg" alt="Dinero y poder en el cloud" %}}

@@ -13,9 +13,16 @@ temas:
 niveles:
 - Iniciaciación
 
+episode : "3"
+audio : "https://ia801502.us.archive.org/27/items/Programar.cloudElCloudEsDondeSeEjecutanLasAplicaciones/1000-el-cloud-es-donde-se-ejecutan-las-aplicaciones.mp3"
+media_bytes : "18639944"
+media_duration : "5:45"
+images : ["https://programar.cloud/media/cloud-money.jpg"]
+explicit : "no"
+
 disqus_identifier: el-nacimiento-de-los-web-services
 disqus_title: El nacimiento de los web services
-disqus_url: "//programar.cloud/posts/el-nacimiento-de-los-web-services"
+disqus_url: "//programar.cloud/post/el-nacimiento-de-los-web-services"
 
 ---                                
 

@@ -13,9 +13,16 @@ temas:
 niveles:
 - Iniciaciación
 
+episode : "1"
+audio : "https://archive.org/download/0000AprendeACrearAplicacionesCloud/0000-aprende-a-crear-aplicaciones-cloud.mp3"
+media_bytes : "3368649"
+media_duration : "4:18"
+images : ["https://programar.cloud/media/dontpanic.jpg"]
+explicit : "no"
+
 disqus_identifier: aprende-a-crear-aplicaciones-cloud
 disqus_title: Aprende a crear apliaciones cloud
-disqus_url: //programar.cloud/posts/aprende-a-crear-aplicaciones-cloud
+disqus_url: //programar.cloud/post/aprende-a-crear-aplicaciones-cloud
 ---
 
 {{% img src="/media/dontpanic.jpg" alt="Don't panic" %}}

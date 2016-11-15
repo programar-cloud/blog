@@ -66,11 +66,9 @@ Por ejemplo, el añadir un nuevo comentario en una canción hace que se guarde u
 
 {{% imgur 5zXFz52 "Desacoplamiento por colas" %}}
 
-¿Y en empresas más cercanas? ¿Se están utilizando estos patrones? En los clientes que tengo más a mano hay de todo, aunque está claro que queda mucho trabajo por hacer. Por ejemplo, unos chiquitos que desarrollan varias aplicaciones web que has usado seguro si vives en España están aplicando tanto metodología ágil con técnicas de devops y arquitecturas orientadas a microservicio con muchísimo éxito. Y no estoy hablando de una empresa pequeña y nueva, aunque es verdad que tienen una raíz tecnológica muy fuerte.
+¿Y en empresas más cercanas? ¿Se están utilizando estos patrones? En los clientes que tengo más a mano hay de todo, aunque está claro que queda mucho trabajo por hacer. Pero cada vez es más común encontrarte con gente como Schibsted, que están aplicando tanto metodología ágil con técnicas de devops y arquitecturas orientadas a microservicio con muchísimo éxito. Quizá no los reconozcas por este nombre pero son los responsables de Infojobs, Fotocasa, Coches.net, etc. Solo tienes que echar un ojo a sus [ofertas de trabajo](https://www.google.es/search?q=schibsted+microservicios) para comprobar que están muy orientados hacia agilidad. Y ya te digo: son buenos implementando software. El [blog técnico](http://bytes.schibsted.com/category/software-engineering/) que publican es súper interesante, no dejes des sucribirte a él.
 
-Oh, venga, está bien: es Schibsted, los chiquitos encargados de Infojobs, Fotocasa, Coches.net, etc. Solo tienes que echar un ojo a sus [ofertas de trabajo](https://www.google.es/search?q=schibsted+microservicios) para comprobar que están muy orientados hacia agilidad. Y ya te digo: son buenos implementando software.
-
-Otro cliente con el que he tenido relación está en mitad del proceso de evolucionar desde un horror monolítico sacado del peor círculo infernal de Dante a una arquitectura cloud que sin ser perfecta al menos les está quitando un buen número de problemas. Faltará arreglar la parte de procesos y el cambio cultural asociado que muy a menudo es el auténtico desafío. Pero terminarán consiguiéndolo. Y no, en este caso no te puedo concretar más ;-)
+Otras empresas están en mitad del proceso de evolucionar desde un horror monolítico sacado del peor círculo infernal de Dante a una arquitectura cloud (que sin ser perfecta) al menos les está quitando un buen número de problemas. Y desde luego es muy probable que terminen antes la transición del software que la cultural: nunca te olvides que al final **las personas importan mucho más que las herramientas**.
 
 {{% imgur JfvMvdN "Dilbert y las buenas prácticas" %}}
 

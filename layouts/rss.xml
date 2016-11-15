@@ -1,19 +1,52 @@
-<rss version="2.0" xmlns:atom="//www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-      <title>{{ .Title }} on {{ .Site.Title }} </title>
-    <link>{{ .Permalink }}</link>
-    <language>es-ES</language>
-    <author>Javi Moreno</author>
-    <rights>Copyright (c) 2016, <a href="//creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Algunos derechos reservados (pero no muchos)</a>.</rights>
-    <updated>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</updated>
-    {{ range first 15 .Data.Pages }}
+    <title>{{ .Site.Title }}</title>
+    <atom:link href="https://programar.cloud/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://programar.cloud</link>
+    <lastBuildDate>{{ dateFormat "Mon, 2 Jan 2006 15:04:05 -0700" .Date }}</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>2</sy:updateFrequency>
+    <language>en-us</language>
+    <copyright>2016 programar.cloud</copyright>
+    <itunes:subtitle>Para convertirte en developer cloud</itunes:subtitle>
+    <itunes:author>Javi Moreno</itunes:author>
+    <itunes:summary>Automatización, agilidad, devops, APIs, frameworks, microservicios, despliegues, escalabilidad, docker y mucho cloud</itunes:summary>
+    <description>Programar Cloud es un cursoblog que te ayudará a cambiar la forma en la que diseñas y programas tus aplicaciones.</description>
+    <itunes:owner>
+    <itunes:name>Javi Moreno</itunes:name>
+    <itunes:email>javi@programar.cloud</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://programar.cloud/media/logo-optimised.png" />
+    <itunes:category text="Technology">
+      <itunes:category text="Software How-To" />
+      <itunes:category text="Tech News" />
+    </itunes:category>
+    {{ range .Site.Pages }}
     <item>
-      <title>{{ .Title }}</title>
+      <title>{{ .Params.episode }} - {{ title .Title }}</title>
+      <itunes:author>Javi Moreno</itunes:author>
+      <itunes:summary>{{ .Description }}</itunes:summary>
+      <description>{{ .Description }}</description>
+      {{if .Params.audio}}
+      <enclosure url="{{ .Params.audio }}" length="{{ .Params.media_bytes}}" type="audio/mpeg" />
+      <guid>{{ .Params.audio }}</guid>
+      {{end}}
+      {{if .Params.video}}
+      <enclosure url="{{ .Params.video }}" length="{{ .Params.media_bytes}}" type="video/mp4" />
+      <guid>{{ .Params.audio }}</guid>
+      {{end}}
       <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
-      <author>Javi Moreno</author>
-      <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}</description>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
+      <itunes:duration>{{ .Params.media_duration}}</itunes:duration>
+      <itunes:explicit>{{ .Params.explicit}}</itunes:explicit>
     </item>
     {{ end }}
   </channel>
