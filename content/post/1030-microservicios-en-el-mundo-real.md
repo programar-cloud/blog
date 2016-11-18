@@ -3,7 +3,7 @@ title: Microservicios en el mundo real
 date: 2016-11-18T8:50:20+02:00
 description: "Algunos ejemplos de cómo las empresas están aplicando hoy en día arquitecturas orientadas a microservicios"
 slug: microservicios-en-el-mundo-real
-draft: false
+draft: true
 tags:
 - arquitectura
 - casos
@@ -13,18 +13,27 @@ temas:
 niveles:
 - Iniciaciación
 
+episode : "9"
+audio : "https://ia801504.us.archive.org/30/items/microservicios-en-el-mundo-real/audio-post.mp3"
+media_bytes : "11.476.289"
+media_duration : "13:19"
+images : ["https://programar.cloud/media/amazon-homepage.jpg"]
+explicit : "no"
+
 disqus_identifier: microservicios-en-el-mundo-real
 disqus_title: Microservicios en el mundo real
-disqus_url: //programar.cloud/posts/microservicios-en-el-mundo-real
+disqus_url: https://programar.cloud/posts/microservicios-en-el-mundo-real
 ---
 
 {{% img src="/media/amazon-homepage.jpg" alt="Amazon front page" class="framed" %}}
 
 *TL:DR; Las aplicaciones cloud nativas basadas en microservicios no son una moda o un ejercicio teórico. Los sistemas de Amazon, Netflix, Spotify, Soundcloud, etc se basan en ellos.*
 
-Quizá no te suene la pantalla que ves arriba. Porque hace unos años te secuestró una nave extraterrestre y acabas de regresar [con otras 4399 personas](https://www.imdb.com/title/tt0389564/). En caso contrario seguro que has visitado Amazon en alguna ocasión: es el *retailer* de referencia en el mundo y ya hemos hablado de ellos antes. 
+{{% archive "microservicios-en-el-mundo-real" %}}
 
-Bueno, pues algún detalle extra: ¿cuántos microservicios crees que se coordinan para generar esa pantalla? ¿20? ¿50? Te lo cuento en el vídeo de hoy (calma, es cortito) pero ya te adelanto que alguno más.<!--more-->
+Quizá no te suene la pantalla que ves arriba. Porque hace unos años te secuestró una nave extraterrestre y acabas de regresar [con otras 4399 personas](https://www.imdb.com/title/tt0389564/). En caso contrario seguro que has visitado Amazon en alguna ocasión: es el *retailer* de referencia en el mundo y ya hemos hablado de ellos antes.<!--more--> 
+
+Bueno, pues algún detalle extra: ¿cuántos microservicios crees que se coordinan para generar esa pantalla? ¿20? ¿50? Te lo cuento en el vídeo de hoy (calma, es cortito) pero ya te adelanto que alguno más.
 
 > Han conseguido mantener un modelo ágil a pesar de su gigantesco tamaño.
 
