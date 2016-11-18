@@ -78,7 +78,7 @@ Un microservicio **NO** se calla los problemas. Si tu componente no es capaz de 
 
 Uff... llevo 1500 palabras. Y tampoco es tan interesante lo que me queda por contarte. Así que ya hablaremos de eso en otro momento. Pero repasa de nuevo los puntos anteriores para saber si no estás haciendo microservicios. Y recuerda: **es posible que eso sea lo que realmente necesitas**. No te olvides de aplicar siempre pensamiento crítico y porque todos te estemos diciendo que debes ir en una dirección al final eres tú quien tiene que decidir si es la que te lleva a donde quieres llegar.
 
-Nos vemos dentro de nada en nuevo post. Y calma, no falta mucho para que nos pongamos a programar como si no hubiese un mañana. Preparad vuestros teclados.
+Nos vemos dentro de nada en nuevo post. Y calma, no falta mucho para que nos pongamos a programar como si no hubiese un mañana. Preparad vuestros teclados ya. Bueno, más o menos. Que todavía me quedan un par de cosas que contaros antes.
 
 jv
 
