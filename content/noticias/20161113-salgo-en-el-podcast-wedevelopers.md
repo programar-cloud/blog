@@ -13,6 +13,14 @@ temas:
 niveles:
 - Iniciaciación
 
+
+episode : "7"
+audio : "http://www.wedevelopers.com/podcast/wedevelopers046.mp3"
+media_bytes : "50190172"
+media_duration : "1:44:00"
+images : ["https://programar.cloud/media/we-developers-docker.png"]
+explicit : "no"
+
 disqus_identifier: podcast-wedevelopers-docker
 disqus_title: WeDevelopers & Docker
 disqus_url: "https://programar.cloud/podcast-wedevelopers-docker"
