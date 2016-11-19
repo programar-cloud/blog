@@ -15,7 +15,7 @@ niveles:
 - Iniciaciación
 
 episode : "2"
-audio : "https://archive.org/download/1000ElCloudEsDondeSeEjecutanLasAplicaciones.mp3/1000-el-cloud-es-donde-se-ejecutan-las-aplicaciones.mp3"
+audio : "https://ia801502.us.archive.org/27/items/Programar.cloudElCloudEsDondeSeEjecutanLasAplicaciones/1000-el-cloud-es-donde-se-ejecutan-las-aplicaciones.mp3"
 media_bytes : "5062479"
 media_duration : "5:44"
 images : ["https://programar.cloud/media/highway-by-fancycrave.jpg"]

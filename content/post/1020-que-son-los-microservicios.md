@@ -1,22 +1,23 @@
 ---
 title: "¿Qué son los microservicios?"
-date: 2016-11-18T14:20:20+02:00
+date: 2016-11-19T14:10:20+02:00
 description: "Comparamos las diferencias entre una arquitectura clásica y una orientada a microservicios."
 slug: que-son-los-microservicios
 draft: false
 tags:
 - arquitectura
 - microservicios
+- cloud
 temas:
 - Conceptos
 niveles:
 - Iniciación
 
 episode : "8"
-audio : ""
-media_bytes : ""
-media_duration : ""
-images : [""]
+audio : "https://ia801504.us.archive.org/0/items/que-son-los-microservicios/audio-post.mp3"
+media_bytes : "14541813"
+media_duration : "16:22"
+images : ["https://programar.cloud/media/micro-machine.jpg"]
 explicit : "no"
 
 disqus_identifier: que-son-los-microservicios
@@ -27,6 +28,8 @@ disqus_url: "https://programar.cloud/post/que-son-los-microservicios"
 {{% img src="/media/micro-machine.jpg" alt="Micromachines" class="framed" %}}
 
 *TL:DR; Piensa en productos, no en servidores o proyectos. Crea programas independientes para cada pieza y únelos con mecanismos simples y tontos.*
+
+{{% archive "que-son-los-microservicios" %}}
 
 ### Por qué NO iba a escribir este post
 
@@ -50,7 +53,7 @@ Un microservicio NO utiliza Data Transfer Objects y Value Objects para comunicar
 
 Un microservicio NO se comunica con otro a través de referencias remotas a objetos, lo hace a través de documentos. Nada de RMI, nada de CORBA, nada que añada acoplamiento entre las tecnologías empleadas entre ellos e incremente la complejidad. Tan solo old good documents.
 
-Un microservicio NO usa SOAP, **porque nadie en su sano juicio usaría algo tan complicado** para solucionar algo como interconectar sistemas. REST es mucho más práctico y semánticamente rico. Y eso no quiere decir que tengas que eliminar XML pero probablemente serás más feliz con alernativas como JSON o Protobuffers. O jpeg, si la tarea lo requiere. Idealmente, que elija el consumidor qué formato prefiere.
+Un microservicio NO usa SOAP, **porque nadie en su sano juicio usaría algo tan complicado** para solucionar un problema ya de por sí difícil como interconectar sistemas. REST es mucho más práctico y semánticamente rico. Y eso no quiere decir que tengas que eliminar XML pero probablemente serás más feliz con alernativas como JSON o Protobuffers. O jpeg, si la tarea lo requiere. Idealmente, que elija el consumidor qué formato prefiere. Pero no SOAP.
 
 {{% imgur 35oWpTw "Dilbert y el despliegue" %}}
 
@@ -72,7 +75,7 @@ Un microservicio NO se despliega en producción a mano. Nunca. Para nada. Porque
 
 {{% img src="/media/keep-calm-and-automate.jpg" alt="keep calm and automate" class="small" %}}
 
-Un microservicio NO es inabarcable para un humano. Si en el equipo que mantiene tu software hay una sola persona que no sea capaz de entender las diferentes responsabilidades de los ficheros que forman el código es que tu componente es demasiado complejo para ser considerado un microservicio. No quiere decir que todo el mundo sea igual de bueno peleando con Hibernate o con CSS pero todos deberían ser capaces de identificar dónde se encuentran los ficheros  relacionado, entender sus roles y aplicar cambios sencillos. **Y sobre todo todos los miembros del equipo deberían de ser capaces de entender los aspectos de negocio que implementa el componente**.
+Un microservicio NO es inabarcable para un humano. Si en el equipo que mantiene tu software hay una sola persona que no sea capaz de entender las diferentes responsabilidades de los ficheros que forman el código es que tu componente es demasiado complejo para ser considerado un microservicio. No quiere decir que todo el mundo tenga que ser igual de bueno peleando con Hibernate o con CSS pero todos deberían ser capaces de identificar dónde se encuentran los ficheros  relacionado, entender sus roles y aplicar cambios sencillos. **Y sobre todo todos los miembros del equipo deberían de ser capaces de entender los aspectos de negocio que implementa el componente**.
 
 Un microservicio NO se apoya en un framework corporativo de capa de negocio. Si todos tus componentes usan la misma librería que incluye un tipo para describir el concepto de *Cliente*, eso no es un microservicio. Porque en el fondo no todo tu producto tiene la misma visión de lo que es un cliente y porque en el equipo encargado de mantener ese framework **tienes otro cuello de botella**. 
 
