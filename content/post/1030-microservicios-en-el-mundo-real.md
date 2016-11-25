@@ -13,6 +13,13 @@ temas:
 niveles:
 - Iniciaciación
 
+episode : "9"
+audio : "https://ia801507.us.archive.org/19/items/microservicios-en-el-mundo-real_201611/audio-post.mp3"
+media_bytes : "13896305"
+media_duration : "16:22"
+images : ["https://programar.cloud/media/micro-machine.jpg"]
+explicit : "no"
+
 disqus_identifier: microservicios-en-el-mundo-real
 disqus_title: Microservicios en el mundo real
 disqus_url: https://programar.cloud/posts/microservicios-en-el-mundo-real
@@ -22,11 +29,11 @@ disqus_url: https://programar.cloud/posts/microservicios-en-el-mundo-real
 
 *TL:DR; Las aplicaciones cloud nativas basadas en microservicios no son una moda o un ejercicio teórico. Los sistemas de Amazon, Netflix, Spotify, Soundcloud, etc se basan en estos patrones.*
 
-{{% archive "microservicios-en-el-mundo-real" %}}
+{{% archive "microservicios-en-el-mundo-real_201611" %}}
 
-Quizá no te suene la pantalla que ves arriba. Porque hace unos años te secuestró una nave extraterrestre y acabas de regresar [con otras 4399 personas](https://www.imdb.com/title/tt0389564/). En caso contrario seguro que has visitado Amazon en alguna ocasión: es el *retailer* de referencia en el mundo y ya hemos hablado de ellos antes.<!--more--> 
+Quizá no te suene la pantalla que ves arriba. Porque hace unos años te secuestró una nave extraterrestre y acabas de regresar [con otras 4399 personas](https://www.imdb.com/title/tt0389564/). En caso contrario seguro que has visitado Amazon en alguna ocasión: es el *retailer* de referencia en el mundo y ya hemos hablado de ellos antes.
 
-Bueno, pues algún detalle extra: ¿cuántos microservicios crees que se coordinan para generar esa pantalla? ¿20? ¿50? Venga, en serio, piensa un número.
+Bueno, pues algún detalle extra: ¿cuántos microservicios crees que se coordinan para generar esa pantalla? ¿20? ¿50? Venga, en serio, piensa un número.<!--more--> 
 
 > Han conseguido mantener un modelo ágil a pesar de su gigantesco tamaño.
 
@@ -64,13 +71,13 @@ Pero volviendo a Netflix, otro patrón muy innovador que aplicaron fue el entren
 
 Otro ejemplo: en Soundcloud [pasaron de una monolítica escrita en Ruby on Rails a una sopa de microservicios](//philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html) desarrollados con Scala, Clojure y JRuby. **En lugar de romper la aplicación original en porciones decidieron congelar sus funcionalidades** y añadir las nuevas en forma de proyectos independientes. Les ayudó mucho el hecho de que ya estaban basando la comunicación con el exterior en un API bien definida con lo que desde el punto de vista de los clientes no supuso ninguna diferencia y solo más tarde empezaron a desgajar la aplicación original.
 
-Un detalle interesante de su arquitectura es que la invocación de algunos microservicios sigue un patrón asíncrono basado en eventos y colas. Quiero decir... normalmente las interacciones con el usuario se consideran principalmente síncronas (Alice hace una petición al servidor e inmediatamente recibe una respuestas) excepto si se trata de una tarea pesada (generar un report o funcionalidades de este estilo). No en el caso de Soundcloud. 
+Un detalle interesante de su arquitectura es que la invocación de algunos microservicios sigue un patrón asíncrono basado en eventos y colas. Quiero decir... normalmente las interacciones con el usuario se consideran principalmente síncronas (Alice hace una petición al servidor e inmediatamente recibe una respuesta) excepto si se trata de una tarea pesada (generar un report o funcionalidades de este estilo). No en el caso de Soundcloud. 
 
 Por ejemplo, el añadir un nuevo comentario en una canción hace que se guarde un mensaje con dicho evento en una cola RabbitMQ y que sea la cola la que afecte a los servicios de comentarios y de notificaciones. Actúa como mecanismo de desacoplamiento: si mañana se necesita que el mismo evento tenga un tercer efecto solo hay que añadir un consumidor más a la misma. A continuación un pequeño dibujo que ilustraría esta arquitectura si fuese capaz de dibujar mínimamente bien:
 
 {{% imgur 5zXFz52 "Desacoplamiento por colas" %}}
 
-¿Y en empresas más cercanas? ¿Se están utilizando estos patrones? Hay de todo, aunque está claro que queda mucho trabajo por hacer. Pero cada vez es más común encontrarte con equipos como los de Schibsted, que están aplicando tanto metodología ágil con técnicas de devops y arquitecturas orientadas a microservicio con muchísimo éxito. Quizá no los reconozcas por este nombre pero son los responsables de Infojobs, Fotocasa, Coches.net, etc. Solo tienes que echar un ojo a sus [ofertas de trabajo](//www.google.es/search?q=schibsted+microservicios) para comprobar que están muy orientados hacia agilidad. Y ya te digo: son buenos implementando software. El [blog técnico de la central](//bytes.schibsted.com/category/software-engineering/) es súper interesante, no dejes des sucribirte a él.
+¿Y en empresas más cercanas? ¿Se están utilizando estos patrones? Hay de todo, aunque está claro que queda mucho trabajo por hacer. Pero cada vez es más común encontrarte con equipos como los de Schibsted, que están aplicando tanto metodología ágil con técnicas de devops y arquitecturas orientadas a microservicio con muchísimo éxito. Quizá no los reconozcas por este nombre pero **son los responsables de Infojobs, Fotocasa, Coches.net, etc.** Solo tienes que echar un ojo a sus [ofertas de trabajo](//www.google.es/search?q=schibsted+microservicios) para comprobar que están muy orientados hacia agilidad. Y ya te digo: son buenos implementando software. El [blog técnico de la central](//bytes.schibsted.com/category/software-engineering/) es súper interesante, no dejes des sucribirte a él.
 
 Otras empresas están en mitad del proceso de evolucionar desde un horror monolítico sacado del peor círculo infernal de Dante a una arquitectura cloud (que sin ser perfecta) al menos les está quitando un buen número de problemas. El caso que me viene a la mente no está centrado en microservicios pero al menos la arquitectura general del sistema es mucho más escalable y fácil de desplegar, con las responsabilidades de cada pieza mucho más delimitadas. Desde luego es muy probable que terminen antes la transición del software que la cultural, y recuerda esto siempre: nunca te olvides de que al final **las personas importan mucho más que las herramientas**.
 
