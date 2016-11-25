@@ -23,7 +23,7 @@ explicit : "no"
 
 disqus_identifier: podcast-wedevelopers-docker
 disqus_title: WeDevelopers & Docker
-disqus_url: "https://programar.cloud/podcast-wedevelopers-docker"
+disqus_url: "//programar.cloud/noticias/podcast-wedevelopers-docker"
 --- 
 
 {{% img src="/media/we-developers-docker.png" alt="we.developers podcast" %}}

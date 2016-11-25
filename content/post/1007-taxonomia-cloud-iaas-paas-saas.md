@@ -24,7 +24,7 @@ explicit : "no"
 
 disqus_identifier: taxonomia-cloud-iaas-paas-saas
 disqus_title: El nacimiento de los web services
-disqus_url: "https://programar.cloud/post/taxonomia-cloud-iaas-paas-saas"
+disqus_url: "//programar.cloud/post/taxonomia-cloud-iaas-paas-saas"
 ---   
 
 ¡Más conceptos básicos importantes! Te doy una visión actualizada de lo que es Infrastructure as a Service, Plataform as a Service y Software as a Service. Hablo de VMWare, Digital Ocean, AWS, Azure, Salesforce y otros. Si no tienes claro algo ¡comenta!

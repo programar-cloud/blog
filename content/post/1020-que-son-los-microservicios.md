@@ -22,7 +22,7 @@ explicit : "no"
 
 disqus_identifier: que-son-los-microservicios
 disqus_title: ¿Qué son los microservicios
-disqus_url: "https://programar.cloud/post/que-son-los-microservicios"
+disqus_url: "//programar.cloud/post/que-son-los-microservicios"
 ---      
 
 {{% img src="/media/micro-machine.jpg" alt="Micromachines" class="framed" %}}

@@ -23,7 +23,7 @@ explicit : "no"
 
 disqus_identifier: el-cloud-es-donde-se-ejecutan-las-aplicaciones
 disqus_title: El Cloud es donde se ejecutan las aplicaciones
-disqus_url: //programar.cloud/post/el-cloud-es-donde-se-ejecutan-las-aplicaciones
+disqus_url: "//programar.cloud/post/cloud-es-donde-se-ejecutan-las-aplicaciones"
 ---
  
 

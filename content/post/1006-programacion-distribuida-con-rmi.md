@@ -22,7 +22,7 @@ explicit : "no"
 
 disqus_identifier: programacion-distribuida-con-rmi
 disqus_title: Programación distribuída con RMI
-disqus_url: "https://programar.cloud/post/programacion-distribuida-con-rmi"
+disqus_url: "//programar.cloud/post/programacion-distribuida-con-rmi"
 ---      
 
 En este vídeo te cuento cómo puedes crear aplicaciones java distribuídas usando Remote Method Invocation para ello. Aunque esta tecnología ya no es popular creo es interesante que tengas al menos nociones sobre este tipo de arquitectura para poder comprarla con el modelo actual de microservicios conectados por APIs REST. ¡Disfruta!
