@@ -1,9 +1,9 @@
 ---
 title: Microservicios en el mundo real
-date: 2016-11-18T8:50:20+02:00
+date: 2016-11-25T11:20:20+02:00
 description: "Algunos ejemplos de cómo las empresas están aplicando hoy en día arquitecturas orientadas a microservicios"
 slug: microservicios-en-el-mundo-real
-draft: true
+draft: false
 tags:
 - arquitectura
 - casos
@@ -12,13 +12,6 @@ temas:
 - Conceptos
 niveles:
 - Iniciaciación
-
-episode : "9"
-audio : "https://ia801504.us.archive.org/30/items/microservicios-en-el-mundo-real/audio-post.mp3"
-media_bytes : "11.476.289"
-media_duration : "13:19"
-images : ["https://programar.cloud/media/amazon-homepage.jpg"]
-explicit : "no"
 
 disqus_identifier: microservicios-en-el-mundo-real
 disqus_title: Microservicios en el mundo real
@@ -59,11 +52,13 @@ Si quieres cifras puedo contarte que en 2016 tienen 50 millones de suscriptores 
 
 > En 2008 todo Netflix se desplegaba como un único fichero .war en un servidor de aplicaciones java.
 
-Además esta gente ha vivido su propia travesía del desierto: en 2008 todo Netflix se desplegaba como un único fichero .war en un servidor de aplicaciones java. Intenta interiorizar esto. TODO NETFLIX. ¿Tú crees que tus puestas en producción son problemáticas? Ellos sí sabían lo que quería decir *problemático*. 
+Además esta gente ha vivido su propia traves ía del desierto: en 2008 todo Netflix se desplegaba como un único fichero .war en un servidor de aplicaciones java. Intenta interiorizar esto. TODO NETFLIX. ¿Tú crees que tus puestas en producción son problemáticas? Ellos sí sabían lo que quería decir *problemático*. 
 
 En dos años rompieron ese gigantesco monolito y lo transformaron en decenas (y más tarde, centenares) de microservicios que corren en AWS.
 
-Un punto especialmente interesante de esta empresa es que fueron **pioneros en crear herramientas de automatización muy sofisticadas**. De hecho, cuando se dieron cuenta de que la consola oficial de AWS no encajaba con sus necesidades (está más orientada a monitorización que a despliegue) crearon un sustituto llamado Asgard mucho más adaptado a su workflow. Sin cortarse un pelo. Y la publicaron como Open Source. Dentro de poco intentaré hablarte de las ventajas que tiene liberar la tecnología que fabrica tu empresa como software libre. También le dedicaremos tiempo a ciertos monillos politoxicómanos que esta empresa utiliza para asegurar que sus equipos incluyen la resiliencia de las aplicaciones en todas las fases del desarrollo. 
+Un punto especialmente interesante de esta empresa es que fueron **pioneros en crear herramientas de automatización muy sofisticadas**. De hecho, cuando se dieron cuenta de que la consola oficial de AWS no encajaba con sus necesidades (está más orientada a monitorización que a despliegue) crearon un sustituto llamado Asgard mucho más adaptado a su workflow y la publicaron como Open Source. Y no necesitas ser Netflix para hacer algo así: seguramente ya sabes que trabajo en [Capside](https://twitter.com/capside) y en nuestro caso hemos hecho lo mismo para facilitar el despliegue de las aplicaciones de nuestros clientes. Tenemos una herramienta que se llama Enzime y que facilita mucho este trabajo, ya te hablaré de ella más adelante porque me servirá para explicarte la forma correcta de hacer pasos a producción en el cloud.
+
+Pero volviendo a Netflix, otro patrón muy innovador que aplicaron fue el entrenar a ciertos monillos politoxicómanos para testear la infraestructura (por ejemplo, rompiendo servidores sin aviso previo). Ya te contaré los detalles porque lo realmente espectacular es que los sueltan *en producción* con lo que Netflix sabotea su propia infraestructura mientras los usuarios hacen uso de ella. Y todos los programadores y programadoras saben que esto va a pasar, por lo que están totalmente obligados a crear arquitecturas resilientes.
 
 {{% imgur 4hFYppe "Soundcloud" %}}
 
@@ -75,17 +70,15 @@ Por ejemplo, el añadir un nuevo comentario en una canción hace que se guarde u
 
 {{% imgur 5zXFz52 "Desacoplamiento por colas" %}}
 
-¿Y en empresas más cercanas? ¿Se están utilizando estos patrones? En los clientes que tengo más a mano hay de todo, aunque está claro que queda mucho trabajo por hacer. Pero cada vez es más común encontrarte con equipos como los de Schibsted, que están aplicando tanto metodología ágil con técnicas de devops y arquitecturas orientadas a microservicio con muchísimo éxito. Quizá no los reconozcas por este nombre pero son los responsables de Infojobs, Fotocasa, Coches.net, etc. Solo tienes que echar un ojo a sus [ofertas de trabajo](//www.google.es/search?q=schibsted+microservicios) para comprobar que están muy orientados hacia agilidad. Y ya te digo: son buenos implementando software. El [blog técnico de la central](//bytes.schibsted.com/category/software-engineering/) es súper interesante, no dejes des sucribirte a él.
+¿Y en empresas más cercanas? ¿Se están utilizando estos patrones? Hay de todo, aunque está claro que queda mucho trabajo por hacer. Pero cada vez es más común encontrarte con equipos como los de Schibsted, que están aplicando tanto metodología ágil con técnicas de devops y arquitecturas orientadas a microservicio con muchísimo éxito. Quizá no los reconozcas por este nombre pero son los responsables de Infojobs, Fotocasa, Coches.net, etc. Solo tienes que echar un ojo a sus [ofertas de trabajo](//www.google.es/search?q=schibsted+microservicios) para comprobar que están muy orientados hacia agilidad. Y ya te digo: son buenos implementando software. El [blog técnico de la central](//bytes.schibsted.com/category/software-engineering/) es súper interesante, no dejes des sucribirte a él.
 
-Otras empresas están en mitad del proceso de evolucionar desde un horror monolítico sacado del peor círculo infernal de Dante a una arquitectura cloud (que sin ser perfecta) al menos les está quitando un buen número de problemas. Y desde luego es muy probable que terminen antes la transición del software que la cultural: nunca te olvides que al final **las personas importan mucho más que las herramientas**.
+Otras empresas están en mitad del proceso de evolucionar desde un horror monolítico sacado del peor círculo infernal de Dante a una arquitectura cloud (que sin ser perfecta) al menos les está quitando un buen número de problemas. El caso que me viene a la mente no está centrado en microservicios pero al menos la arquitectura general del sistema es mucho más escalable y fácil de desplegar, con las responsabilidades de cada pieza mucho más delimitadas. Desde luego es muy probable que terminen antes la transición del software que la cultural, y recuerda esto siempre: nunca te olvides de que al final **las personas importan mucho más que las herramientas**.
 
 {{% imgur JfvMvdN "Dilbert y las buenas prácticas" %}}
 
 Pero en la mayoría de los casos lo que hay es, sobre todo, una conciencia clara de que hay que mejorar lo que tienen. Que hay que conseguir entregar mejor software en menos tiempo. La parte buena es que nunca antes las herramientas para hacerlo han sido tan asequibles... aunque probablemente ya te estarás dando cuenta de que es mucho más fácil instalar un Jenkins que conseguir que los que están en las trincheras cambien la forma en la que han estado haciendo aplicaciones durante años.
 
-¡Ah! En los vídeos de hoy te resuelvo el enigma del número de servicios que componen el frontal de Amazon y echamos un vistazo rápido a algunas cuentas de github que tienes que conocer sí o sí. Ya me contarás si te gustan. No, en serio, coméntamelo, que interaccionar con vosotros y vosotras siempre me hace ilusión.
-
-
+¡Pero no es nuestro caso! Nosotros ya estamos metidos en este viaje. En el próximo post vamos a hablar un poco sobre metodología ágil y cultura devops. Stay tuned!
 
 jv
 
