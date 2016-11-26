@@ -22,7 +22,7 @@ explicit : "no"
 
 disqus_identifier: microservicios-en-el-mundo-real
 disqus_title: Microservicios en el mundo real
-disqus_url: "//programar.cloud/posts/microservicios-en-el-mundo-real"
+disqus_url: "//programar.cloud/post/microservicios-en-el-mundo-real"
 ---
 
 {{% img src="/media/amazon-homepage.jpg" alt="Amazon front page" class="framed" %}}
