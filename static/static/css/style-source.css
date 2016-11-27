@@ -823,7 +823,15 @@ span.subcount {
 }
 
 .audio-player {
-    height : 48px;
+}
+
+audio {
+    width: 100%;
+}
+
+.audio-player p {
+    text-align: right;
+    font-size: 66%;
 }
 
 .embed {
