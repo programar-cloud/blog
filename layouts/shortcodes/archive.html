@@ -5,6 +5,6 @@
 
 -->
 <div class="embed audio-player">
-<audio src="{{ .Page.Params.audio }}" controls></audio>
+<audio src="{{ .Page.Params.audio }}" controls preload="none"></audio>
 <p>alojado en <a href="https://archive.org/embed/{{ index .Params 0 }}">archive.org</a></p>
 </div>
