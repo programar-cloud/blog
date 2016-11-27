@@ -272,22 +272,6 @@ article ol {
     margin-left: 1em
 }
 
-@font-face {
-    font-family: 'kvwp';
-    src: url("../fonts/KievitWebPro.eot");
-    src: local("☺"), url("../fonts/KievitWebPro.woff") format("woff"), url("../fonts/KievitOT-Regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'kvwp';
-    src: url("../fonts/KievitWebPro-Bold.eot");
-    src: local("☺"), url("../fonts/KievitWebPro-Bold.woff") format("woff"), url("../fonts/KievitOT-Bold.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal
-}
-
 body {
     font-weight: 200;
     font-family: 'Open Sans', sans-serif;
