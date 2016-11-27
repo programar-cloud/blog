@@ -22,6 +22,6 @@ He hecho algunos pequeños cambios en el blog. La idea es que tarde menos en car
 
 Google sigue llorando porque bloqueo el render de la página para cargar las dos fuentes que utiliza el site ([Fjalla One](https://fonts.google.com/specimen/Fjalla+One) y [Open Sans](https://fonts.google.com/specimen/Open+Sans)) pero solo faltaría que tuviese que enseñártelo en Arial. Si tienes alguna idea sobre cómo solucionar este problema te agradeceré que lo comentes.
 
-Como siempre, si encontráis cualquier problema ¡escríbeme! :)<!--more-->
+Como siempre, si encontráis cualquier problema ¡escribidme! :)<!--more-->
 
 jv
