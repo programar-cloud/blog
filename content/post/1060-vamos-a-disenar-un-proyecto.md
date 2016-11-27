@@ -18,7 +18,7 @@ niveles:
 
 disqus_identifier: vamos-a-diseñar-un-proyecto-con-microservicios
 disqus_title: Vamos a diseñar un proyecto con microservicios
-disqus_url: //programar.cloud/post/vamos-a-diseñar-un-proyecto-con-microservicios
+disqus_url: "//programar.cloud/post/vamos-a-diseñar-un-proyecto-con-microservicios"
 ---
 
 {{% img src="/media/cloud-money.jpg" alt="Dinero y poder en el cloud" %}}

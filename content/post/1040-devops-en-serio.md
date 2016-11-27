@@ -14,7 +14,7 @@ niveles:
 
 disqus_identifier: devops-en-serio
 disqus_title: Microservicios en el mundo real
-disqus_url: //programar.cloud/post/devops-en-serio
+disqus_url: "//programar.cloud/post/devops-en-serio"
 ---
 
 {{% img src="/media/velocidad.jpg" alt="Velocidad" %}}

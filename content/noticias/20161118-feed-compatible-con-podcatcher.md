@@ -14,7 +14,7 @@ niveles:
 
 disqus_identifier: feed-rss-compatible-podcatchers
 disqus_title: "Feed RSS compatible con podcatchers"
-disqus_url: "https://programar.cloud/post/feed-rss-compatible-podcatchers"
+disqus_url: "//programar.cloud/noticias/feed-rss-compatible-podcatcher"
 --- 
 
 {{% img src="/media/headphones.jpg" alt="auriculares" %}}

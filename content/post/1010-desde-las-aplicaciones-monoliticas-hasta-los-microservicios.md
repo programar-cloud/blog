@@ -24,7 +24,7 @@ explicit : "no"
 
 disqus_identifier: desde-las-aplicaciones-monoliticas-hasta-los-microservicios
 disqus_title: Desde monolíticas hasta microservicios
-disqus_url: https://programar.cloud/post/desde-monoliticas-hasta-microservicios
+disqus_url: "//programar.cloud/post/desde-monoliticas-hasta-microservicios"
 ---
 
 {{% img src="/media/almacen.jpg" alt="almacén lleno de stock" %}}

@@ -9,7 +9,7 @@ tags:
 
 disqus_identifier: quien-es-javi
 disqus_title: ¿Quién es Javi?
-disqus_url: //programar.cloud/javi
+disqus_url: "//programar.cloud/autores/quien-es-javi"
 --- 
 
 

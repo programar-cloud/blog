@@ -22,7 +22,7 @@ explicit : "no"
 
 disqus_identifier: aprende-a-crear-aplicaciones-cloud
 disqus_title: Aprende a crear apliaciones cloud
-disqus_url: //programar.cloud/post/aprende-a-crear-aplicaciones-cloud
+disqus_url: "//programar.cloud/post/aprende-a-crear-aplicaciones-cloud"
 ---
 
 {{% img src="/media/dontpanic.jpg" alt="Don't panic" %}}
