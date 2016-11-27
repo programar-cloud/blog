@@ -12,7 +12,7 @@ niveles:
 - Iniciaciación
 
 disqus_identifier: optimizando-el-blog
-disqus_title: "Feed RSS compatible con podcatchers"
+disqus_title: "Optimizando el blog"
 disqus_url: "https://programar.cloud/noticias/optimizando-el-blog"
 --- 
 
