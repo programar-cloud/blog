@@ -31,5 +31,10 @@ fitText(document.getElementById('title'), 1)
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
+<script>
+/* http://www.labnol.org/internet/light-youtube-embeds/27941/  */
+function labnolThumb(a){var b='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',c='<div class="play"></div>';return b.replace("ID",a)+c}function labnolIframe(){var a=document.createElement("iframe"),b="https://www.youtube.com/embed/ID?autoplay=1";a.setAttribute("src",b.replace("ID",this.dataset.id)),a.setAttribute("frameborder","0"),a.setAttribute("allowfullscreen","1"),this.parentNode.replaceChild(a,this)}document.addEventListener("DOMContentLoaded",function(){var a,b,c=document.getElementsByClassName("youtube-player");for(b=0;b<c.length;b++)a=document.createElement("div"),a.setAttribute("data-id",c[b].dataset.id),a.innerHTML=labnolThumb(c[b].dataset.id),a.onclick=labnolIframe,c[b].appendChild(a)});
+
+</script>
 </body>
 </html>
