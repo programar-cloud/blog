@@ -9,13 +9,6 @@
     </p>
   </div>
 </footer>
-<!-- Begin Cookie Consent plugin by Silktide - //silktide.com/cookieconsent -->
-<script type="text/javascript">
-    window.cookieconsent_options = {"message":"Usamos cookies, como todo el mundo.","dismiss":"Me vale","learnMore":"+info","link":"//politicadecookies.com/cookies.php","theme":"light-bottom"};
-</script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
-<!-- End Cookie Consent plugin -->
 
 <script type="text/javascript">
 (function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
@@ -36,5 +29,12 @@ fitText(document.getElementById('title'), 1)
 function labnolThumb(a){var b='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',c='<div class="play"></div>';return b.replace("ID",a)+c}function labnolIframe(){var a=document.createElement("iframe"),b="https://www.youtube.com/embed/ID?autoplay=1";a.setAttribute("src",b.replace("ID",this.dataset.id)),a.setAttribute("frameborder","0"),a.setAttribute("allowfullscreen","1"),this.parentNode.replaceChild(a,this)}document.addEventListener("DOMContentLoaded",function(){var a,b,c=document.getElementsByClassName("youtube-player");for(b=0;b<c.length;b++)a=document.createElement("div"),a.setAttribute("data-id",c[b].dataset.id),a.innerHTML=labnolThumb(c[b].dataset.id),a.onclick=labnolIframe,c[b].appendChild(a)});
 
 </script>
+<!-- Begin Cookie Consent plugin by Silktide - //silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Usamos cookies, como todo el mundo.","dismiss":"Me vale","learnMore":"+info","link":"//politicadecookies.com/cookies.php","theme":"light-bottom"};
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
 </body>
 </html>
