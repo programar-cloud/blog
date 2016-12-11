@@ -10,6 +10,17 @@
   </div>
 </footer>
 
+<script>
+    document.querySelector('html').classList.remove('loading');
+    (function() {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = "//fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300";
+        document.querySelector("head").appendChild(link);
+    })();    
+</script>
+
+
 <script type="text/javascript">
 (function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
 fitText(document.getElementById('title'), 1)
@@ -36,5 +47,6 @@ function labnolThumb(a){var b='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js" async></script>
 <!-- End Cookie Consent plugin -->
+
 </body>
 </html>

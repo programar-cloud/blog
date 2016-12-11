@@ -33,7 +33,7 @@ disqus_url: https://programar.cloud/post/devops-en-serio
 
 {{% archive "devops-en-serio-devops" %}}
 
-Si me diesen un euro por cada vez que escucho lo de "hacemos devops: mira, tenemos un Jenkins" me podría retirar a Menorca mañana mismo. Casi. Diez o doce euros los tendría seguro y esa otra frase de "no, si no necesitamos gente de sistemas, somos devops". Es señal inequívoca de que la arquitectura y el mantenimiento de la infraestructura es un drama.
+Si me diesen un euro por cada vez que escucho lo de "hacemos devops: mira, tenemos un Jenkins" me podría retirar a Menorca mañana mismo. Casi. Diez o doce euros los tendría seguro. Y qué me dices de esa otra frase de "no, si no necesitamos gente de sistemas, somos devops". Es señal inequívoca de que la arquitectura y el mantenimiento de la infraestructura es un drama.
 
 El problema es el mismo de siempre: necesitas un nombre para vender (evangelizar) una idea. Algo que aglutine todo lo que quieres transmitir en una única palabra. Y esa palabra tiene que ser lo más potente posible. A veces resulta tan potente que termina canibalizando la idea en sí por muy buena que esta sea y al final solo queda eso, la palabra, vacía y sin contenido: todo el mundo quiere apropiarse de ella y nadie sabe exactamente lo que significa.
 
@@ -51,7 +51,7 @@ De eso va exactamente devops: de evitar que haya un muro entre desarrollo y oper
 
 {{% img src="/media/devops-toolchain.svg" alt="devops toolchain" %}}
 
-Trabajé un tiempo en una empresa que se dedica a gestionar el seguro médico de varios millones de trabajadores en España... los once meses más frustrantes de toda mi vida profesional. Con una cerveza te explio los detalles más escabrosos pero lo relevante ahora es que te cuente algunas anécdotas sobre el workflow de trabajo que teníamos. No me invento nada, palabrita.
+Trabajé un tiempo en una empresa que se dedica a gestionar el seguro médico de varios millones de trabajadores en España... los once meses más frustrantes de toda mi vida profesional. Con una cerveza te explico los detalles más escabrosos pero lo relevante ahora es que te cuente algunas anécdotas sobre el workflow de trabajo que teníamos. No me invento nada, palabrita.
 
 Éramos unas ocho personas desarrollando y la primera división era contractual: si formabas parte de la plantilla tenías ciertos derecho. Si (como yo) eras externo, no tantos. Pequeñas cosas, en realidad, y en nuestro caso eso no suposo ningún roce. Pero psicológicamente es una primera barrera, una división. 
 
