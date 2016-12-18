@@ -1596,3 +1596,10 @@ html.loading  p {
 html.loading  em {
     visibility: hidden;
 }
+
+.remarked p{
+    background-color : rgba(255, 222, 176, 0.35);
+    color : #363636;
+    padding : 0.5em;
+    border-radius: 8px;
+}
