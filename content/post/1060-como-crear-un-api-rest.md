@@ -1,6 +1,6 @@
 ---
 title: Cómo crear un API rest
-date: 2016-12-18T20:14:20+02:00
+date: 2016-12-18T15:45:20+02:00
 description: "Vamos a diseñar el API de nuestro microservicio basándonos en REST."
 slug: como-crear-un-api-rest
 draft: false
@@ -102,7 +102,7 @@ Bien, perfecto. Funcionará. Ahora tenemos que solucionar el *extra* del que hem
 
 * ```GET /cursos/actividad?desde={fechaInicial}&hasta={fechaFinal}```
 
-El formato para especificar fechas más popular es el de [ISO-8601](https://es.wikipedia.org/wiki/ISO_8601). Y vigila, porque ya sabes que en informática las fechas tienen siempre más peligro que una piraña en un vidé: almacena el dato siempre en UTC y solo cuando dibujes pantallas preséntalo en el formato local del usuario. O tendrás poblemas. Serios. 
+El formato para especificar fechas más popular es el de [ISO-8601](https://es.wikipedia.org/wiki/ISO_8601). Y vigila, porque ya sabes que en informática las fechas tienen siempre más peligro que una piraña en un bidé: almacena el dato siempre en UTC y solo cuando dibujes pantallas preséntalo en el formato local del usuario. O tendrás poblemas. Serios. 
 
 Básicamente la UTC (Coordinated Universal Time acronimizado por alguien que llevaba dos cervezas de más) se determina a partir de las oscilaciones de más de 70 relojes atómicos y es en el fondo el valor reconocido internacionalmente como *fecha actual* independientemente de la zona horaria en la que te encuentres. Bien, filtro solucionado.
 
