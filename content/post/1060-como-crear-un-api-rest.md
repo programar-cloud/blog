@@ -1,7 +1,13 @@
 ---
+<<<<<<< HEAD
 title: Cómo crear un API rest
 date: 2016-12-18T15:45:20+02:00
 description: "Vamos a diseñar el API de nuestro microservicio basándonos en REST."
+=======
+title: Cómo crear una API REST
+date: 2016-12-18T20:14:20+02:00
+description: "Vamos a diseñar la API de nuestro microservicio basándonos en REST."
+>>>>>>> c0acf060037e9a439fa83fb047c0a02ea132c931
 slug: como-crear-un-api-rest
 draft: false
 tags:
@@ -25,13 +31,13 @@ explicit : "no"
 
 
 disqus_identifier: como-crear-un-api-rest
-disqus_title: Cómo crear un API rest
+disqus_title: Cómo crear una API REST
 disqus_url: "https://programar.cloud/post/como-crear-un-api-rest"
 ---
 
 {{% img src="/media/banco_bengallagher.jpg" alt="un banco en el parque" %}}
 
-*TL:DR; Diseña un API de la misma manera que diseñas una pantalla: pensando en la comodidad de quien la va a utilizar, no en tu conveniencia.*
+*TL:DR; Diseña una API de la misma manera que diseñas una pantalla: pensando en la comodidad de quien la va a utilizar, no en tu conveniencia.*
 
 {{% archive "como-crear-un-api-rest" %}}
 
@@ -47,11 +53,11 @@ Bien, manos a la obra: tendremos que detectar los recursos a manipular, definir 
 
 ## Los recursos
 
-En la Wikipedia tienes una [buena descripción sobre REST](//wikipedia/https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional), no voy a  repetirte lo que hay allí: mi plan es ir contándote los detalles que hagan falta en el momento en el que los necesites, no adelantarlos todos para después aplicarlos. Es como a mi me gusta aprender. Pero si prefieres hacerte una idea de lo que vamos a hablar antes de seguir no te cortes y visita el link antes de continuar leyendo. Tampoco te preocupes si tu programación está un poco oxidada, verás que no hago mucho incapié en ese aspecto en este post.
+En la Wikipedia tienes una [buena descripción sobre REST](//wikipedia/https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional), no voy a  repetirte lo que hay allí: mi plan es ir contándote los detalles que hagan falta en el momento en el que los necesites, no adelantarlos todos para después aplicarlos. Es como a mí me gusta aprender. Pero si prefieres hacerte una idea de lo que vamos a hablar antes de seguir no te cortes y visita el link antes de continuar leyendo. Tampoco te preocupes si tu programación está un poco oxidada, verás que no hago mucho hincapié en ese aspecto en este post.
 
 Lo primero que tenemos que tener claro es que REST se estructura alrededor de **recursos**, las entidades que permites manipular. Esas entidades deben quedar representadas en la URL (la ruta) que se utiliza para ejecutar operaciones sobre ellas. Así que el primer paso es definir la lista de recursos y para ello vamos a echar un vistazo a la historia de usuario.
 
-El *administrador de cursos*, claramente, es un actor involucrado que en el fondo corresponderá a un tipo de *usuario*. No va a tener un papel relevante más allá de la autorización: qué operaciones puede invocar y a qué información tiene acceso. Así que de momento aparcamos su implementación. Esto generará una nueva tarea que consistirá en integrar el sistema de permisos en la funcionalidad que implementos ahora mismo pero ya la llevaremos a cabo más tarde. Lo comentamos con el resto del equipo, apuntan la nueva tarea y pasamos al siguiente paso.
+El *administrador de cursos*, claramente, es un actor involucrado que en el fondo corresponderá a un tipo de *usuario*. No va a tener un papel relevante más allá de la autorización: qué operaciones puede invocar y a qué información tiene acceso. Así que de momento aparcamos su implementación. Esto generará una nueva tarea que consistirá en integrar el sistema de permisos en la funcionalidad que implementemos ahora mismo pero ya la llevaremos a cabo más tarde. Lo comentamos con el resto del equipo, apuntan la nueva tarea y pasamos al siguiente paso.
 
 > Fíjate en algo importante: hemos pedido una aclaración. Qué loco. Durante el desarrollo.
 
@@ -67,9 +73,9 @@ Así que ya tenemos nuestra lista inicial de recursos: *curso* y *unidad-didacti
 
 ¡Son consultas, está bastante claro! En concreto confirmamos con el product owner que está interesado en poder visualizar datos del número de estudiantes que han participado en cada curso y también quiere ver el número de estudiantes que han participado en cada lección de un curso concreto entre un rango de fechas determinado.
 
-La aclaración no es muy diferente de lo que nos había comentado en la reunión de planificación así que decidimos que podemos implementarlo. Pero no tiene por qué ser así: si el trabajo de planficación fue pobre y fallamos en describir correctamente la tarea resulta imposible estimar su duración correctamente. **En ese caso la mejor opción es siempre crear nuevas tareas con los detalles extra que no se puedan asumir en este sprint y dejarlos pendientes para el siguiente**. 
+La aclaración no es muy diferente de lo que nos había comentado en la reunión de planificación así que decidimos que podemos implementarlo. Pero no tiene por qué ser así: si el trabajo de planificación fue pobre y fallamos en describir correctamente la tarea resulta imposible estimar su duración correctamente. **En ese caso la mejor opción es siempre crear nuevas tareas con los detalles extra que no se puedan asumir en este sprint y dejarlos pendientes para el siguiente**. 
 
-Si implementar el filtro hubiese supuesto mucho trabajo eso es exactamente lo que habríamos hecho. Y ¿sabes una cosa que a mi me sigue costando pero que poco a poco voy aprendiendo? Sí, exacto: a decir NO. Y es crítico hacerlo cuando estás en este tipo de desarrollo y se propone un cambio de funcionalides importante porque te has comprometido a muy corto plazo para completar una serie de tareas. Si tienes problemas enfrentándote a las peticiones del product owner, avisa al scrum master: sus responsabilidades incluyen además de hacer cafés el mantener la dinámica del sprint y (si es necesario) controlar las peticiones del product owner.
+Si implementar el filtro hubiese supuesto mucho trabajo eso es exactamente lo que habríamos hecho. Y ¿sabes una cosa que a mí me sigue costando pero que poco a poco voy aprendiendo? Sí, exacto: a decir NO. Y es crítico hacerlo cuando estás en este tipo de desarrollo y se propone un cambio de funcionalides importante porque te has comprometido a muy corto plazo para completar una serie de tareas. Si tienes problemas enfrentándote a las peticiones del product owner, avisa al scrum master: sus responsabilidades incluyen además de hacer cafés el mantener la dinámica del sprint y (si es necesario) controlar las peticiones del product owner.
 
 {{% imgur "dSwTHIA" "grumpy cat dice NO." %}}
 
@@ -93,7 +99,7 @@ Hay dos opciones. La primera sería añadir un mecanismo por el cual podamos esp
 * ```GET /cursos?proyeccion=titulo,actividad```
 * ```GET /cursos/actividad```
 
-¿Qué te parece mejor? Pues esa es la decisión correcta. En mi caso creo que la segunda opción se entiende mejor, es más legible sobre todo si más adelante tenemos que utilizar la querystring para alguna otra cosa. Y seguramente también tiene una semántica más fuerte. Así que optamos por ella. **Pero no deja de ser una decisión de diseño, defiéndola como tal**. Por coherencia seguimos la misma táctica con las unidades didácticas. Y nuestro API queda así:
+¿Qué te parece mejor? Pues ésa es la decisión correcta. En mi caso creo que la segunda opción se entiende mejor, es más legible sobre todo si más adelante tenemos que utilizar la querystring para alguna otra cosa. Y seguramente también tiene una semántica más fuerte. Así que optamos por ella. **Pero no deja de ser una decisión de diseño, defiéndela como tal**. Por coherencia seguimos la misma táctica con las unidades didácticas. Y nuestra API queda así:
 
 * ```GET /cursos/actividad```
 * ```GET /cursos/{codigo}/unidades-didacticas/actividad```
@@ -122,7 +128,7 @@ Pero recuerda que nadie nos ha pedido esta funcionalidad y que la mejor manera d
 
 ## Las respuestas
 
-Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor del API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma. 
+Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor de la API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma. 
 
 Por cierto, una cabecera HTTP es... no, espera, mejor dame unos días y preparo un vídeo para enseñarte cómo funciona HTTP si nunca te has puesto a jugar con él a bajo nivel. Lo que te enseño ahora es un ejemplo del posible resultado para ambas APIs para la petición ```/cursos/actividad?desde=2016-11-01T00:00:00-00:00&hasta=2000-10-31T23:59:59-00:00```
 
@@ -152,16 +158,16 @@ Por cierto, una cabecera HTTP es... no, espera, mejor dame unos días y preparo 
 ]
 ```
 
-El hecho de repetir el rango de fechas para cada curso es una decisión de diseño, de nuevo. El objetivo es facilitar la vida al desarrollador que utilice el API al devolverle objetos muy simples como respuestas en lugar de obligarle a crear una composición en la que un objeto *Curso* contenga instancias de tipo *Actividad*.
+El hecho de repetir el rango de fechas para cada curso es una decisión de diseño, de nuevo. El objetivo es facilitar la vida al desarrollador que utilice la API al devolverle objetos muy simples como respuestas en lugar de obligarle a crear una composición en la que un objeto *Curso* contenga instancias de tipo *Actividad*.
 
-> Una vez hayamos publicado esta versión del API estamos firmando un contrato: no vamos a poder cambiar el nombre y el tipo de ninguno de sus atributos.
+> Una vez hayamos publicado esta versión de la API estamos firmando un contrato: no vamos a poder cambiar el nombre y el tipo de ninguno de sus atributos.
 
-Y sobre todo recuerda que una vez hayamos publicado esta versión del API estamos firmando un contrato: no vamos a poder cambiar el nombre y el tipo de ninguno de sus atributos. Añadir nueva información puede ser aceptable pero a menos que quieras mantener varios proyectos que implementen distintas versiones del web service (ya te contaré cómo hacerlo si resulta inevitable) los nombres y tipos que hayas decidido aquí están para quedarse. Y si no me crees echa un vistazo a la cantidad de atributos repetidos (con distinto formato) en un tuit cualquiera. Por ejemplo, la propiedad *geo* está duplicada en *place* (en distintos formatos) y debería ir asociada a *location*. Pero los chiquitos que crearon el contrato se han portado bien y han resistido el impulso de refactorizarlo.
+Y sobre todo recuerda que una vez hayamos publicado esta versión de la API estamos firmando un contrato: no vamos a poder cambiar el nombre y el tipo de ninguno de sus atributos. Añadir nueva información puede ser aceptable pero a menos que quieras mantener varios proyectos que implementen distintas versiones del web service (ya te contaré cómo hacerlo si resulta inevitable) los nombres y tipos que hayas decidido aquí están para quedarse. Y si no me crees echa un vistazo a la cantidad de atributos repetidos (con distinto formato) en un tuit cualquiera. Por ejemplo, la propiedad *geo* está duplicada en *place* (en distintos formatos) y debería ir asociada a *location*. Pero los chiquitos que crearon el contrato se han portado bien y han resistido el impulso de refactorizarlo.
 
 {{% imgur "a96YFyM" "anatomía de un tuit, por raffi krikorian" %}}
 
 {{% activity %}}
-Pero ¿se te ocurre otro par de formatos que podrían ser útiles en nuestro caso? Venga, para un momento piensa un poco en ello. Luego sigue leyendo.
+Pero ¿se te ocurre otro par de formatos que podrían ser útiles en nuestro caso? Venga, para un momento y piensa un poco en ello. Luego sigue leyendo.
 {{% /activity %}}
 
 Yeeeeees. Estamos hablando de números, estadísticas. Y el product owner nos ha dicho que quiere dibujarlos, representarlos. Así que ¿por qué no ofreces la posibilidad de pedir un dibujo? Ya sabes, image/png, image/jpg... lo que sea. No es tan difícil, de nuevo tienes una lista enorme de librerías que te ayudan. De esta manera le estás facilitando enormente el trabajo de hacer una primera integración entre su producto y tu API.
@@ -191,13 +197,13 @@ Aparecerán unos bonitos mensajes (incluyendo el aviso de que el servidor de apl
 
 ```http://localhost:8080/cursos/introduccion/actividad```
 
-Verás también que si cambias los parámetros ¡obtienes exactamente el mismo resultado! Eso es porque solo está implementada la capa del Controlador, es decir, la que permite interaccionar con el exterior de la aplicación y que es la que define el API. Las reglas de negocio, la base de datos y el resto de componentes están simulados y nos dedicaremos a ellas más adelante. Es más, si pruebas la segunda dirección a fecha de hoy no te funcionará porque la he implementado todavía: no aporta mucho a lo que ya hemos explicado.
+Verás también que si cambias los parámetros ¡obtienes exactamente el mismo resultado! Eso es porque solo está implementada la capa del Controlador, es decir, la que permite interaccionar con el exterior de la aplicación y que es la que define la API. Las reglas de negocio, la base de datos y el resto de componentes están simulados y nos dedicaremos a ellas más adelante. Es más, si pruebas la segunda dirección a fecha de hoy no te funcionará porque no la he implementado todavía: no aporta mucho a lo que ya hemos explicado.
 
 Querrás comprobar también si los otros formatos de respuesta funcionan y para eso tienes que ser capaz de enviar cabeceras HTTP. Desde el navegador puedes hacerlo con extensiones como el súper conocido [Postman para Chrome](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) o el [Rest-easy para Firefox](https://addons.mozilla.org/es/firefox/addon/rest-easy/). En el vídeo en el que te hablaré de HTTP te enseño a usarlos. Si (como yo) eres un romántico o una romántica en realidad terminarás usando [the good old cUrl](https://curl.haxx.se/download.html).
 
 ## En el siguiente capítulo
 
-Recuerda: tengo un plan. Y el plan incluye empezar a hablar sobre tests tan rápido como sea posible porque son la única manera de asegurar la calidad de tu código. Nos dedicaremos a ello la semana que viene mientras gestionamos los posibles errores del API y alguna operación adicional. También hablaremos de documentación automática, algo crítico a la hora de facilitar la vida a tus usuarios. Y de HATEOAS y paginación. No, eso no va a caber. Lo dejaremos para la siguiente entrega. Pero ¡seguiremos implementando nuestro microservicio!
+Recuerda: tengo un plan. Y el plan incluye empezar a hablar sobre tests tan rápido como sea posible porque son la única manera de asegurar la calidad de tu código. Nos dedicaremos a ello la semana que viene mientras gestionamos los posibles errores de la API y alguna operación adicional. También hablaremos de documentación automática, algo crítico a la hora de facilitar la vida a tus usuarios. Y de HATEOAS y paginación. No, eso no va a caber. Lo dejaremos para la siguiente entrega. Pero ¡seguiremos implementando nuestro microservicio!
 
 ¡Ah! Y si no tienes clara alguna de las ideas que han ido saliendo (por ejemplo qué es JSON), dímelo. Tengo un plan, pero si no te gusta aquí tengo otros ;-)
 
