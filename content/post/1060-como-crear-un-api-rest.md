@@ -1,13 +1,7 @@
 ---
-<<<<<<< HEAD
-title: Cómo crear un API rest
-date: 2016-12-18T15:45:20+02:00
-description: "Vamos a diseñar el API de nuestro microservicio basándonos en REST."
-=======
 title: Cómo crear una API REST
 date: 2016-12-18T20:14:20+02:00
 description: "Vamos a diseñar la API de nuestro microservicio basándonos en REST."
->>>>>>> c0acf060037e9a439fa83fb047c0a02ea132c931
 slug: como-crear-un-api-rest
 draft: false
 tags:
@@ -26,7 +20,7 @@ episode : "12"
 audio : "https://ia601505.us.archive.org/2/items/como-crear-un-api-rest/como-crear-un-api-rest.mp3"
 media_bytes : "27620291"
 media_duration : "33:37"
-images : ["https://programar.cloud/post/como-crear-un-api-rest"]
+images : ["https://programar.cloud/media/banco_bengallagher.jpg"]
 explicit : "no"
 
 
@@ -37,7 +31,7 @@ disqus_url: "https://programar.cloud/post/como-crear-un-api-rest"
 
 {{% img src="/media/banco_bengallagher.jpg" alt="un banco en el parque" %}}
 
-*TL:DR; Diseña una API de la misma manera que diseñas una pantalla: pensando en la comodidad de quien la va a utilizar, no en tu conveniencia.*
+*TL:DR; Diseña un API de la misma manera que diseñas una pantalla: pensando en la comodidad de quien la va a utilizar, no en tu conveniencia.*
 
 {{% archive "como-crear-un-api-rest" %}}
 
@@ -128,7 +122,7 @@ Pero recuerda que nadie nos ha pedido esta funcionalidad y que la mejor manera d
 
 ## Las respuestas
 
-Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor de la API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma. 
+Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor del API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma. 
 
 Por cierto, una cabecera HTTP es... no, espera, mejor dame unos días y preparo un vídeo para enseñarte cómo funciona HTTP si nunca te has puesto a jugar con él a bajo nivel. Lo que te enseño ahora es un ejemplo del posible resultado para ambas APIs para la petición ```/cursos/actividad?desde=2016-11-01T00:00:00-00:00&hasta=2000-10-31T23:59:59-00:00```
 
