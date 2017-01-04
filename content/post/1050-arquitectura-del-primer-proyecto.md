@@ -14,7 +14,7 @@ tags:
 - springboot
 - ranting
 temas:
-- Proyecto
+- API
 niveles:
 - Intermedio
 
@@ -41,7 +41,7 @@ disqus_url: "https://programar.cloud/post/arquitectura-del-primer-proyecto"
 
 Primero voy a ponerme distintos gorritos para ir presentándote un proyecto. Lógicamente es una caricatura (espero que seas indulgente con los detalles) pero tendrá la suficiente complejidad como para que vayamos practicando los patrones de los que quiero hablar.<!--more-->
 
-Va a ser más divertido si pruebas las cosas que lees y si te paras a hacer las actividades que van saliendo. Y como siempre, no te cortes en los comentarios compartiendo problemas y experiencias. 
+Va a ser más divertido si pruebas las cosas que lees y si te paras a hacer las actividades que van saliendo. Y como siempre, no te cortes en los comentarios compartiendo problemas y experiencias.
 
 ## Los requerimientos
 
@@ -51,7 +51,7 @@ Bueno, en realidad lo que ha pasado es que [Josep](http://twitter.com/josep) me 
 
 {{% imgur glM0nyT "22 años después, la misma sensación" %}}
 
-El lunes por la mañana se lleva a cabo la reunión de planificación. El jefe toma el rol en este caso de *product owner* y ha hecho los deberes: viene con una serie de tareas en la lista del *product backlog* priorizadas según la importancia de cada una. El *equipo* invierte un tiempo discutiendo con él en qué consisten, aclarando el significado general y pidiendo café. Tampoco es un interrogatorio exhaustivo porque al fin y al cabo el *product owner* **irá contestando las dudas conforme vayan surgiendo**. El *scrum master* se pasa la reunión haciendo café para todos y masajeando la espalda de quienes lo piden. 
+El lunes por la mañana se lleva a cabo la reunión de planificación. El jefe toma el rol en este caso de *product owner* y ha hecho los deberes: viene con una serie de tareas en la lista del *product backlog* priorizadas según la importancia de cada una. El *equipo* invierte un tiempo discutiendo con él en qué consisten, aclarando el significado general y pidiendo café. Tampoco es un interrogatorio exhaustivo porque al fin y al cabo el *product owner* **irá contestando las dudas conforme vayan surgiendo**. El *scrum master* se pasa la reunión haciendo café para todos y masajeando la espalda de quienes lo piden.
 
 Tras aclarar el significado de cada tarea el equipo utiliza [cartas](//www.scrummanager.net/bok/index.php?title=Estimaci%C3%B3n_de_p%C3%B3quer) para estimar la duración de las que se encuentran al principio del product backlog y que por lo tanto son más importantes o urgentes. Por tercera vez se le comenta a uno de los juniors más jóvenes que [esa carta](http://albertofernandez.canaldenegocio.com/cartas-de-estimacion-agiles-scrum-para-el-verano/) no implica la ingestión de alcohol necesariamente.
 
@@ -114,7 +114,7 @@ En cualquier caso haré mucho hincapié en cómo se crea una API REST, en lo imp
 
 Para la persistencia utilizaremos PostgreSQL: es un producto maduro, tiene una comunidad y un soporte a toda prueba, puede desplegarse en AWS como base de datos gestionada (RDS) y es compatible con casi cualquier lenguaje de programación. No quiero convertir este blog en un curso generalista de programación así que no insistiré en que las bases de datos relacionales son en el fondo tecnología legacy del siglo pasado y que están pensadas para brillar en la época en la que los discos duros eran pequeños brazos robóticos que giraban sobre cilindros susceptibles a campos magnéticos. Solo lo comentaré por encima cinco o seis docenas de veces.
 
-> Ojo, no te equivoques: admiro muchísimo a dónde se ha conseguido llegar con un modelo de representación de datos tan pobre como las claves foráneas. 
+> Ojo, no te equivoques: admiro muchísimo a dónde se ha conseguido llegar con un modelo de representación de datos tan pobre como las claves foráneas.
 
 Ojo, no te equivoques: admiro muchísimo a dónde se ha conseguido llegar con un modelo de representación de datos tan pobre como las claves foráneas. Y desde luego cuando me jubile dentro de unas décadas seguirán teniendo un papel muy relevante, igual que COBOL. Pero si vamos a dedicar energía a esta capa física va a ser sobre todo porque por la naturaleza de la propia tecnología supondrá el cuello de botella más importante de todo el despliegue a nivel de rendimiento, escalabilidad y gestión.
 
@@ -138,8 +138,3 @@ pppd: He puesto otra tira de Dilbert. Y te lo digo de verdad: he trabajado con t
 ppppd: La foto de la barbacoa es de [Henrik Kniberg](https://twitter.com/henrikkniberg) y enseña cómo puedes utilizar [Kanban](https://es.wikipedia.org/wiki/Kanban_(desarrollo))  para organizar prácticamente cualquier cosa en esta vida. Tiene una presentación sobre [agilidad en casa](http://documents.tips/documents/henrik-kniberg-agile-at-home.html) espectacular. En [su blog](http://blog.crisp.se/2015/06/07/henrikkniberg/no-i-didnt-invent-the-spotify-model) puedes leer un montón de cosas interesantes sobre (por ejemplo) cómo funciona Spotify.
 
 pppppd: El gran [Tomàs Manzanares](//twitter.com/tomasmanz), compi en CAPSiDE, amigo y mi referente en el mundo del podcasting con su [Mossega](http://mossegalapoma.cat) y [Zetatesters](http://zetatesters.com) me aconsejó un enfoque diferente para esta parte del blog. El suyo era más emocionante (basado en *serverless*) pero al final he preferido hacer las cosas poco a poco porque me será más fácil estructurarlas. Espero no perderle como lector/oyente! Y vosotros, si no le escucháis, ya estáis tardando.
-
-
-
-
-

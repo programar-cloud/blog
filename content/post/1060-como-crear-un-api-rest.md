@@ -12,7 +12,7 @@ tags:
 - java
 - springboot
 temas:
-- Proyecto
+- API
 niveles:
 - Intermedio
 
@@ -67,7 +67,7 @@ Así que ya tenemos nuestra lista inicial de recursos: *curso* y *unidad-didacti
 
 ¡Son consultas, está bastante claro! En concreto confirmamos con el product owner que está interesado en poder visualizar datos del número de estudiantes que han participado en cada curso y también quiere ver el número de estudiantes que han participado en cada lección de un curso concreto entre un rango de fechas determinado.
 
-La aclaración no es muy diferente de lo que nos había comentado en la reunión de planificación así que decidimos que podemos implementarlo. Pero no tiene por qué ser así: si el trabajo de planificación fue pobre y fallamos en describir correctamente la tarea resulta imposible estimar su duración correctamente. **En ese caso la mejor opción es siempre crear nuevas tareas con los detalles extra que no se puedan asumir en este sprint y dejarlos pendientes para el siguiente**. 
+La aclaración no es muy diferente de lo que nos había comentado en la reunión de planificación así que decidimos que podemos implementarlo. Pero no tiene por qué ser así: si el trabajo de planificación fue pobre y fallamos en describir correctamente la tarea resulta imposible estimar su duración correctamente. **En ese caso la mejor opción es siempre crear nuevas tareas con los detalles extra que no se puedan asumir en este sprint y dejarlos pendientes para el siguiente**.
 
 Si implementar el filtro hubiese supuesto mucho trabajo eso es exactamente lo que habríamos hecho. Y ¿sabes una cosa que a mí me sigue costando pero que poco a poco voy aprendiendo? Sí, exacto: a decir NO. Y es crítico hacerlo cuando estás en este tipo de desarrollo y se propone un cambio de funcionalides importante porque te has comprometido a muy corto plazo para completar una serie de tareas. Si tienes problemas enfrentándote a las peticiones del product owner, avisa al scrum master: sus responsabilidades incluyen además de hacer cafés el mantener la dinámica del sprint y (si es necesario) controlar las peticiones del product owner.
 
@@ -75,12 +75,12 @@ Si implementar el filtro hubiese supuesto mucho trabajo eso es exactamente lo qu
 
 Bien, volvamos a las operaciones. Vamos a definir rutas que tengan cierta semántica y utilizaremos el plural para representar el recurso (en serio, hazlo, todo queda más natural). Recuerda (por lo que has leído en la Wikipedia) que en REST nos vamos a esforzar en utilizar la semántica original del protocolo HTTP para describir qué queremos hacer sobre esos recursos. Si repasas la [RFC de HTTP](https://tools.ietf.org/html/rfc2616#page-36) (no, en serio, hazlo, que es súper legible y sencilla) verás que para obtener un documento debe usarse el método ```GET```. También vamos a tomar la convención de que si una parte de la ruta es variable (para especificar un subconjunto del total de recursos) colocaremos su identificador entre llaves. Digamos que definimos estas operaciones:
 
-* ```GET /cursos``` 
+* ```GET /cursos```
 * ```GET /cursos/{codigo}/unidades-didacticas```
 
-La primera nos retornará la información de todos los cursos y la segunda información sobre las unidades didácticas de un curso concreto. Un ejemplo de la segunda URL en la que se ha aplicado un valor a la parte variable sería: 
+La primera nos retornará la información de todos los cursos y la segunda información sobre las unidades didácticas de un curso concreto. Un ejemplo de la segunda URL en la que se ha aplicado un valor a la parte variable sería:
 
-* ```/cursos/introduccion/unidades-didacticas``` 
+* ```/cursos/introduccion/unidades-didacticas```
 
 indicando que quieres conocer los datos de las unidades didácticas del curso con el código *introduccion*. Así que ¿qué te parece esta primera aproximación?
 
@@ -102,11 +102,11 @@ Bien, perfecto. Funcionará. Ahora tenemos que solucionar el *extra* del que hem
 
 * ```GET /cursos/actividad?desde={fechaInicial}&hasta={fechaFinal}```
 
-El formato para especificar fechas más popular es el de [ISO-8601](https://es.wikipedia.org/wiki/ISO_8601). Y vigila, porque ya sabes que en informática las fechas tienen siempre más peligro que una piraña en un bidé: almacena el dato siempre en UTC y solo cuando dibujes pantallas preséntalo en el formato local del usuario. O tendrás poblemas. Serios. 
+El formato para especificar fechas más popular es el de [ISO-8601](https://es.wikipedia.org/wiki/ISO_8601). Y vigila, porque ya sabes que en informática las fechas tienen siempre más peligro que una piraña en un bidé: almacena el dato siempre en UTC y solo cuando dibujes pantallas preséntalo en el formato local del usuario. O tendrás poblemas. Serios.
 
 Básicamente la UTC (Coordinated Universal Time acronimizado por alguien que llevaba dos cervezas de más) se determina a partir de las oscilaciones de más de 70 relojes atómicos y es en el fondo el valor reconocido internacionalmente como *fecha actual* independientemente de la zona horaria en la que te encuentres. Bien, filtro solucionado.
 
-Un inciso ¿tendría sentido una ruta de este estilo? 
+Un inciso ¿tendría sentido una ruta de este estilo?
 
 * ```/cursos/{codigo-curso}/unidades-didacticas/{numero-ul}/actividad```
 
@@ -114,7 +114,7 @@ Probablemente no: el resultado sería simplemente un número con el número de u
 
 * ```/cursos/{codigo-curso}/unidades-didacticas/{numero-ul}```
 
-Si te parece complicado, **piensa en pantallas para humanos**: posiblemente crearías una para visualizar la ficha de una unidad didáctica pero no para presentar tan solo la actividad que ha recibido. 
+Si te parece complicado, **piensa en pantallas para humanos**: posiblemente crearías una para visualizar la ficha de una unidad didáctica pero no para presentar tan solo la actividad que ha recibido.
 
 > La mejor manera de incrementar tu productividad es no hacer lo que nadie ha pedido.
 
@@ -122,7 +122,7 @@ Pero recuerda que nadie nos ha pedido esta funcionalidad y que la mejor manera d
 
 ## Las respuestas
 
-Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor del API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma. 
+Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor del API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma.
 
 Por cierto, una cabecera HTTP es... no, espera, mejor dame unos días y preparo un vídeo para enseñarte cómo funciona HTTP si nunca te has puesto a jugar con él a bajo nivel. Lo que te enseño ahora es un ejemplo del posible resultado para ambas APIs para la petición ```/cursos/actividad?desde=2016-11-01T00:00:00-00:00&hasta=2000-10-31T23:59:59-00:00```
 
@@ -178,14 +178,14 @@ El mismo razonamiento puedes hacer a la hora de *recibir* información en la pet
 
 En este post no voy a dar muchos detalles sobre ella, no es el objetivo que tengo aquí. En cuanto pueda montaré una serie de entradas especiales centradas específicamente en el desarrollo y como ya escuchaste en {{% ilink "arquitectura-del-primer-proyecto" "el capítulo anterior" %}} se basará en [Spring Boot](https://projects.spring.io/spring-boot/): este framework me tiene el corazón robado, bribón.
 
-Aquí tienes [el repositorio de código fuente](https://github.com/ciberado/controlactividad) y en este otro link encontrarás [el ejecutable ya compilado](https://github.com/ciberado/controlactividad/releases/download/como-crear-un-api-rest/controlactividad-0.0.1-SNAPSHOT.jar). Elige el camino con el que estés más cómodo para probarlo pero seguramente este último te será más sencillo si no has programado antes en java: solo tienes que instalar [el kit de desarollo](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) y desde línea de comando: 
+Aquí tienes [el repositorio de código fuente](https://github.com/programar-cloud/controlactividad/tree/1060) y en este otro link encontrarás [el ejecutable ya compilado](https://github.com/programar-cloud/controlactividad/releases/download/1060/controlactividad-0.0.1-SNAPSHOT.jar). Elige el camino con el que estés más cómodo para probarlo pero seguramente este último te será más sencillo si no has programado antes en java: solo tienes que instalar [el kit de desarollo](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) y desde línea de comando:
 
 ```bash
 cd <carpeta_en_la_que_tienes_el_jar>
 java -jar controlactividad-0.0.1-SNAPSHOT.jar
 ```
 
-Aparecerán unos bonitos mensajes (incluyendo el aviso de que el servidor de aplicaciones está listo para recibir peticiones) y dado que son consultas y por lo tanto utilizan el método GET de HTTP puedes probarlas desde tu navegador: 
+Aparecerán unos bonitos mensajes (incluyendo el aviso de que el servidor de aplicaciones está listo para recibir peticiones) y dado que son consultas y por lo tanto utilizan el método GET de HTTP puedes probarlas desde tu navegador:
 
 ```http://localhost:8080/cursos/actividad?desde=2016-11-01T00:00:00-00:00&hasta=2000-10-31T23:59:59-00:00```
 
@@ -210,6 +210,3 @@ ppd: La imagen del post ilustra perfectamente lo que quiero hacer una vez pase l
 pppd: Como casi siempre te dejo una tira de Dilbert. Por cierto, [la de esta semana](http://dilbert.com/strip/2016-12-12) es espectacular.
 
 ppppd: Simon Fodden escribió hace tiempo una interesante artículo sobre [la anatomía de un tuit](http://www.slaw.ca/2011/11/17/the-anatomy-of-a-tweet-metadata-on-twitter/) utilizando para ello el gráfico que has visto antes de [Raffi Krikorian](https://twitter.com/raffi).
-
-
-

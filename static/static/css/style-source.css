@@ -162,7 +162,15 @@ textarea {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
+    margin-bottom: 1em;
+    border: 1px solid #efefef;    
+}
+table td, table th {
+    padding : 4px 8px;
+}
+tr:nth-child(even) {
+    background-color: #fffaf4;
 }
 
 * {
