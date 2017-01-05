@@ -197,7 +197,7 @@ Querrás comprobar también si los otros formatos de respuesta funcionan y para 
 
 ## En el siguiente capítulo
 
-Recuerda: tengo un plan. Y el plan incluye empezar a hablar sobre tests tan rápido como sea posible porque son la única manera de asegurar la calidad de tu código. Nos dedicaremos a ello la semana que viene mientras gestionamos los posibles errores de la API y alguna operación adicional. También hablaremos de documentación automática, algo crítico a la hora de facilitar la vida a tus usuarios. Y de HATEOAS y paginación. No, eso no va a caber. Lo dejaremos para la siguiente entrega. Pero ¡seguiremos implementando nuestro microservicio!
+Recuerda: tengo un plan. Y el plan incluye empezar a hablar sobre tests tan rápido como sea posible porque son la única manera de asegurar la calidad de tu código. Nos dedicaremos a ello  {{% ilink "tests-de-integracion" "semana que viene" %}} mientras gestionamos los posibles errores de la API y alguna operación adicional. También hablaremos de documentación automática, algo crítico a la hora de facilitar la vida a tus usuarios. Y de HATEOAS y paginación. No, eso no va a caber. Lo dejaremos para la siguiente entrega. Pero ¡seguiremos implementando nuestro microservicio!
 
 ¡Ah! Y si no tienes clara alguna de las ideas que han ido saliendo (por ejemplo qué es JSON), dímelo. Tengo un plan, pero si no te gusta aquí tengo otros ;-)
 

@@ -3,7 +3,7 @@ title: Tests de integración
 date: 2017-01-06T08:14:20+02:00
 description: "Es imposible mantener la velocidad de despliegue si los errores no se detectan inmediatamente y tu herramienta para hacerlo es testear."
 slug: tests-de-integracion
-draft: true
+draft: false
 tags:
 - arquitectura
 - programación
@@ -16,12 +16,11 @@ niveles:
 - Intermedio
 
 episode : "13"
-audio : ""
-media_bytes : ""
-media_duration : ""
-images : ["1070-traffic-light-tree-william-warby.jpg"]
+audio : "https://ia801500.us.archive.org/11/items/tests-de-integracion/tests-de-integracion.mp3"
+media_bytes : "25133178"
+media_duration : "29:07"
+images : ["https://programar.cloud/media/1070-traffic-light-tree-william-warby.jpg"]
 explicit : "no"
-
 
 disqus_identifier: tests-de-integracion
 disqus_title: Tests de integración
@@ -35,7 +34,7 @@ disqus_url: "https://programar.cloud/post/tests-de-integracion"
 
 {{% archive "tests-de-integracion" %}}
 
-Voy a decirte por primera vez algo: no, no, en realidad llevo dándote la paliza con lo mismo desde el primer post y es que **el código tiene que estar en producción para que aporte valor**. Y el problema principal que te vas a encontrar si en lugar de una release al mes haces cuatro (o diez, o cien) es que tienes cuatro, diez o cien veces más oportunidades de liarla. Cualquier error que hayas introducido en tu código potencialmente puede terminar impactando al usuario mucho antes y provocar un retraso en cascada de nuevos despliegues. Voy a explicare cómo evitar esta situación y de paso también te contaré algunas cosas sobre las lechugas.<!--more-->
+Voy a decirte por primera vez algo: no, no, en realidad llevo dándote la paliza con lo mismo desde el primer post y es que **el código tiene que estar en producción para que aporte valor**. Y el problema principal que te vas a encontrar si en lugar de una release al mes haces cuatro (o diez, o cien) es que tienes cuatro, diez o cien veces más oportunidades de liarla. Cualquier error que hayas introducido en tu código potencialmente puede terminar impactando al usuario mucho antes y provocar un retraso en cascada de nuevos despliegues. Voy a explicarte cómo evitar esta situación y de paso también te contaré algunas cosas sobre las lechugas.<!--more-->
 
 ## Las restricciones de cualquier proyecto
 
@@ -67,7 +66,7 @@ Puedes hacerlo a mano. En serio. Hace poco me comentaron que el control de calid
 
 Y es que no te engañes: está genial tener un departamento de QA si tienes presupuesto para mantenerlo pero **la responsabilidad principal sobre las pruebas de un proyecto debe de recaer en su equipo de desarrollo**. Y precisamente es para evitar lo que te he contado y conseguir que tan rápido como se detecten los problemas las personas que tienen el contexto necesario para analizarlos y corregirlos puedan ponerse manos a la obra.
 
-Pero obviamente el equipo de devels tienen otros cosas que hacer que seguir hojas procedimentales para probar manualmente la aplicación. No sé, cosas como desarrollar y tal. De manera que vas a tener que automatizar los tests para conseguir que no estorben. Y en el fondo es la misma diferencia que encontrarás entre cultivar lechugas con robots o hacerlo de forma tradicional: o echas las ganas al principio o las pones para siempre. Los japos piensan fabricar 500.000 lechugas al día con el primer sistema y adivina [quiénes van a verse afectados por ello](http://www.grupomsc.com/espana-el-mayor-productor-de-lechugas-en-2015/). Amigo, amiga: no quieres ser la lechuga. Quieres trabajar con el robot que hace lechugas.
+Pero obviamente el equipo de devels tienen otros cosas que hacer que seguir hojas procedimentales para probar manualmente la aplicación. No sé, cosas como desarrollar y tal. De manera que vas a tener que automatizar los tests para conseguir que no estorben. Y en el fondo es la misma diferencia que encontrarás entre cultivar lechugas con robots o hacerlo de forma tradicional: o echas las ganas al principio o las pones para siempre. Los japos piensan fabricar 500.000 lechugas al día con el primer sistema automatizado de producción de lechugas y adivina [quiénes van a verse afectados por ello](http://www.grupomsc.com/espana-el-mayor-productor-de-lechugas-en-2015/). Amigo, amiga: no quieres ser la lechuga. Quieres trabajar con el robot que hace lechugas.
 
 Venga, una batallita: conocí hace años a una programadora que me contó que su marido llevaba semanas llegando a casa a las once de la noche. Sé lo que estáis pensando. Pero no. Que no, en serio: el chiquito era también programador y estaba contratado en un banco de tamaño mediano. Su trabajo, a partir de las seis de la tarde, consistía básicamente en mirar pantallas mientras una serie de tests se ejecutaban sobre la aplicación que estaban desarrollando. Y claro, era a las seis porque a esa hora los desarrolladores dejaban de añadir código y por lo tanto no cambiaban el comportamiento después de que el pobre chaval hubiese ejecutado el programa de pruebas asociado. Tardaba cuatro horas en completar el trabajo y después todavía tenía que arrastrarse hasta la estación de tren y cogerlo para llegar a casa.
 
@@ -75,7 +74,7 @@ Venga, una batallita: conocí hace años a una programadora que me contó que su
 
 Fíjate en la gran cantidad de cosas que se pueden hacer rematadamente mal en un párrafo tan pequeño. Para empezar no existía control de versiones y había que congelar el desarrollo para hacer las pruebas. O mejor dicho, congelar las pruebas hasta que desarrollo se fuese a casa. Y **los programadores no sentían como algo propio la responsabilidad de testear sistemáticamente la aplicación si no que lo delegaban en otra personita, con el impacto psicológico que esto tiene en cómo se hacen las cosas**. Pero lo más increíble es que aunque tenían programados los tests al final no se lanzaban sin intervención humana y no generaban un informe automáticamente: terminaba todo dependiendo de un par de ojos pendientes de la pantalla que confirmaban que todo estaba ok. De unos ojos muy cansados, mucho. Conectados a un cerebro que probablemente no dejaría de preguntarse qué estaba haciendo con su vida.
 
-Recordad, soy devel. Sé lo que piensas la primera vez que alguien nos dice  "¿dónde están los tests?". Esa primera vez solemos contestar "no tengo tiempo de escribir tests". Cuando lo cierto es que escribir tests es nuestro [fraking](https://youtu.be/r7KcpgQKo2I?t=22s) trabajo, es nuestra responsabilidad. Y es verdad, en un mundo perfectamente esférico muchos tests estarían escritos por las personas que mejor conocen el comportamiento de la aplicación (la gente de negocio, los usuarios finales, quienes sea) pero no estamos en un mundo de [vacas esféricas](http://ingenieriasimple.com/blog/blog/2010/01/05/el-chiste-del-ingeniero-el-fisico-y-el-matematico/). Ellos no van a escribir tests y como les intentes explicar lo naturalmente expresivo que es [cucumber](https://cucumber.io/) van a terminar llamando a seguridad. Así que por motivos prácticos los que harán ese trabajo son los que saben programador y en concreto aquellos que pueden aprovechar más rápidamente esos informes de error para corregir el código. Me vas pillando: el equipo de desarrollo lleva casi todas las papeletas para el sorteo.  Y sí, sí, mete también un equipo especializado en QA si te llega la pasta. Pero como algo complementario.
+Recordad, soy devel. Sé lo que piensas la primera vez que alguien nos dice  "¿dónde están los tests?". Esa primera vez solemos contestar "no tengo tiempo de escribir tests". Cuando lo cierto es que escribir tests es nuestro [fraking](https://youtu.be/r7KcpgQKo2I?t=22s) trabajo, es nuestra responsabilidad. Y es verdad, en un mundo perfectamente esférico muchos tests estarían escritos por las personas que mejor conocen el comportamiento de la aplicación (la gente de negocio, los usuarios finales, quienes sea) pero no estamos en un mundo de [vacas esféricas](http://ingenieriasimple.com/blog/blog/2010/01/05/el-chiste-del-ingeniero-el-fisico-y-el-matematico/). Ellos no van a escribir tests y como les intentes explicar lo naturalmente expresivo que es [cucumber](https://cucumber.io/) van a terminar llamando a seguridad. Así que por motivos prácticos los que harán ese trabajo son los que saben programar y en concreto aquellos que pueden aprovechar más rápidamente esos informes de error para corregir el código. Me vas pillando: el equipo de desarrollo lleva casi todas las papeletas para el sorteo.  Y sí, sí, mete también un equipo especializado en QA si te llega la pasta. Pero como algo complementario.
 
 > Un 10% de código comprobado es infinitamente mejor que un 0%, sobre todo si te centras en la parte que resulta más problemática y si te encargas de testear funcionalidad y no líneas de código.
 
@@ -90,7 +89,7 @@ Pero hey, mi intención hoy no era solo darte la brasa. ¡Quieres código y cód
 Te iba a explicar con detalle cada uno de estos tipos pero a la que he empezado a escribir me he dado cuenta de que no cabría en las tres mil palabras que me he puesto como límite en los posts. Así que vamos a centrarnos en el caso que podemos aplicar ya utilizando el código del post sobre {{%ilink "como-crear-un-api-rest" "creación de APIs"  %}} y dejaremos los demás para más adelante.
 
 {{% activity %}}
-Estás invitado a crear los flames que creas necesarios sobre las diferencias existentes entre pruebas de UI, end-to-end, pruebas funcionales y cualquier otra denominación que se te ocurra. No te cortes, yo me apunto a la fiesta.
+Estás invitado e invitada a crear los flames que creas necesarios sobre las diferencias existentes entre pruebas de UI, end-to-end, pruebas funcionales y cualquier otra denominación que se te ocurra. No te cortes, yo me apunto a la fiesta.
 {{% /activity %}}
 
 ## Todo tiene un precio
@@ -101,17 +100,17 @@ Tal y como estamos ahora un test de interfaz de usuario queda descartado: no la 
 
 Se trata de conocer cómo se comportan los componentes de tu sistema cuando los utilizas conjuntamente. Por ejemplo, si la clase que aplica las reglas de negocio para manipular las entidades que modificas es capaz de recuperarlas correctamente de la base de datos. O si el controlador que has escrito se comporta como debería cuando un cliente hace la petición HTTP correspondiente.
 
-Te puedes imaginar que esto no es tan barato como arrancar un pequeño objeto y ejecutar las operaciones que describen su comportamiento. Aquí estamos hablando de lanzar una copia (aunque sea simplificada) del despliegue final. Y lo tienes que hacer cada vez que vas a probar una operación determinada porque cada test tiene que encontrarse el sistema en un estado concreto y no es aceptable recibir influencia de la ejecución de otra prueba anterior.
+Te puedes imaginar que esto no es tan barato como arrancar un pequeño objeto y ejecutar las operaciones que describen su comportamiento. Aquí estamos hablando de lanzar una copia (aunque sea simplificada) del despliegue final. Y lo tienes que hacer cada vez que vas a probar una operación determinada porque cada test tiene que encontrarse el sistema en un estado concreto y no muchas veces no es aceptable recibir influencia de la ejecución de otra prueba anterior.
 
 {{% imgur "ipzXToB" "Típica respuesta de negocio a una explicación técnica" %}}
 
 Según la tecnología que uses para implementar tu código podrás conseguir este *reset* de una forma u otra. A veces tendrás que reiniciar el servidor completo, o tu programa. En el ejemplo de la aplicación que estamos montando lo que haremos será reconstruir el *contexto* de SpringBoot, lo que básicamente tiene el efecto de reiniciar el módulo que implementa el API sin tener que pasar por el *bootstrapping* completo de Tomcat. En cualquier caso es una tarea pesada y tendrás que llegar a un equilibrio entre la pureza del estado que buscas y la velocidad a la que quieres poder ejecutar las pruebas.
 
-Y sí, la base de datos suele ser un problema. Si los test de integración solo prueba la relación entre la capa de negocio (el código que efectúa la manipulación del modelo) y la capa de base de datos entonces suele ser posible  terminar cualquier transacción con un *rollback* para que no se consoliden los cambios. Pero si el test lo que hace es simular un cliente externo para entrar por el API y llegar hasta la cocina... ahí no hay forma práctica de utilizar ese truco porque por definición el inicio de la ejecución se encuentra fuera del servidor de aplicaciones y por lo tanto fuera del alcance la cualquier transacción. Proyectos como Docker pueden ayudar en algunos casos a permitir un comportamiento más natural instancia copias de la base de datos en pocos segundos... anda, apúntalo en la lista de temas pendientes.
+Y sí, la base de datos suele ser un problema. Si los test de integración solo prueba la relación entre la capa de negocio (el código que efectúa la manipulación del modelo) y la capa de base de datos entonces suele ser posible  terminar cualquier transacción con un *rollback* para que no se consoliden los cambios. Pero si el test lo que hace es simular un cliente externo para entrar por el API y llegar hasta la cocina... ahí no hay forma práctica de utilizar ese truco porque por definición el inicio de la ejecución se encuentra fuera del servidor de aplicaciones y por lo tanto fuera del alcance la cualquier transacción. Proyectos como Docker pueden ayudar en algunos casos a permitir un comportamiento más natural al permitir instanciar copias de la base de datos en pocos segundos... anda, apúntalo en la lista de temas pendientes.
 
 Sea como sea, y te lo digo muy en serio, ejecutar este tipo de tests puede llegar a ser realmente caro. De nuevo aplica pensamiento crítico y no confíes ciegamente en lo que lees (incluyendo lo que yo te cuento) y trata de poner en una balanza el esfuerzo que supondrá correr una batería de pruebas de este tipo y  el beneficio que obtendrás con ello. Estoy totalmente seguro de que querrás hacerlo antes de aprobar un cambio importante en una funcionalidad como parte de tu proceso de integración continua pero ¿querrás hacerlo también cada vez que haya un cambio pequeño realizado por una de las personas del equipo y que todavía no forme parte de la rama principal del código? Quizá. O quizá no.
 
-Con suerte tu código estará dividido en pequeñas piezas independientes lo que facilitará todo este proceso: los test a ejecutar vendrán delimitados de forma natural por el micro servicio en el que estés trabajando.
+Con suerte tu código estará dividido en pequeñas piezas independientes lo que facilitará todo este proceso: los tests a ejecutar vendrán delimitados de forma natural por el micro servicio en el que estés trabajando.
 
 ## Poner orden en casa del otro
 
@@ -137,7 +136,7 @@ Vamos a probar cómo se comporta, manualmente. Luego automatizaremos. Para compl
 http://localhost:8080/cursos/cultura/unidades-didacticas/actividad
 ```
 
-Deberías tener un resultado como el siguiente:
+Deberías tener poder ver algo así:
 
 {{% imgur "InZ09te" "Output esperado para text/html" %}}
 
@@ -158,7 +157,7 @@ Parece que somos felices, verdad. Pero no, no te engañes. Prueba esto: ```http:
 
 Pues aquí tienes otro punto que vas a comprobar cuando testeas APIs: los códigos de estado HTTP. Ahora te hago un resumen de los que te interesan como desarrollador o desarrolladora aunque hay algunos más como [Method not Allowed](http://www.checkupdown.com/status/E405_es.html), [Request time-out](http://www.checkupdown.com/status/E408_es.html), [Internal Server Error](http://www.checkupdown.com/status/E500_es.html), etc que con toda probabilidad serán generados automáticamente por el framework que utilices. Y como ya has visto el ```404``` puede aparecer tanto como resultado de una operación como por un error del lado del cliente.
 
-Recuerda: si el código de error empieza por 2 es que todo ha ido bien. Si empieza por 4 es que el usuario del API metió la pata. Si empieza por 5 es que algo ha ido muy mal.
+Recuerda: si el código de estado empieza por 2 es que todo ha ido bien. Si empieza por 4 es que el usuario del API metió la pata al llamar al API. Y si empieza por 5 es que algo ha ido muy mal por nuestra parte.
 
 | CÓDIGO&nbsp;&nbsp;          | NOMBRE           |SIGNIFICADO  
 |:---------------------------:|:-----------------|:-----------
@@ -178,7 +177,7 @@ Perfecto, ya tenemos dos temas controlados: que el API retorne la información q
 **Disclaimer**: amablemente varios de vosotros me habéis comentado que os sangran los ojos cuando leéis mi código y lo encontráis escrito en castellano. Y no es para menos, la verdad. Pero cuando doy formación suelo usar el idioma para hacer más fácil la distinción entre la parte que añadimos nosotros y la que viene proporcionada por el framework de turno. Dicho lo cual, si te veo escribiendo código en español me presentaré a las tres de la mañana en tu habitación para cantarte [Corazón Marinero](https://www.youtube.com/watch?v=XQ3ZrgYIIgc) al oído. Quien avisa no es traidor.
 {{% /warning %}}
 
-Puedes encontrar [bajo el tag 1070](https://github.com/programar-cloud/controlactividad/tree/1070) el código actualizado del proyecto incluyendo tests de integración. En este caso para poder probarlos necesitas descargar la [Maven](http://maven.apache.org/download.cgi) que es la herramienta utilizada para automatizar el procesamiento del código. Una vez la tengas en el ```PATH```de Windows coge el código fuente (con git o bien descargando [el fichero zip](https://github.com/programar-cloud/controlactividad/archive/1070.zip)). En cualquier caso entra en la carpeta del proyecto (la que contiene el fichero ```pom.xml```) y ejecuta:
+Puedes encontrar [bajo la rama 1070](https://github.com/programar-cloud/controlactividad/tree/1070) el código actualizado por el proyecto (incluyendo tests de integración). En este caso para poder probarlos necesitas descargar e instalar [Maven](http://maven.apache.org/download.cgi) que es la herramienta usada para automatizar el procesamiento del código. Una vez la tengas en el ```PATH``` de Windows consigue el código fuente (haciendo un clone con git o bien descargando y descomprimiendo [el fichero zip](https://github.com/programar-cloud/controlactividad/archive/1070.zip)). En cualquier caso entra en la carpeta del proyecto (la que contiene el fichero ```pom.xml```) y ejecuta:
 
 ```bash
 mvn verify
@@ -200,6 +199,8 @@ Bien, debería haber quedado bastante claro: somos capaces de probar nuestra API
 
 El siguiente paso para mejorar nuestro API va a ser crear una documentación mínima. Veremos cómo podemos hacerlo pero sobre todo insistiré en lo importante que es que se genere automáticamente para que sea práctica. Nos vemos en nada.
 
+Y de nuevo, recuerda: no seas la lechuga.
+
 jv
 
 pd: [Marcus](https://soundcloud.com/musicbymarcus/promo-music-inspiational) se encarga una vez más de la música de la entradilla. Sonríe.
@@ -211,3 +212,5 @@ pppd: Scott Adams tiene spyware instalado en mi ordenador: [hoy](http://dilbert.
 ppppd: Recuerda que Jack Nicholson termina mal en *Algunos hombres buenos*.
 
 pppppd: El nuevo límite oficia de los posts es de 4000 palabras, hasta que escriba otro que supere este número.
+
+ppppppd: Abrazo grande y kudos para [Fede Álvarez](https://blog.falvarez.es/) que me ha hecho la revisión y corrección del {{% ilink "como-crear-un-api-rest" "post anterior" %}} :D
