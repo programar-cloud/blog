@@ -1,6 +1,6 @@
 ---
 title: Tests de integración
-date: 2017-01-06T08:14:20+02:00
+date: 2017-01-05T08:14:20+02:00
 description: "Es imposible mantener la velocidad de despliegue si los errores no se detectan inmediatamente y tu herramienta para hacerlo es testear."
 slug: tests-de-integracion
 draft: false
@@ -27,7 +27,7 @@ disqus_title: Tests de integración
 disqus_url: "https://programar.cloud/post/tests-de-integracion"
 ---
 
-{{% img src="media/1070-traffic-light-tree-william-warby.jpg" alt="traffic light tree" %}}
+{{% img src="/media/1070-traffic-light-tree-william-warby.jpg" alt="traffic light tree" %}}
 
 
 *TL;DR: Es imposible mantener la calidad del producto si los errores no se detectan inmediatamente. Una de las herramientas más potentes que tienes son los tests.*
@@ -211,6 +211,6 @@ pppd: Scott Adams tiene spyware instalado en mi ordenador: [hoy](http://dilbert.
 
 ppppd: Recuerda que Jack Nicholson termina mal en *Algunos hombres buenos*.
 
-pppppd: El nuevo límite oficia de los posts es de 4000 palabras, hasta que escriba otro que supere este número.
+pppppd: El nuevo límite oficial de los posts es de 4000 palabras, hasta que escriba otro que supere este número.
 
 ppppppd: Abrazo grande y kudos para [Fede Álvarez](https://blog.falvarez.es/) que me ha hecho la revisión y corrección del {{% ilink "como-crear-un-api-rest" "post anterior" %}} :D
