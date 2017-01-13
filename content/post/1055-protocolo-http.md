@@ -38,6 +38,6 @@ Me habéis comentado que el capítulo sobre {{% ilink "como-crear-un-api-rest"  
 
 <!--more-->
 
-En ella hago un pequeño (pequeñísimo) repaso por el origen de la Web, comento su funcionamiento básico y detallo la semántica de sus principales métodos. También te enseño a utilizar [curl](http://www.confusedbycode.com/curl/) para invocar APIs, por si no te has peleado con él antes.
+En ella hago un pequeño (pequeñísimo) repaso por el origen de la Web, comento el funcionamiento básico del protocolo HTTP y detallo la semántica de los principales métodos. También te enseño a utilizar [curl](http://www.confusedbycode.com/curl/) para invocar APIs, por si no te has peleado con él antes.
 
 Enjoy
