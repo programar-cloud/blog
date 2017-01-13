@@ -34,7 +34,9 @@
       <title>{{ title .Title }}</title>
       <itunes:author>Javi Moreno</itunes:author>
       <itunes:summary>{{ .Description }}</itunes:summary>
-      <description>{{ .Description }}</description>
+      <description> 
+        {{ .Summary | plainify  }}
+      </description>
       {{if .Params.audio}}
       <enclosure url="{{ .Params.audio }}" length="{{ .Params.media_bytes}}" type="audio/mpeg" />
       <guid>{{ .Params.audio }}</guid>
