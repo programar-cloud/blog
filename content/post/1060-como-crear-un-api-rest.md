@@ -124,7 +124,7 @@ Pero recuerda que nadie nos ha pedido esta funcionalidad y que la mejor manera d
 
 Una vez solucionado el cómo invocamos la operación tenemos que decidir el formato en el que responderemos. Y sé lo que esperas: esperas que te diga que XML es muerte y hay que usar JSON. **Y lo cierto es que XML es muerte** pero si tu usuario (¡el consumidor del API!) trabaja con XML es tu responsabilidad darle esa opción: que sea él quien con por ejemplo la cabecera ```Accept``` de HTTP te indique qué prefiere. La enorme mayoría de frameworks del mundo permiten generar los dos formatos automáticamente así que ante todo mucha calma.
 
-Por cierto, una cabecera HTTP es... no, espera, mejor dame unos días y preparo un vídeo para enseñarte cómo funciona HTTP si nunca te has puesto a jugar con él a bajo nivel. Lo que te enseño ahora es un ejemplo del posible resultado para ambas APIs para la petición ```/cursos/actividad?desde=2016-11-01T00:00:00-00:00&hasta=2000-10-31T23:59:59-00:00```
+Por cierto, una cabecera HTTP es... no, espera, mejor échale un vistazo a este {{% ilink "protocolo-http" "vídeo que describe HTTP" %}} para entender los detalles de este protocolo. Lo que te enseño ahora es un ejemplo del posible resultado para ambas APIs para la petición ```/cursos/actividad?desde=2016-11-01T00:00:00-00:00&hasta=2000-10-31T23:59:59-00:00```
 
 ```json
 [
