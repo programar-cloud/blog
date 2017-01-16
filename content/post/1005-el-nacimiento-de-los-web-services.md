@@ -60,7 +60,7 @@ Este tipo de tecnología floreció en la segunda mitad de los 90 y de alguna man
 
 {{% img src="/media/batman-robin-corba.jpg" alt="batman enseña a robin a evitar corba" small="true" %}}
 
-En cualquier en esta primera generación de aplicaciones web corporativas se utilizaba HTTP para presentar las pantallas HTML a los usuarios pero internamente los nodos que componían el clúster servidor se comunicaban entre ellos usando referencias remotas.
+En cualquier caso en esta primera generación de aplicaciones web corporativas se utilizaba HTTP para presentar las pantallas HTML a los usuarios pero internamente los nodos que componían el clúster servidor se comunicaban entre ellos usando referencias remotas.
 
 Si no te queda muy claro no te preocupes, he montado un pequeño {{% ilink "programacion-distribuida-con-rmi" "screencast con una demo de RMI" %}}. No es que crea que vayas a utilizar mucho esta tecnología pero si te interesa Java necesitas conocerla por cultura general. Además sé que estás deseando coger el teclado y poder empezar a picar como si el mundo se terminase mañana así que cuando acabes de leer este post revisa el siguiente en el que incluyo el vídeo.
 
