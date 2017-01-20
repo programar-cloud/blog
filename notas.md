@@ -1,5 +1,9 @@
 # Notas para futuros capítulos (alerta Spoiler)
 
+## 1080 TESTS
+
+* http://yetanotherdevblog.com/introduction_to_spring_restdocs
+
 ## 1090 HATEOAS
 
 * https://www.infoq.com/articles/webber-rest-workflow

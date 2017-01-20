@@ -117,7 +117,7 @@ sub {
 pre {
     white-space: pre;
     white-space: pre-wrap;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 b,
@@ -164,7 +164,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 1em;
-    border: 1px solid #efefef;    
+    border: 1px solid #efefef;
 }
 table td, table th {
     padding : 4px 8px;
@@ -201,7 +201,7 @@ img {
 }
 
 .small {
-    width: 50% !important; 
+    width: 50% !important;
     margin-left: 25%;
 }
 
@@ -211,11 +211,11 @@ img {
 }
 
 .thumbnail {
-    display: block; 
-    max-width:50% !important;  
-    margin:1em auto; 
-    border : 1px solid silver; 
-    padding : 1em;    
+    display: block;
+    max-width:50% !important;
+    margin:1em auto;
+    border : 1px solid silver;
+    padding : 1em;
 }
 
 body {
@@ -913,8 +913,7 @@ pre {
     background-color: ghostwhite;
     padding: 1em;
     line-height: 1.4;
-    font-size: larger
-}
+}
 
 header,
 section,
@@ -1015,7 +1014,7 @@ footer>div,
 #logolink {
     display : inline-block;
     float : left;
-    margin-bottom: 1em;    
+    margin-bottom: 1em;
 }
 
 #logolink>img {
@@ -1276,7 +1275,7 @@ body>footer p {
         font-size: 1.1875em;
         line-height: 1.89474em
     }
-        
+
     #mainnav span.icon {
         margin-bottom: 0.125em
     }
@@ -1287,7 +1286,7 @@ body>footer p {
         line-height: 1.7;
         margin-left: -5px
     }
-    
+
     #logolink>img {
         text-align: center;
         width: 45%;
@@ -1295,9 +1294,9 @@ body>footer p {
     #logolink {
         display : inline-block;
         float : none;
-        margin-bottom: 0;    
+        margin-bottom: 0;
     }
-    
+
     h1 {
         margin: 0.5em 0 0.5em
     }
@@ -1317,9 +1316,9 @@ body>footer p {
     }
     #logolink {
         display:block;
-        text-align: center;        
+        text-align: center;
     }
-    
+
     #mainnav span.icon {
         font-size: 1.8em
     }
@@ -1401,7 +1400,7 @@ body>footer p {
     #comments:after {
         clear: both
     }
-    
+
 }
 
 @media screen and (min-width: 90em) {
@@ -1490,7 +1489,7 @@ body>footer p {
     #comments:after {
         clear: both
     }
-    
+
     #header {
         width: 20.83333%;
         -webkit-box-sizing: border-box;
@@ -1597,7 +1596,7 @@ body>footer p {
 
 html.loading  p {
     background-image: linear-gradient(transparent 50%, rgba(24, 101, 165, 0.10) 50%);
-    background-size: 1.5em 1.5em;    
+    background-size: 1.5em 1.5em;
     color  : transparent;
 }
 
