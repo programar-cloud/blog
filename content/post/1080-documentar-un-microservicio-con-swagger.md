@@ -27,7 +27,7 @@ disqus_title: Cómo documentar un microservicio incluyendo Swagger
 disqus_url: "https://programar.cloud/post/como-documentar-un-microservicio-con-swagger"
 ---
 
-{{% img src="media/1080-papiro-de-ani.jpg" alt="Papiro de Ani" %}}
+{{% img src="/media/1080-papiro-de-ani.jpg" alt="Papiro de Ani" %}}
 
 
 *TL;DR: Nos pagan por entregar valor. Invertir tiempo en crear documentos que nadie va a leer no tiene sentido pero publicar un API sin explicar cómo funciona es aún peor. Te cuento cómo encontrar el equilibrio entre ambos extremos y te explico por qué NO usarás Swagger (a medio plazo).*
