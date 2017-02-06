@@ -20,7 +20,7 @@ disqus_url: "https://programar.cloud/noticias/nuevo-podcast-en-capside"
 {{% img src="/media/microphone.jpg" alt="micrófono" %}}
 
 *TL:DR; ¡En la empresa hemos montado un podcast! En el primer episodio os cuento cómo
-aprobar el examen para ser AWS Certified Archictect - Professional Level.*
+aprobar el examen para ser AWS Certified Architect - Professional Level.*
 
 Sí, sí, me has pillado: no tengo listo el post de esta semana. ¡Mucha calma,
 no voy a dejarte sin turrón! Quizá no lo sabes pero [CAPSiDE](http://twitter.com/capside) es una potencia mundial en creación de podcast. Bueno, no CAPSiDE en sí, más bien los chiquitos que trabajamos allí. Y esta semana hemos empezado un proyecto oficial: [el #CapsideLAB podcast](https://play.uwhisp.com/capside). Como te comentaba más arriba en este primer capi te doy algunos trucos para sacarte la [segunda certificación más complicada de AWS](https://aws.amazon.com/es/certification/certified-solutions-architect-professional/). Aquí tienes el audio:

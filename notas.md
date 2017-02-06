@@ -1,10 +1,14 @@
 # Notas para futuros capítulos (alerta Spoiler)
 
-## 1080 TESTS
+## 1090 TESTS
 
 * http://yetanotherdevblog.com/introduction_to_spring_restdocs
+* https://scacap.github.io/spring-auto-restdocs/  
+* https://developer.github.com/v3/
 
-## 1090 HATEOAS
+## 1100 Paginación
+
+## 1110 HATEOAS
 
 * https://www.infoq.com/articles/webber-rest-workflow
 * https://blogs.oracle.com/craigmcc/entry/why_hateoas
