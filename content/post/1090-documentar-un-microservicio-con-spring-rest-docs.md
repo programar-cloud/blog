@@ -16,22 +16,22 @@ niveles:
 - Intermedio
 
 episode : "15"
-audio : ""
-media_bytes : ""
-media_duration : ""
-images : [""]
+audio : "https://ia601502.us.archive.org/17/items/como-documentar-con-spring-rest-docs/como-documentar-con-spring-rest-docs.mp3"
+media_bytes : "14786567"
+media_duration : "21:28"
+images : ["https://programar.cloud/media/1090-kindle-from-maxpixel.jpg"]
 explicit : "no"
 
 disqus_identifier: como-documentar-un-microservicio-con-spring-rest-docs
-disqus_title: Cómo documentar un microservicio sin Swagger
+disqus_title: Cómo documentar un microservicio con Spring REST Docs
 disqus_url: "https://programar.cloud/post/como-documentar-un-microservicio-con-spring-rest-docs"
 ---
 
-{{% img src="/media/1080-papiro-de-ani.jpg" alt="Papiro de Ani" %}}
+{{% img src="/media/1090-kindle-from-maxpixel.jpg" alt="Documentación electrónica" %}}
 
 *TL;DR: Genera documentación de forma casi automática, minimizando el repeat yourself casi a cero y estructurándola de forma que tenga sentido y coherencia. ¡Ah! Y llénala de ejemplos, maldita sea. Con Spring REST docs.*
 
-{{% archive "" %}}
+{{% archive "como-documentar-con-spring-rest-docs" %}}
 
 <!--more-->
 
@@ -197,11 +197,11 @@ Vale, ahora sí que ya te he contado todo lo que quería. Y perdona el retraso p
 
 jv
 
-pd: [Marcus](https://soundcloud.com/musicbymarcus) se encarga como siempre de la música del podcast. Porque nos hace sonreír.
+pd: [Marcus](https://soundcloud.com/musicbymarcus) se encarga como siempre de la música del podcast. Porque nos hace sonreír. La bonita foto del post la ceden como CC0 [los chiquitos de MaxPixel](http://maxpixel.freegreatpicture.com/Kindle-Device-Glasses-Paper-White-E-book-Book-785682). Kudos to them.
 
 ppd: En serio, sigue a [Jorge Aguilera](https://twitter.com/jagedn) en Twitter porque además de ser súper majo siempre anda metido en temas interesante. Desarrolla con Groovy, no te digo más.
 
-pppd: Estaré por la [Spring.IO 2017](TODO!) que se celebra en Barcelona el próximo mayo (2017). En algún momento te cuento más cosas sobre este evento pero si tienes pensado pasar por allí asegúrate de buscar al tipo calvo y atractivo que escribe este blog. Intentaremos conseguir cerveza.
+pppd: Estaré por la [Spring.IO 2017](http://2017.springio.net/) que se celebra en Barcelona el próximo mayo (2017). En algún momento te cuento más cosas sobre este evento pero si tienes pensado pasar por allí asegúrate de buscar al tipo calvo y atractivo que escribe este blog. Intentaremos conseguir cerveza.
 
 pppppd: Acuérdate de que compartir es amar y que publicando la dirección del blog o del podcast en tus redes sociales haces que llegue a más gente. En este punto no me vale lo de la pereza ;-)
 
