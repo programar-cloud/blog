@@ -160,7 +160,7 @@ Una característica que forma parte del diseño de SRESTD es que utilizas los te
 
 Soy un firme defensor de que la pereza en el caso de la programación es una virtud, no un defecto. Que te ayuda a escribir mejor código. Si quieres usar otra expresión para el mismo concepto aquí tienes una: [don't repeat yourself](https://es.wikipedia.org/wiki/No_te_repitas).
 
-Hace unos párrafos te he dicho que solucionaríamos este punto, así que vamos a ello porque resulta que hace solo unos días (literalmente) [Jurag Misur](https://twitter.com/juraj_misur) y [Florian Benz](https://twitter.com/flbenz) han publido el proyecto [Spring **Auto** REST Docs](https://github.com/ScaCap/spring-auto-restdocs) que elimina esa sobrecarga.
+Hace unos párrafos te he dicho que solucionaríamos este punto, así que vamos a ello porque resulta que hace solo unos días (literalmente) [Jurag Misur](https://twitter.com/juraj_misur) y [Florian Benz](https://twitter.com/flbenz) han publicado el proyecto [Spring **Auto** REST Docs](https://github.com/ScaCap/spring-auto-restdocs) que elimina esa sobrecarga.
 
 **Este proyecto utiliza introspección y análisis de código para extraer la información que tu API necesita** directamente del lugar en el que de forma más natural vas a codificarla.
 
@@ -183,7 +183,7 @@ cd target
 java -jar controlactividad-0.0.4-SNAPSHOT.jar
 ```
 
-Fíjate en cómo los parámetros de path y querystring quedan estupendamente documentados y cómo tienes ejemplos del resultado en json, HTML e imagen. Pero sobre todo fíjate en como puedes estructurar tu documentación como a ti te parezca más razonable, describiendo convenciones como qué semántica otorgas a PUT respecto a POST o cuándo vas a devolver una respuesta vacía o un estado 404. Sí, sí, amigo y amiga: tus usuarios van a ser fanes, van a adorarte, van a construirte un monumento. No literalmente y quizá ni siquiera conscientemente, lo sé. Pero ¡van a utilizar tu API! Van a usar tu producto. Es lo mismo.
+Fíjate en cómo los parámetros de path y querystring quedan estupendamente documentados y cómo tienes ejemplos del resultado en json, HTML e imagen. Pero sobre todo fíjate en como puedes estructurar tu documentación como a ti te parezca más razonable, describiendo convenciones como qué semántica otorgas a PUT respecto a POST o cuándo vas a devolver una respuesta vacía o un estado 404. Sí, sí, amigo y amiga: tus usuarios van a ser fans, van a adorarte, van a construirte un monumento. No literalmente y quizá ni siquiera conscientemente, lo sé. Pero ¡van a utilizar tu API! Van a usar tu producto. Es lo mismo.
 
 {{% imgur "0BGi2ke" "Tus usuarios aprendiendo tu API" %}}
 
