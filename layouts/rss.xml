@@ -34,7 +34,7 @@
       <title>{{ title .Title }}</title>
       <itunes:author>Javi Moreno</itunes:author>
       <itunes:summary>{{ .Description }}</itunes:summary>
-      <description> 
+      <description>
         {{ .Summary | plainify  }}
       </description>
       {{if .Params.audio}}
@@ -43,7 +43,7 @@
       {{end}}
       {{if .Params.video}}
       {{end}}
-      <link>{{ .Permalink }}</link>
+      <link>https://programar.cloud{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
       <itunes:duration>{{ .Params.media_duration}}</itunes:duration>
       <itunes:explicit>{{ .Params.explicit}}</itunes:explicit>
