@@ -3,7 +3,7 @@ title: Persistir el estado (Bases de datos, caches & cía)
 date: 2017-03-01T22:14:20+01:00
 description: "Datos, datos datos: hoy te cuento cómo guardarlos sin que a medio plazo tengas un problema de coste o escalabilidad."
 slug: persistir-el-estado-en-la-base-de-datos
-draft: false
+draft: true
 tags:
 - arquitectura
 - programación
