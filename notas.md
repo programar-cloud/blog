@@ -1,5 +1,7 @@
 # Notas para futuros capítulos (alerta Spoiler)
 
+* http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+
 ## 1100 HATEOAS
 
 * https://www.infoq.com/articles/webber-rest-workflow
