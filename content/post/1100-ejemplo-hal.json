@@ -1,0 +1,51 @@
+{
+  "codigo": "apirest",
+  "titulo": "Diseño de APIs",
+  "unidadesDidacticasCompletadas": 2000,
+  "_links" : {
+    "curies": [
+        { "name": "cl",
+          "href": "http://programar.cloud/relations/{rel}.html",
+          "templated": true
+        }
+    ],
+    "self" : { "href" : "/cursos/apirest",
+               "type" : "application/vnd.programarcloud.curso" },
+    "next" : { "href" : "/cursos/cultura",
+               "type" : "application/vnd.programarcloud.curso",
+               "title" : "Cultura DevOps" },
+    "previous" : { "href" : "/cursos/cloud",
+                   "type" : "application/vnd.programarcloud.curso",
+                   "title" : "Infraestructura cloud" },
+    "cl:inscribir" : { "href" : "/cursos/apirest/inscripciones",
+                       "type" : "application/vnd.programarcloud.curso",
+                       "title" : "Inscribirse" },
+  },
+  "_embedded" : {
+    "profesores" : [
+        { "email" : "javi@programar.cloud",
+          "nombre" : "Javi",
+          "_links" : {
+            "self" : { "href" : "/profesores/javi",
+                       "type" : "application/vnd.programarcloud.profesor" }
+          }
+        }
+    ],
+    "unidadesDidacticas" : [
+      { "numero" : 1,
+        "nombre" : "Arquitectura del primer proyecto",
+        "_links" : {
+          "self" : { "href" : "/cursos/apirest/unidades-didacticas/1",
+                     "type" : "application/vnd.programarcloud.unidaddidactica" }
+        }
+      },
+      { "numero" : 2,
+        "nombre" : "El protocolo HTTP",
+        "_links" : {
+          "self" : { "href" : "/cursos/apirest/unidades-didacticas/2",
+                     "type" : "application/vnd.programarcloud.unidaddidactica" }
+        }
+      }
+    ]
+  }
+}
