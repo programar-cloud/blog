@@ -29,9 +29,12 @@ disqus_url: "https://programar.cloud/post/como-implementar-hateoas-en-tus-apis"
 
 {{% img src="/media/1100-lidarose.jpg" alt="Documentación electrónica" %}}
 
+
 *TL;DR: Los hiperenlaces tienen un papel tan importante en las APIs como en las pantallas para humanos y sin embargo casi nunca se implementan correctamente. Te cuento cómo solucionar este problema.*
 
 {{% archive "como-documentar-con-spring-rest-docs" %}}
+{{% github "https://github.com/programar-cloud/controlactividad/tree/1100" %}}
+
 
 HATEAOS es un término inglés que traducido significa "Estoy desesperado buscando un acrónimo con gancho y no lo consigo encontrar". Pero detrás esta palabra encontrarás lo que durante veinte años ha sido el *core* de la web: el hipertexto, los enlaces.<!--more-->
 
@@ -85,7 +88,7 @@ Como somos muy ingenieros nos encantan los estándares. Y como no podía ser de 
 
 ## HAL (Hypertext Application Language)
 
-Básicamente una respuesta HAL se representa con el *MIME type* ```application/hal+json``` o ```application/hal+xml``` y no es tan complicada como puede parecerte a primera vista. Te dejo un ejemplo a continuación describiendo el curso de diseño de APIs REST (puedes abrirlo a pantalla completa pulsando [aquí](1100-ejemplo-hal.json) si te resulta más cómodo para visualizarlo):
+Básicamente una respuesta HAL se representa con el *MIME type* ```application/hal+json``` o ```application/hal+xml``` y no es tan complicada como puede parecerte a primera vista. Te dejo un ejemplo a continuación describiendo el curso de diseño de APIs REST (puedes abrirlo a pantalla completa pulsando [aquí](/1100-ejemplo-hal.json) si te resulta más cómodo para visualizarlo):
 
 ``` json
 {
@@ -109,7 +112,7 @@ Básicamente una respuesta HAL se representa con el *MIME type* ```application/h
                    "title" : "Infraestructura cloud" },
     "cl:inscribir" : { "href" : "/cursos/apirest/inscripciones",
                        "type" : "application/vnd.programarcloud.curso",
-                       "title" : "Inscribirse" },
+                       "title" : "Inscribirse" }
   },
   "_embedded" : {
     "profesores" : [
@@ -143,7 +146,7 @@ Básicamente una respuesta HAL se representa con el *MIME type* ```application/h
 
 Tranquilidad, mucha tranquilidad. Es largo pero fácil de entender. Para empezar explicita una serie de *propiedades* del objeto. Si estamos hablando de un curso podemos indicar el código, su título, etc.
 
-A continuación vienen los ```_links``` que relacionan ese objeto con los siguientes estados a los que se sugiere poder saltar. En el caso de un curso podría incluir enlaces para recuperar los datos del curso que actúa como pre-requisito de este o el que supone su continuació nnatural. Pero también el hipertexto que necesitamos para llevar a cabo una acción como puede ser inscribir a un estudiante en él. Por supuesto que podríamos buscar otro enfoque para representar este último caso (¿un ```PUT``` a un recurso *inscripción*, quizá?) pero el que te comento es perfectamente aceptable.
+A continuación vienen los ```_links``` que relacionan ese objeto con los siguientes estados a los que se sugiere poder saltar. En el caso de un curso podría incluir enlaces para recuperar los datos del curso que actúa como pre-requisito de este o el que supone su continuació natural. Pero también el hipertexto que necesitamos para llevar a cabo una acción como puede ser inscribir a un estudiante en él. Por supuesto que podríamos buscar otro enfoque para representar este último caso (¿un ```PUT``` a un recurso *inscripción*, quizá?) pero el que te comento es perfectamente aceptable.
 
 Fíjate en que la clave que describe cada link indica su *relación* con el nodo de destino: ```self, previous, next```, etc. El IANA ha creado una lista con [varias relaciones estandarizadas para REST](http://www.iana.org/assignments/link-relations/link-relations.xhtml) pero también puedes inventar las tuyas propias. La única obligatoria es ```href``` que indica siempre la url necesaria para recuperar el recurso actual. Otro atributo de la relación interesante es ```type```. Úsalo para describir la estructura del objeto que se recuperará usando el enlace y que seguramente indicarás usando el [vendor tree](https://en.wikipedia.org/wiki/Media_type#Vendor_tree).
 
@@ -225,7 +228,7 @@ No me ha dado tiempo de completar el enlace a ningún curso que no sea el primer
 
 ## Diseño de tipos y DTOs
 
-¿Recuerdas lo que te expliqué en el post sobre {{%ilink "como-crear-un-api-rest" "creación de APIs"%}}? Remarqué varias veces que tienes que pensar en tu usuario, en el programador o programadora que consuma tus servicios. Y que la vida de esa personita era mucho más fácil si recibía una respuesta que pudiese utilizar directamente: objetos sencillos, con información adicional como el criterio de filtrado utilizado en la *query* (fechas, en nuestro ejemplo).
+¿Recuerdas lo que te expliqué en el post sobre {{%ilink "como-crear-un-api-rest" "creación de APIs"%}}? Remarqué varias veces que tienes que pensar en tu usuario, en el programador o programadora que consume tus servicios. Y que la vida de esa personita era mucho más fácil si recibía una respuesta que pudiese utilizar directamente: objetos sencillos, con información adicional como el criterio de filtrado utilizado en la *query* (fechas, en nuestro ejemplo).
 
 Así que aunque no lo vimos en ese ejemplo concreto es muy posible que las clases con las que defines las respuestas de tus web services sean muy simples, sin asociaciones complejas ni herencia de ningún tipo. Este patrón lo llamamos [Data Transfer Objects](https://es.wikipedia.org/wiki/Objeto_de_Transferencia_de_Datos_(DTO)). Estos objetos no tienen un gran carga semántica, no encajan muy bien con nuestra visión de la realidad y solo sirven para mantener en memoria un grupo de propiedades simples. Y si los usas a todo la largo del código corres el peligro de perder potencia simbólica. Los humanos somos animalitos simbólicos, animalitos que nos basamos en el significado de las palabras y los conceptos. Sin una semántica fuerte es mucho más fácil perder la visión del diseño y terminar creando una aplicación con componentes redundantes.
 
@@ -271,9 +274,9 @@ for (UnidadDidactica ud : curso.getUnidadesDidacticas()) {
 
 Y hablando de tests... ¿cómo los implementamos? ¡Spring REST Docs for the win, por supuesto! Recuerda que ya tengo un {{% ilink "como-documentar-un-microservicio-con-spring-rest-docs" "post dedicado íntegramente a él"%}}.
 
-## Conclusiones y a otra cosa
+## Conclusiones
 
-Si quieres ver la aplicación de HAL en un caso real tienes que visitar [la documentación del API de Paypal](https://developer.paypal.com/docs/api/hateoas-links/). También encontrarás súper interesante el [explorador de Foxycart](https://api-sandbox.foxycart.com/hal-browser/browser.html#https://api-sandbox.foxycart.com/): es una aplicación web que termite aprender el API de esta plataforma de *ecommerce* navegando por ella. Seguramente es la demostración más directa que puedas encontrar sobre hasta qué punto el concepto de Hipermedia es interesante para crear aplicaciones orientadas a APIs.
+Si quieres ver la aplicación de HAL en un caso real tienes que visitar [la documentación del API de Paypal](https://developer.paypal.com/docs/api/hateoas-links/). También encontrarás súper interesante el [explorador de Foxycart](https://api-sandbox.foxycart.com/hal-browser/browser.html#https://api-sandbox.foxycart.com/): es una aplicación web que termite aprender el API de esta plataforma de *ecommerce* navegando por ella. **Seguramente es la demostración más directa que puedas encontrar sobre hasta qué punto el concepto de Hipermedia mejorará tu capacidad para crear aplicaciones orientadas a APIs**.
 
 No olvides supervitaminarte y mineralizarte. Y nos vemos dentro de nada hablando de autorización y autentificación de llamadas REST en... ¡programar.cloud!
 
@@ -285,15 +288,8 @@ ppd: En la foto que acompaña al post (hecha y compartida por [Lida](https://www
 
 pppd: Ok, ok, por un día abandono mi boicot a Scott Adams y sus tiras de Dilbert. No te pierdas este artículo sobre [cómo Trump le tiene hipnotizado](https://www.bloomberg.com/news/features/2017-03-22/how-dilbert-s-scott-adams-got-hypnotized-by-trump). ¡Es aún más largo que los míos! Y de una manera bastante elegante (aunque no sutil) explica su comportamiento y la visión algo cínica que tiene del mundo.
 
-pppd: He recuperado a nuestro vividor favorito directamente desde el artículo en el que hablaba {{% ilink "cloud-es-donde-se-ejecutan-las-aplicaciones" "sobre el cloud"%}}. Espero que no lo hayas echado de menos porque no se lo merece :)
+pppd: He recuperado a nuestro vividor favorito directamente desde el artículo en el que hacía {{% ilink "cloud-es-donde-se-ejecutan-las-aplicaciones" "una introducción al cloud"%}}. Espero que no lo hayas echado de menos porque no se lo merece :)
 
-ppppd: De nuevo, prometo intentar publicar con regularidad. Aunque ahora mismo no soy capaz de comprometerme sobre el significado de esa palabra. Pero leeros por [Twitter](http://twitter.com/ciberado) o cualquier otro medio me carga pilas para dedicarle un rato al blog.
+ppppd: De nuevo, prometo intentar publicar con regularidad. Aunque ahora mismo no soy capaz de comprometerme sobre el significado de esa palabra. Pero que sepáis que leeros por [Twitter](http://twitter.com/ciberado) o cualquier otro medio me carga pilas para dedicarle un rato al blog.
 
 pppppd: ¡Y acordaros de que compartir es ❤! ¡Pasadle el post a vuestros compis, usad la sección de comentarios, obligad a vuestra pareja a leerlo!
-
-
-
-
-
-
-.

@@ -19,7 +19,7 @@
                    "title" : "Infraestructura cloud" },
     "cl:inscribir" : { "href" : "/cursos/apirest/inscripciones",
                        "type" : "application/vnd.programarcloud.curso",
-                       "title" : "Inscribirse" },
+                       "title" : "Inscribirse" }
   },
   "_embedded" : {
     "profesores" : [
