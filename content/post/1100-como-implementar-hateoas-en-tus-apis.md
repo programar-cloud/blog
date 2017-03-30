@@ -29,12 +29,10 @@ disqus_url: "https://programar.cloud/post/como-implementar-hateoas-en-tus-apis"
 
 {{% img src="/media/1100-lidarose.jpg" alt="Documentación electrónica" %}}
 
-
 *TL;DR: Los hiperenlaces tienen un papel tan importante en las APIs como en las pantallas para humanos y sin embargo casi nunca se implementan correctamente. Te cuento cómo solucionar este problema.*
 
 {{% archive "como-documentar-con-spring-rest-docs" %}}
 {{% github "https://github.com/programar-cloud/controlactividad/tree/1100" %}}
-
 
 HATEAOS es un término inglés que traducido significa "Estoy desesperado buscando un acrónimo con gancho y no lo consigo encontrar". Pero detrás esta palabra encontrarás lo que durante veinte años ha sido el *core* de la web: el hipertexto, los enlaces.<!--more-->
 
@@ -74,7 +72,7 @@ Y ahora, un doble salto mortal con tirabuzón: Si te planteas el segundo ejemplo
 
 Vale, ok, calma. Lo que quería decir es que estarás relacionando un determinado recurso (*Game of Thrones*, en este caso) con los posibles siguientes estados: el cliente podría perfectamente saltar de una pantalla en la que muestra esta información a otra que lista los libros clasificados como *culebrones* siguiendo la relación *categoría*. O bien puede averiguar más datos sobre el autor navegando a la propiedad ```$.self.autor.self```.
 
-Generaliza esta idea y **tienes un mapa para representar las acciones que se pueden llevar a cabo desde cualquier lugar de tu API, quizá incluso sin que el cliente tenga que recordar información de contexto**. Y eso es BIEN porque de esta manera incluso tu cliente se convierte en *stateless*. Esto es lo que [Roy Fielding](https://es.wikipedia.org/wiki/Roy_Fielding) tenía en mente cuando creó REST en su [tesis doctoral](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) hace casi veinte años.
+Generaliza esta idea y **tienes un mapa para representar las acciones que se pueden llevar a cabo desde cualquier lugar de tu API, quizá incluso sin que el cliente tenga que recordar información de contexto**. Y eso es BIEN porque de esta manera incluso tu cliente se convierte en *stateless*. Esto es lo que [Roy Fielding](https://es.wikipedia.org/wiki/Roy_Fielding) tenía en mente cuando creó REST en su [tesis doctoral](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) hace casi veinte años. Porque sí: HATEOAS fue definido a los pocos años de que la web naciese.
 
 > Permiten crear unas aplicaciones más fiables desde el lado del cliente y más fáciles de actualizar en el servidor.
 
