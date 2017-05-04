@@ -1,9 +1,9 @@
 ---
 title: Cómo implementar HATEOAS en tus APIs
-date: 2017-03-17T22:14:20+01:00
+date: 2017-03-30T12:38:20+01:00
 description: "Te explico cómo crear APIs que aprovechen el modelo de hiperenlaces que ha hecho triunfar la web."
 slug: como-implementar-hateoas-en-tus-apis
-draft: true
+draft: false
 tags:
 - arquitectura
 - programación
@@ -16,10 +16,10 @@ niveles:
 - Intermedio
 
 episode : "16"
-audio : ""
-media_bytes : ""
-media_duration : ""
-images : [""]
+audio : "https://ia801509.us.archive.org/17/items/como-implementar-hateaoas-en-tus-apis/como-implementar-hateaoas-en-tus-apis.mp3"
+media_bytes : "21469452"
+media_duration : "28:36"
+images : ["/media/1100-lidarose.jpg"]
 explicit : "no"
 
 disqus_identifier: como-implementar-hateoas-en-tus-apis
@@ -27,7 +27,7 @@ disqus_title: Cómo implementar HATEOAS en tus APIs
 disqus_url: "https://programar.cloud/post/como-implementar-hateoas-en-tus-apis"
 ---
 
-{{% img src="/media/1100-lidarose.jpg" alt="Documentación electrónica" %}}
+{{% img src="/media/1100-lidarose.jpg" alt="Multiversos enlazados" %}}
 
 *TL;DR: Los hiperenlaces tienen un papel tan importante en las APIs como en las pantallas para humanos y sin embargo casi nunca se implementan correctamente. Te cuento cómo solucionar este problema.*
 

@@ -3,7 +3,7 @@ relativeurls=true
 title = "Programar en cloud"
 languageCode = "es-ES"
 disqusShortname = "programarcloud"
-copyright = "Copyright (c) 2016, Javi Moreno; Creative Commons sobre el contenido creado."
+copyright = "Copyright (c) 2016-2017, Javi Moreno; Creative Commons sobre el contenido creado."
 MetaDataFormat = "yaml"
 
 [author]
