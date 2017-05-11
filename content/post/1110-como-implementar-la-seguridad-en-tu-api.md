@@ -3,7 +3,7 @@ title: "Cómo implementar la seguridad de tu API"
 date: 2017-04-25T12:38:20+01:00
 description: "Todo lo que quisiste saber y siempre te dio pereza preguntar sobre seguridad en web services."
 slug: como-implementar-la-seguridad-en-tu-api
-draft: false
+draft: true
 tags:
 - arquitectura
 - programación
@@ -27,7 +27,7 @@ disqus_url: "https://programar.cloud/post/como-implementar-la-seguridad-en-tu-ap
 
 {{% img src="/media/1110-authorized-only.jpg" alt="Beware of the cat" %}}
 
-*TL;DR: Basic auth solo sirve para conseguir un token, que puede ser un API Key o un JWT. OAuth2 sirve para delegar, no para autentificar. Y todo tiene que ir por TLS. ¡Ah! Y nada de cookies. Ok, ahora me explico.*
+*TL;DR: Basic auth solo sirve para conseguir un token, que puede ser un API Key o un JWT. OAuth2 sirve para delegar, no para autenticar. Y todo tiene que ir por TLS. ¡Ah! Y nada de cookies. Ok, ahora me explico.*
 
 {{% archive "" %}}
 
@@ -54,7 +54,7 @@ Es decir, palabras que tienes que conocer. Recuerda que mientras más palabra co
 
 {{% imgur "ZPB8x7T" "Acéptalo de una vez"%}}
 
-**Clave simétrica**: la típica contraseña usada para encriptar, la de toda la vida. La que tienes que compartir con la personita que debe desencriptar. Y eso es malo porque la seguridad del sistema ya no depende solo de ti: si esa persona la compromete (típicamente escribiéndola en un post-it), estás vendido.
+**Clave simétrica**: la típica contraseña usada para encriptar, la de toda la vida. La que tienes que compartir con la personita que debe desencriptar. Y eso es malo porque la seguridad del sistema ya no depende solo de ti: si esa persona la compromete (típicamente escribiéndola en un post-it), estás vendido. Además, como me comenta el gran [Humbert](https://twitter.com/ackhum), gestionar claves simétricas cuando tienes que repartirlas a N personas es inviable.
 
 **AES-256**: Un algoritmo de clave simétrica muy popular y ampliamente utilizado. Tu micro tiene instrucciones de bajo nivel que ayudan a implementarlo con lo resulta muy barato computacionalmente.
 
@@ -66,7 +66,7 @@ Es decir, palabras que tienes que conocer. Recuerda que mientras más palabra co
 
 **SSL/TLS**: es una forma de cifrar un canal de transmisión sin que los usuarios del mismo tengan que hacer nada especial. Es lo que por ejemplo utilizas cuando te conectas por ```https``` a un servidor: el servidor te envía un *certificado* con información sobre él mismo y con una clave pública. El navegador se inventa una clave simétrica de sesión y la encripta usando la clave pública que obtuvo del certificado que le había mandado el servidor. Una vez hecho la puede enviar al servidor sin miedo a que nadie excepto él pueda descifrarla y a partir de ese momento el resto de intercambios se lleva a cabo utilizando la clave simétrica.
 
-**Firma de documento**: básicamente consiste en calcular un número a partir del contenido del documento más una clave (que puede ser simétrica o asimétrica) y compartir ese número con el destinatario de los datos. Solo los conocedores de la clave pueden comprobar la validez del número en el otro extremo por lo que de esta manera se garantiza tanto el origen como la integridad del mensaje porque cualquier cambio en el mismo daría lugar a otro número completamente diferente.
+**Firma de documento**: básicamente consiste en calcular un número a partir del contenido del documento más una clave (que puede ser simétrica o asimétrica) y compartir ese número con el destinatario de los datos. Solo los conocedores de la clave pueden comprobar la validez del número en el otro extremo por lo que de esta manera se garantiza tanto el origen como la integridad del mensaje porque cualquier cambio en el mismo daría lugar a otro número completamente diferente. Por cierto, Humbert me recuerda que [MD5 no se considera seguro](http://www.zdnet.com/article/md5-password-scrambler-no-longer-safe/) para firmar documentos ni guardar passwords.
 
 Aquí tienes una primera regla, por lo tanto:
 
@@ -74,19 +74,19 @@ Aquí tienes una primera regla, por lo tanto:
 TODO EL TRÁFICO QUE TRANSMITAS POR UNA RED QUE NO CONTROLES DEBE IR CIFRADO OBLIGATORIAMENTE. Y POSIBLEMENTE SI CONTRALAS LA RED TAMPOCO ESTÁ DE MÁS. ASÍ, EN MAYÚSCULAS Y NEÓN.
 {{% /important %}}
 
-**Autentificación**: es el proceso por el que un cliente o usuario demuestra que es quien dice que es. En una aplicación tradicional para humanos utilizas típicamente usuario/password para generar una identificador de sesión que se envía automáticamente en forma de *cookie* a cada petición. Más tarde verás que esta segunda parte es una MALA IDEA para un API.
+**autenticación**: es el proceso por el que un cliente o usuario demuestra que es quien dice que es. En una aplicación tradicional para humanos utilizas típicamente usuario/password para generar una identificador de sesión que se envía automáticamente en forma de *cookie* a cada petición. Más tarde verás que esta segunda parte es una MALA IDEA para un API.
 
 **Autorización**: se trata de averiguar si quien ha realizado una petición tiene permiso o no para llevarla a cabo. Típicamente coges su identidad y revisas una lista de acciones asociadas a la misma. Pero luego verás que si somos astutos esa lista de acciones puedes mandarla junto a la identidad.
 
-**Delegación**: aka *federación*. Es un mecanismo por el cual un usuario tiene permisos en dos sistemas distintos con dos autentificaciones diferentes y el sistema A pide al sistema B que le permita el acceso haciéndose pasar (impersonando) a ese usuario. El sistema B pregunta al usuario si está de acuerdo y si todo el mundo es feliz a partir de ahí el sistema A accede al B sin tener que molestarle más. Lo has hecho mil veces cada vez que te registras en una web con las credenciales de Google o de Facebook y es para lo que sirve ese infierno de especificación llamado OAuth2. En este artículo no voy a hablar sobre este tema. Hey, relax, ya llegará.
+**Delegación**: aka *federación*. Es un mecanismo por el cual un usuario tiene permisos en dos sistemas distintos con dos icaciones diferentes y el sistema A pide al sistema B que le permita el acceso haciéndose pasar (impersonando) a ese usuario. El sistema B pregunta al usuario si está de acuerdo y si todo el mundo es feliz a partir de ahí el sistema A accede al B sin tener que molestarle más. Lo has hecho mil veces cada vez que te registras en una web con las credenciales de Google o de Facebook y es para lo que sirve ese infierno de especificación llamado OAuth2. En este artículo no voy a hablar sobre este tema. Hey, relax, ya llegará.
 
-**Principal**: la entidad que estás autentificando. Por ejemplo, la usuario Alice.
+**Principal**: la entidad que estás autenticando. Por ejemplo, la usuario Alice.
 
 **Realm**: los mecanismos de protección que tiene un determinado recurso. Normalmente se trata de una lista de usuarios que representan a los correspondientes *principals* junto a los permisos que tienen cada uno.
 
-Vale, ya tienes un vocabulario digno de un consultor. Ahora vamos a ver cómo funcionaba el proceso de autentificación en una aplicación web clásica.
+Vale, ya tienes un vocabulario digno de un consultor. Ahora vamos a ver cómo funcionaba el proceso de autenticación en una aplicación web clásica.
 
-## ¿Cómo funciona la autentificación en webapps?
+## ¿Cómo funciona la autenticación en webapps?
 
 Oye, que igual te estás preguntando ¿pero qué tiene de malo el viejo buen sistema de username/password? En realidad, por sí mismo, no tiene nada de malo. El problema viene cuando empiezas a pensar en el workflow clásico que se ha utilizado desde tiempos inmemoriales para acceder a una web y lo comparas con lo que necesitas para invocar un API.
 
@@ -94,17 +94,17 @@ Un rápido repaso en el que obviamente utilizamos SSL/TLS para codificar la comu
 
 {{% imgur "rHNS1yr" "Alice quiere un gato" %}}
 
-1. Alice llega y abre la página que requiere autentificación.
+1. Alice llega y abre la página que requiere autenticación.
 2. El servidor no sabe nada sobre ella así que retorna un código HTTP 401 (no autorizada)
 3. El navegador le muestra a Alice una cajita para que escriba su nombre de usuario
 4. Alice rellena los datos con el username ("Alice") y el password ([pongamos que es "bragasdeesparto"](https://www.youtube.com/watch?v=DfQDXgI4vZg)).
 5. El navegador concatena el nombre, un ":" y el password en una única cadena. Después aplica la función *base64* sobre ella (el resultado es *QWxpY2U6YnJhZ2FzZGVlc3BhcnRv*). Le prefija con la palabra "Basic " y la envía al servidor utilizando la cabecera HTTP *Authorization*. Ojo, base64 es obviamente [un algoritmo reversible](https://es.wikipedia.org/wiki/Base64) así que más te vale utilizar TLS (https) para que nadie sepa lo que estáis intercambiando.
-6. El servidor recibe la nueva petición, examina la cabecera y recupera la identidad del usuario y su password. Comprueba en el *realm* correspondiente que todo está en orden (**autentificando** al usuario) y revisa que tiene permiso para acceder al recurso que ha pedido (el proceso de **autorización**). Si es así lo transmite al navegador pero también genera un número único temporal (pongamos en nuestro juego que es "1234") denominado *identificador de sesión* y que se añade a la respuesta en forma de *cookie* (deliciosa galletita).
+6. El servidor recibe la nueva petición, examina la cabecera y recupera la identidad del usuario y su password. Comprueba en el *realm* correspondiente que todo está en orden (**autenticando** al usuario) y revisa que tiene permiso para acceder al recurso que ha pedido (el proceso de **autorización**). Si es así lo transmite al navegador pero también genera un número único temporal (pongamos en nuestro juego que es "1234") denominado *identificador de sesión* y que se añade a la respuesta en forma de *cookie* (deliciosa galletita).
 7. El navegador le muestra la respuesta a Alice.
 8. Alice pulsa en un enlace que la redirige a otro recurso protegido. Junto a la petición se incluye **automáticamente** el ID de sesión del que hablábamos antes porque una cookie se envía siempre en todas las peticiones al servidor que la generó sin intervención manual.
-9. El servidor recibe el valor de la cookie de sesión y recupera los datos de autentificación y autorización del usuario al que se le asignó, con lo que ya podemos repetir el ciclo las veces que queramos.
+9. El servidor recibe el valor de la cookie de sesión y recupera los datos de autenticación y autorización del usuario al que se le asignó, con lo que ya podemos repetir el ciclo las veces que queramos.
 
-## ¿Cómo funciona la autentificación en APIs?
+## ¿Cómo funciona la autenticación en APIs?
 
 Te puedes imaginar que **cuando estamos hablando de acceder a un API en lugar de cargar una pantalla este flujo tiene varios problemas importantes**.
 
@@ -124,7 +124,7 @@ Ahí está el problema real de las galletas: no tienes control sobre el momento 
 
 {{% imgur PfXzpjM "Dame una cookie"%}}
 
-En otras palabras, cada vez que necesitamos invocar un API incluiremos una cabecera que permita identificar al consumidor (usuario o programa) que la realiza. El nombre de la cabecera suele ser ***Authorization***, algo que no deja de provocar confusión porque en el fondo la estás usuando para autentificar. Aunque esto no deja de ser una convención y en ocasiones verás como se utiliza ```X-Access-Key``` o cualquier otro nombre arbitrario.
+En otras palabras, cada vez que necesitamos invocar un API incluiremos una cabecera que permita identificar al consumidor (usuario o programa) que la realiza. El nombre de la cabecera suele ser ***Authorization***, algo que no deja de provocar confusión porque en el fondo la estás usuando para autenticar. Aunque esto no deja de ser una convención y en ocasiones verás como se utiliza ```X-Access-Key``` o cualquier otro nombre arbitrario.
 
 ¿Y qué es lo que vamos a enviar como valor? Aquí depende un poco de la implementación que hayas elegido. Te cuento los mecanismos más comunes.
 
@@ -136,7 +136,7 @@ Esta llave puede intercambiarse en el momento en el que el humano responsable de
 
 {{% imgur jD3maMU "Gimme all the keys" %}}
 
-En cambio si el cliente es un humano utilizando una webapp esta forma de generar la clave no es práctica porque **lo que en el fondo quieres autentificar no es la aplicación sino a cada usuario individual que la está usando en ese momento**. Lo normal en este caso es que la primera interacción del usuario se lleve a cabo contra un servicio específico de autentificación al que le mandará el típico username/password y que se encargará de generar el *API key* dinámicamente exclusivo para esa sesión. Como te decía hace un rato en el fondo estamos replicando el mecanismo de las *cookies* pero de manera controlada.
+En cambio si el cliente es un humano utilizando una webapp esta forma de generar la clave no es práctica porque **lo que en el fondo quieres autenticar no es la aplicación sino a cada usuario individual que la está usando en ese momento**. Lo normal en este caso es que la primera interacción del usuario se lleve a cabo contra un servicio específico de autenticación al que le mandará el típico username/password y que se encargará de generar el *API key* dinámicamente exclusivo para esa sesión. Como te decía hace un rato en el fondo estamos replicando el mecanismo de las *cookies* pero de manera controlada.
 
 Aunque utilices TLS para asegurar la confidencialidad de la comunicación en ocasiones querrás aumentar la seguridad para evitar ataques de tipo [man in the middle](TODO!) en los que el súpervillano de turno coloca una trampa a lo largo del camino de tus datos haciéndose pasar por el destino de los mismos y de esta manera tiene acceso al contenido desencriptado de las comunicaciones... incluyendo el *API key*.
 
@@ -169,7 +169,7 @@ El JWT es solo una evolución del API Key. Básicamente en lugar de solo transmi
 
 Vale, vale: técnicamente son dos documentos diferentes, la cabecera y el *payload* o contenido. El primero explicita que esto es JWT y que se firmará usando *HS256* ([HMAC SHA-256](https://es.wikipedia.org/wiki/HMAC#Ejemplos_de_HMAC_.28MD5.2C_SHA1.2C_SHA256.29)), luego te cuento más sobre esto.
 
-En nuestro caso hemos decidido incluir en el documento de *payload* un identificar de usuario (*sub* por *subject*) e información adicional que nos parece interesante: el nombre humano y sus permisos de autorización. Y esto es importante porque de esa manera desde el lado del servidor ya no tendrás que consultar ninguna fuente externa para obtener esos datos: implementas el mantenimiento del estado de la autentificacíón en el cliente que envía la cabecera. En este link puedes ver [la lista de campos estándar](https://en.wikipedia.org/wiki/JSON_Web_Token#Standard_fields).
+En nuestro caso hemos decidido incluir en el documento de *payload* un identificar de usuario (*sub* por *subject*) e información adicional que nos parece interesante: el nombre humano y sus permisos de autorización. Y esto es importante porque de esa manera desde el lado del servidor ya no tendrás que consultar ninguna fuente externa para obtener esos datos: implementas el mantenimiento del estado de la autenticación en el cliente que envía la cabecera. En este link puedes ver [la lista de campos estándar](https://en.wikipedia.org/wiki/JSON_Web_Token#Standard_fields).
 
 También vas a necesitar un password (simétrico o asimétrico según lo que indiques en el campo ```alg``` de la cabecera) entre cliente y servidor. Lo llamaremos el *secret* y será utilizado para firmar:
 
@@ -192,7 +192,7 @@ Puedes usar [el depurador de jwt.io](https://jwt.io) para comprobar el resultado
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFsaWNlIHdvbmRlcmxhbmQiLCJyb2xlcyI6WyJkZXZlbCIsImRlcGxveWVyIl19.0ghVcvXMrSA6UQyqxhHPicpPwpvbHod77QCuMFRr4Qw
 ```
 
-Ahora solo tienes que fijar como valor del *header* ```Authorization``` la palabra *bearer* seguida de dicho token. Esto es solo una forma de seguir el estándar HTTP que indica que tras el nombre de la cabecera puedes especificar el protocolo de autentificación utilizado... y JWT define el mismo como *bearer*.
+Ahora solo tienes que fijar como valor del *header* ```Authorization``` la palabra *bearer* seguida de dicho token. Esto es solo una forma de seguir el estándar HTTP que indica que tras el nombre de la cabecera puedes especificar el protocolo de autenticación utilizado... y JWT define el mismo como *bearer*.
 
 ```
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMj
@@ -202,7 +202,7 @@ lcGxveWVyIl19.0ghVcvXMrSA6UQyqxhHPicpPwpvbHod77QCuMFRr4Qw
 
 ¡Fíjate bien! JWT no va encriptado, solo codificado en base64. Así que todo lo que hemos comentado sobre súpervillanos capaces de aprovechar un *man in the middle* sigue siendo válido.
 
-## ¿Dónde implemento la autentificación?
+## ¿Dónde implemento la autenticación?
 
 ¡Buena pregunta! Básicamente tienes tres opciones: integrarla en cada uno de tus microservicios, usar una solucion SaaS o centralizarla en API gateways.
 
@@ -214,7 +214,7 @@ La tercera opción merece un apartado para ella sola.
 
 ## ¿Qué es un API gateway?
 
-Un API gateway es un programa que actúa como filtro HTTP. Un proxy, vamos. Pero con funcionalidades que te ayudan a mejorar la utilización los consumidores hacen tus APIs. Típicamente puedes delegar en ellos la autentificación, caching, la cuotas de uso (por ejemplo en forma de número máximo de llamadas por segundo), la generación de métricas, etc. Y para usarlo solo tienes que colocarlo como puerta de entrada a tus microservicios.
+Un API gateway es un programa que actúa como filtro HTTP. Un proxy, vamos. Pero con funcionalidades que te ayudan a mejorar la utilización los consumidores hacen tus APIs. Típicamente puedes delegar en ellos la autenticación, caching, la cuotas de uso (por ejemplo en forma de número máximo de llamadas por segundo), la generación de métricas, etc. Y para usarlo solo tienes que colocarlo como puerta de entrada a tus microservicios.
 
 > Al ser un componente independiente la gobernanza de la seguridad se vuelve mucho más sencilla.
 
@@ -244,20 +244,25 @@ Como me descuide en las postdatas vuelvo a llegar a las 4000 palabras, así que 
 
 - Términos básicos de seguridad
 - Diferencias entre aplicaciones web clásicas y API oriented
-- Mecanismos de autentificación más populares (JWT & API keys)
+- Mecanismos de autenticación más populares (JWT & API keys)
 - Métodos de despliegue (descentralizado y API Gateway)
 
 Y nos quedaría por implementar algún ejemplo práctico. Si te parece bien voy a dejar la parte de desarrollo para cuando monte el curso estrictamente de programación pero como te decía a poco que pueda grabaré un pequeño vídeo sobre cómo instalar [Kong](https://getkong.org) y configurar la seguridad mediante *API keys*. Si quieres más detalles en [CAPSiDE](https://capside.com) tenemos un curso específico sobre este tema, coméntamelo si estás interesado.
 
+¿Todavía con ganas de leer más sobre este tema? Échale un vistazo a la página del [OWASP sobre protección de APIs](https://www.owasp.org/index.php/Top_10_2017-A10-Underprotected_APIs).
+
 En cualquier caso la seguridad es completamente crítica en cualquier sistema y recuerda lo que te he dicho al principio: añadirla a posteriori siempre sale muy caro.
 
-JWT para nodejs: https://www.jsonwebtoken.io/
-JWT para springboot: https://auth0.com/blog/securing-spring-boot-with-jwts/
+Bueno, nos vemos dentro de nada. Y acordaros de que cada vez que publicáis en Twitter o Linked-in un link al blog yo os quiero un poquito más. Y que a la izquierda del post (o debajo, si estás con el móvil) tienes links para hacerlo cómodamente.
 
-.
+jv
 
-ps: Aparentemente el origen etimológico de password de Paz Padilla es la frase "eres más basta que unas bragas de esparto".
+ps: Como siempre la música es del bueno de  [Marcus](https://soundcloud.com/musicbymarcus) y oye, te la voy a poner enterita en el podcast. La imagen la publica [Geralt en Pixebay](https://pixabay.com/es/users/geralt-9301/).
 
-pps: Imprescindible site en el que se ofrecen todo tipo de [detalles sobre las cookies](http://www.recetacookies.com/).
+pps: Aparentemente el origen etimológico del password de Paz Padilla es la frase "eres más basta que unas bragas de esparto".
 
-ppps: El diagrama de Trump in the Middle se basa en el [artículo sobre MitM](https://es.wikipedia.org/wiki/Ataque_de_intermediario) de la Wiki con un toque de [Nei Ruffino ](http://toolkitten.deviantart.com/art/PoliticsGQ-594831165). En serio, échale un ojo a sus ilustraciones.
+ppps: Imprescindible site en el que se ofrecen todo tipo de [detalles sobre las cookies](http://www.recetacookies.com/).
+
+pppps: El diagrama de Trump in the Middle se basa en el [artículo sobre MitM](https://es.wikipedia.org/wiki/Ataque_de_intermediario) de la Wiki con un toque de [Nei Ruffino ](http://toolkitten.deviantart.com/art/PoliticsGQ-594831165). En serio, échale un ojo a sus ilustraciones.
+
+ppppps: Y last but not least ¡mil gracias otra vez a [Humbert](https://twitter.com/ackhum) y [Loïc](https://twitter.com/monsenyor) por sus aportaciones al post! Son más majos que las pesetas y saben mucho más sobre seguridad que yo :)

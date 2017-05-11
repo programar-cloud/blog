@@ -15,7 +15,7 @@ temas:
 niveles:
 - Intermedio
 
-episode : "16"
+episode : "17"
 audio : "https://ia801509.us.archive.org/17/items/como-implementar-hateaoas-en-tus-apis/como-implementar-hateaoas-en-tus-apis.mp3"
 media_bytes : "21469452"
 media_duration : "28:36"
