@@ -36,7 +36,7 @@ Como decía la semana pasada, hoy vamos a hablar de seguridad. ¡La semana pasad
 
 > Y puede que hasta pienses que este tema es algo de lo que principalmente se debería encargar la gente de sistemas [...]. Pues lo siento, eso no va a funcionar.
 
-Primero, recuerda: yo también era developer antes de [meterme en la farándula](TODO! linkedin). Sé lo poco interesante que pueden parecer los aspectos relacionados con la seguridad y lo mucho que puede llegar intimidarte tener que pelear con ellos. Y puede que hasta pienses que este tema es algo de lo que principalmente se debería encargar a la gente de sistemas, que lo tuyo es hacer que pasen cosas. Pues lo siento, eso no va a funcionar.
+Primero, recuerda: yo también era developer antes de [meterme en la farándula](https://www.linkedin.com/in/javier-more/). Sé lo poco interesante que pueden parecer los aspectos relacionados con la seguridad y lo mucho que puede llegar intimidarte tener que pelear con ellos. Y puede que hasta pienses que este tema es algo de lo que principalmente se debería encargar a la gente de sistemas, que lo tuyo es hacer que pasen cosas. Pues lo siento, eso no va a funcionar.
 
 Primer *disclaimer*: como ya te habrás dado cuenta casi no estoy hablando de infraestructura en el blog. Y este artículo no va a ser una excepción pero desde luego **tienes que tener muy presente que la configuración de tu red, reglas de enrutado, firewalls y credenciales de infraestructura son totalmente críticos si quieres mantener seguro tu sistema**. Pero esa parte la dejamos para más adelante, ahora me centro solo en los conceptos de desarrollo.
 
