@@ -14,11 +14,11 @@ temas:
 niveles:
 - Intermedio
 
-episode : "20"
-audio : ""
-media_bytes : ""
-media_duration : ""
-images : [""]
+episode : "21"
+audio : "https://ia601505.us.archive.org/34/items/como-implementar-la-seguridad-en-tu-api-parte-2/1110b-como-implementar-la-seguridad-en-tu-api-parte-2.mp3"
+media_bytes : "17070930"
+media_duration : "23:10"
+images : ["/media/1110b-authorized-only.jpg"]
 explicit : "no"
 
 disqus_identifier: "como-implementar-la-seguridad-en-tu-api-parte-2"
@@ -30,7 +30,7 @@ disqus_url: "https://programar.cloud/post/como-implementar-la-seguridad-en-tu-ap
 
 *TL;DR: Access key/Secret key es un mecanismo de autentificación muy popular pero JWT tiene ventajas al proporcionar más información sobre el usuario. Puedes centralizar la seguridad utilizando un API Gateway o implementarla en todos y cada uno de tus microservicios.*
 
-{{% archive "" %}}
+{{% archive "https://ia601505.us.archive.org/34/items/como-implementar-la-seguridad-en-tu-api-parte-2/1110b-como-implementar-la-seguridad-en-tu-api-parte-2.mp3" %}}
 
 Vale, esta es la segunda parte del {{% ilink "como-implementar-la-seguridad-en-tu-api-parte-1" "post en el que hablo de seguridad" %}} desde el punto de vista del desarrollador. Nos vamos a centrar en explicar tanto el acceso mediante Access Key como los detalles sobre JSON Web Token y hablaremos de las alternativas que tienes a la hora de implementar la autenticación incluyendo el uso de API gateways. ¡No lo pierdas!
 <!--more-->
