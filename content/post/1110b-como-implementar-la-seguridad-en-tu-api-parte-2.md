@@ -3,7 +3,7 @@ title: "Cómo implementar la seguridad de tu API (Segunda parte)"
 date: 2017-06-10T12:38:20+01:00
 description: "Todo lo que quisiste saber y siempre te dio pereza preguntar sobre seguridad en web services."
 slug: como-implementar-la-seguridad-en-tu-api-parte-2
-draft: true
+draft: false
 tags:
 - arquitectura
 - programación
@@ -135,7 +135,7 @@ Por el lado negativo tienes que tener en cuenta que si el súpervillano consigue
 
 {{% imgur bHtTRMK "AWS Api Gateway"%}}
 
-Vale, quiero uno. ¿Cómo lo instalo? Dependiendo de tu infraestructura puedes desplegarlos de varias maneras. Por ejemplo, si te gusta frotarte contra el hardware físico y te apetece quemar dinero estoy seguro de que puedes [configurar un F5](https://f5.com/resources/white-papers/authentication-101) para que te funcione como tal. Pero también podrías hacer [algo más productivo](https://www.medicosdelmundo.org/) con ese dinero.
+Vale, quiero uno. ¿Cómo lo instalo? Dependiendo de tu infraestructura puedes desplegarlos de varias maneras. Por ejemplo, si te gusta frotarte contra el hardware físico y te apetece quemar dinero estoy seguro de que puedes [configurar un F5](https://f5.com/products/big-ip/secure-web-gateway-services-swgs) para que te funcione como tal. Pero también podrías hacer [algo más productivo](https://www.medicosdelmundo.org/) con ese dinero.
 
 Si estás en cloud público tienes productos con estos roles. No entro (hoy) en detalles pero en AWS tienes un relativamente digno [API gateway](https://aws.amazon.com/es/api-gateway/) y en Azure encontrarás un muy completo [API management](https://azure.microsoft.com/es-es/services/api-management/) que Microsoft integró tras comprar la empresa *Apiphany* hace unos años. Son servicios gestionados, lo que siempre es BIEN. En la parte negativa está el precio (relativamente caro) y la latencia que añaden.
 

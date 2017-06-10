@@ -34,9 +34,12 @@ disqus_url: "https://programar.cloud/post/como-implementar-la-seguridad-en-tu-ap
 Como decía la semana pasada, hoy vamos a hablar de seguridad. ¡La semana pasada! ¿Lo pillas? Ay... en serio, he echado de menos escribiros y espero que vosotros también os hayáis acordado de mi. Para compensar vuelvo con un capítulo súper práctico y detallado que espero que aclare todas las dudas que tienes sobre un pilar fundamental de tu arquitectura como es la seguridad. Vamos a ello.
 <!--more-->
 
-> Y puede que hasta pienses que este tema es algo de lo que principalmente se debería encargar la gente de sistemas [...]. Pues lo siento, eso no va a funcionar.
+**Ojo cuidado: ¡este artículo tiene {{% ilink "como-implementar-la-seguridad-en-tu-api-parte-2" "segunda parte" %}} sobre JWT y API gateways!**
+
 
 Primero, recuerda: yo también era developer antes de [meterme en la farándula](https://www.linkedin.com/in/javier-more/). Sé lo poco interesante que pueden parecer los aspectos relacionados con la seguridad y lo mucho que puede llegar intimidarte tener que pelear con ellos. Y puede que hasta pienses que este tema es algo de lo que principalmente se debería encargar a la gente de sistemas, que lo tuyo es hacer que pasen cosas. Pues lo siento, eso no va a funcionar.
+
+> Y puede que hasta pienses que este tema es algo de lo que principalmente se debería encargar la gente de sistemas [...]. Pues lo siento, eso no va a funcionar.
 
 Primer *disclaimer*: como ya te habrás dado cuenta casi no estoy hablando de infraestructura en el blog. Y este artículo no va a ser una excepción pero desde luego **tienes que tener muy presente que la configuración de tu red, reglas de enrutado, firewalls y credenciales de infraestructura son totalmente críticos si quieres mantener seguro tu sistema**. Pero esa parte la dejamos para más adelante, ahora me centro solo en los conceptos de desarrollo.
 
@@ -132,7 +135,7 @@ En otras palabras, cada vez que necesitamos invocar un API incluiremos una cabec
 
 ## ¿Qué viene a continuación?
 
-¡Access Keys y JWT! Pero este artículo ha quedado larguísimo y muy denso así que déjame que lo divida en dos partes: la siguiente hablará específicamente de estos dos temas. Nos leemos en nada (en serio: ya lo tengo escrito ;-)).
+El artículo ha quedado muy largo así que ¡te lo he dividido en dos partes! En la siguiente te cuento cómo usar {{% ilink "como-implementar-la-seguridad-en-tu-api-parte-2" "Access keys, JWT y API gateways" %}}. No te lo pierdas.
 
 jv
 
