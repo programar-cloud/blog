@@ -93,7 +93,7 @@ Vale, ya tienes un vocabulario digno de un consultor. Recuerda pedir un aumento.
 
 Oye, que igual te estás preguntando ¿pero qué tiene de malo el viejo buen sistema de username/password? En realidad, por sí mismo, no tiene nada de malo. El problema viene cuando empiezas a pensar en el workflow clásico que se ha utilizado desde tiempos inmemoriales para acceder a una web y lo comparas con lo que necesitas para invocar un API.
 
-Un rápido repaso en el que obviamente utilizamos SSL/TLS para codificar la comunicación:
+Un rápido repaso en el que obviamente utilizamos SSL/TLS para <strike>codificar</strike> cifrar la comunicación:
 
 {{% imgur "rHNS1yr" "Alice quiere un gato" %}}
 

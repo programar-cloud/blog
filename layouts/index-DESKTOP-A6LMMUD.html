@@ -23,21 +23,12 @@
     {{ range first 10 .Data.Pages }}
         {{ .Render "summary"}}
     {{ end }}
-    <div>        
+    <div>
        <a href='/post'><nobr>Ver todos los posts</nobr></a>
     </div>
   </div>
 
 </section>
-    
-    
-    <!-- CURSOS
-    <aside id="meta">
-        <ul id="all-tags">
-          {{ range $name, $taxonomy := .Site.Taxonomies.temas }}
-            <li><a href="{{ "/tags/" | relURL }}{{ $name | urlize }}">{{ $name }}</a></li>
-          {{ end }}
-        </ul>
-    </aside>
-    -->
+
+
 {{ partial "footer.html" . }}

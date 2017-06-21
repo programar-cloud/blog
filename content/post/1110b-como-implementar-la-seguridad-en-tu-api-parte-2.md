@@ -169,3 +169,7 @@ pd: Como siempre la música es del bueno de  [Marcus](https://soundcloud.com/mus
 ppd: El diagrama de Trump in the Middle se basa en el [artículo sobre MitM](https://es.wikipedia.org/wiki/Ataque_de_intermediario) de la Wiki con un toque de [Nei Ruffino ](http://toolkitten.deviantart.com/art/PoliticsGQ-594831165). En serio, échale un ojo a sus ilustraciones.
 
 pppd: ¡Oh! Y muchas gracias a [Félix Sanz](https://twitter.com/felixsanzm) por invitarme a usar [Photon](https://photon.sh/) :D Es un *syntax highlighter* súper fácil de integrar con Hugo que formatea el código incrustado para que quede estupendísimo. Échale un ojo que es gratis y funciona muy bien!
+
+{{% important %}}
+ppppd: Esto es para [Jorge](https://twitter.com/jagedn), que echa de menos el neón ;-)
+{{% /important %}}
