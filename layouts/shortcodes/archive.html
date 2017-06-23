@@ -1,4 +1,27 @@
+<style>
+div.dettached p {
+  visibility : hidden;
+}
+div.dettached audio {
+  position : fixed;
+  top: 0;
+  left: 0;
+}
+</style>
 <div class="embed audio-player">
-<audio src="{{ .Page.Params.audio }}" controls preload="none"></audio>
-<p>alojado en <a href="https://archive.org/embed/{{ index .Params 0 }}">archive.org</a></p>
+  <audio src="{{ .Page.Params.audio }}" controls preload="none"></audio>
+  <p style="float: left;">
+    <button class="dettacher">&#x2723; (expand)</button>
+  </p>
+  <p>alojado en <a href="https://archive.org/embed/{{ index .Params 0 }}">archive.org</a></p>
 </div>
+<script>
+(function() {
+  document
+    .querySelectorAll('.dettacher')
+    .forEach(elem => elem.onclick = function() {
+        var div = this.parentElement.parentElement;
+        div.className  += ' dettached'
+    });
+})();
+</script>
