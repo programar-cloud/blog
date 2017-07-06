@@ -25,7 +25,7 @@ explicit : "no"
 
 disqus_identifier: demo-del-api-gateway-kong
 disqus_title: Demo del Api Gateway Kong
-disqus_url: "//programar.cloud/post/demo-del-api-gateway-kong"
+disqus_url: "https://programar.cloud/post/demo-del-api-gateway-kong"
 ---      
 
 ¡Volvemos a tener vídeo! Esta semana vamos a poner en práctica lo que hemos explicado sobre seguridad en {{% ilink "como-implementar-la-seguridad-en-tu-api-parte-1" "el post con el glosario" %}} y en el que hablaba {{% ilink "como-implementar-la-seguridad-en-tu-api-parte-2" "sobre implementaciones" %}}.
