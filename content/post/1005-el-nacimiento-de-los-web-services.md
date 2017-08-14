@@ -14,7 +14,7 @@ niveles:
 - Iniciaciación
 
 episode : "3"
-audio : "https://ia801502.us.archive.org/27/items/Programar.cloudElCloudEsDondeSeEjecutanLasAplicaciones/1000-el-cloud-es-donde-se-ejecutan-las-aplicaciones.mp3"
+audio : "https://ia801909.us.archive.org/5/items/Programar.cloudElNacimientoDeLosWebServices/el-nacimiento-de-los-web-services.mp3"
 media_bytes : "18639944"
 media_duration : "5:45"
 images : ["https://programar.cloud/media/cloud-money.jpg"]
@@ -30,7 +30,7 @@ disqus_url: "//programar.cloud/post/el-nacimiento-de-los-web-services"
 
 *TL;DR: Estamos en la tercera generación de aplicaciones distribuídas. Curiosamente hoy priorizamos la simplicidad para poder crear arquitecturas complejas de verdad.*
 
-{{% archive "Programar.cloudElNacimientoDeLosWebServices" %}}
+{{% archive "https://ia801909.us.archive.org/5/items/Programar.cloudElNacimientoDeLosWebServices/el-nacimiento-de-los-web-services.mp3" %}}
 
 *Disclaimer: no me digas que este post es largo, que luego bien que coges la [jotdown](http://jotdown.es) y la lees de arriba abajo. Pero vamos, que vas a necesitar buscar un rato en el que nadie te agobie para poder dedicarle un cuartito de hora. Y recuerda: en estas primeras entradas estamos montando un framework mental. No hace falta que te quedes con todos los detalles pero sí que reflexiones sobre cómo hemos llegado hasta aquí.*
 
@@ -44,19 +44,19 @@ Pasaron los años y al terminar los estudios Marc se metió en una gran empresa:
 
 ### Las primeras aplicaciones web
 
-Como todas las corporaciones de los 90 y por motivos que darían para otro post-culebrón en Oracle apostaron por Java. Habían comprado Orion (un servidor de aplicaciones sueco, aparentemente los suecos hacían estas cosas) y con esa facilidad característica suya para bautizar épicamente sus productos lo renombraron como "*OC4J*". Claro que sí. 
+Como todas las corporaciones de los 90 y por motivos que darían para otro post-culebrón en Oracle apostaron por Java. Habían comprado Orion (un servidor de aplicaciones sueco, aparentemente los suecos hacían estas cosas) y con esa facilidad característica suya para bautizar épicamente sus productos lo renombraron como "*OC4J*". Claro que sí.
 
 {{% img src="/media/java.svg" alt="Java Logo"%}}
 
-En cualquier caso la idea detrás de este software era que los desarrolladores pudiesen crear aplicaciones web que fuesen capaces de escalar (crecer) según la carga de trabajo: si el hierro se quedaba corto en lugar de conseguir una máquina más grande lo que podías hacer es añadir más máquinas y crear una aplicación distribuída en un clúster. 
+En cualquier caso la idea detrás de este software era que los desarrolladores pudiesen crear aplicaciones web que fuesen capaces de escalar (crecer) según la carga de trabajo: si el hierro se quedaba corto en lugar de conseguir una máquina más grande lo que podías hacer es añadir más máquinas y crear una aplicación distribuída en un clúster.
 
 Umh... luego volvemos con Marc pero déjame que te aclare un poco la idea de aplicación distribuída porque quizá a ti esa época te pille muy lejos. Se trataba de unir los recursos de distintas máquinas de forma más o menos transparente para ejecutar lo que a nivel lógico (desde el punto de vista del programador) debería parecer un único programa. Es decir, puedes tener una variable ```miCarritoDeLaCompra``` en el ordenador *A* y el objeto apuntado por ella puede encontrarse físicamente en la máquina *B*. **Así puedes usar los recursos locales de *B* desde *A* y distribuir el trabajo entre ambas**. Espera, mejor con un dibujo:
 
 {{% img src="/media/1005-el-nacimiento-de-los-web-services-diagrama.png" alt="diagrama con referencias entre máquinas" %}}
 
-Obviamente entre dos máquinas no compartes ni RAM ni procesador por lo que debe de existir alguna magia intermedia para crear la ilusión de que ```miCarritoDeLaCompra.obtenerImporteTotal()``` se ejecute transparentemente y esta magia pasa por transmitir datos a través de la red. 
+Obviamente entre dos máquinas no compartes ni RAM ni procesador por lo que debe de existir alguna magia intermedia para crear la ilusión de que ```miCarritoDeLaCompra.obtenerImporteTotal()``` se ejecute transparentemente y esta magia pasa por transmitir datos a través de la red.
 
-Este tipo de tecnología floreció en la segunda mitad de los 90 y de alguna manera prometían mejorar la arquitectura de aplicaciones síncronas (alguien pedía algo y se le contestaba inmediatamente) que solían utilizar variaciones de [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call#History_and_origins) porque (de nuevo, en teoría) se adaptaban mejor a la orientación a objetos y casi no tendríamos que hacer cambios en el código para incorporarlas. **Si llevas un tiempo en el negocio te sonarán productos como [RMI](https://es.wikipedia.org/wiki/Java_Remote_Method_Invocation), [DCOM](https://es.wikipedia.org/wiki/Modelo_de_Objetos_de_Componentes_Distribuidos) o [CORBA](//c2.com/cgi/wiki?WhatsWrongWithCorba)**. En este último caso se trataba de magia negra de la peor calaña y motivo suficiente para pedir la cuenta y buscar otra empresa. En serio, no quieres usar CORBA. 
+Este tipo de tecnología floreció en la segunda mitad de los 90 y de alguna manera prometían mejorar la arquitectura de aplicaciones síncronas (alguien pedía algo y se le contestaba inmediatamente) que solían utilizar variaciones de [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call#History_and_origins) porque (de nuevo, en teoría) se adaptaban mejor a la orientación a objetos y casi no tendríamos que hacer cambios en el código para incorporarlas. **Si llevas un tiempo en el negocio te sonarán productos como [RMI](https://es.wikipedia.org/wiki/Java_Remote_Method_Invocation), [DCOM](https://es.wikipedia.org/wiki/Modelo_de_Objetos_de_Componentes_Distribuidos) o [CORBA](//c2.com/cgi/wiki?WhatsWrongWithCorba)**. En este último caso se trataba de magia negra de la peor calaña y motivo suficiente para pedir la cuenta y buscar otra empresa. En serio, no quieres usar CORBA.
 
 {{% img src="/media/batman-robin-corba.jpg" alt="batman enseña a robin a evitar corba" small="true" %}}
 
@@ -68,29 +68,29 @@ No parece tan malo ¿no? O sea... ¿qué problema tienen las aplicaciones distri
 
 ### La llegada del Service Oriented Architecture
 
-En fin, en cualquier caso en algún momento los problemas de este enfoque se hicieron tan evidentes que las empresas que marcaban la innovación (porque amigos y amigas, antes la innovación en software la dirigían las grandes corporaciones) decidieron que había llegado la hora de crear una alternativa. Algo más modernito. Que no diese problemas con el maldito firewall. **Basado en eso que lo estaba petando, ya sabes, *la web***. 
+En fin, en cualquier caso en algún momento los problemas de este enfoque se hicieron tan evidentes que las empresas que marcaban la innovación (porque amigos y amigas, antes la innovación en software la dirigían las grandes corporaciones) decidieron que había llegado la hora de crear una alternativa. Algo más modernito. Que no diese problemas con el maldito firewall. **Basado en eso que lo estaba petando, ya sabes, *la web***.
 
 {{% img src="/media/jodorowsky.jpg" alt="Un consejo ignorable de Alejandro Jodorowsky" %}}
 
-La idea era separar completamente las máquinas entre sí: nada de conexiones permanentes entre clientes y servidores, nada comunicación directa entre los nodos servidores. Cada producto publicaría aquello que podía hacer a través de direcciones web y solo se comunicarían mediante peticiones HTTP para intercambiar documentos. 
+La idea era separar completamente las máquinas entre sí: nada de conexiones permanentes entre clientes y servidores, nada comunicación directa entre los nodos servidores. Cada producto publicaría aquello que podía hacer a través de direcciones web y solo se comunicarían mediante peticiones HTTP para intercambiar documentos.
 
-Inicialmente este cambio añadía latencia a todo el procesamiento así que se modificó la granularidad con la que se manipalaban los datos: dejó de diseñarse alrededor de la invocación de rutinas (como se hacía en aplicaciones distribuídas) y se empezaron a intercambiar documentos completos. 
+Inicialmente este cambio añadía latencia a todo el procesamiento así que se modificó la granularidad con la que se manipalaban los datos: dejó de diseñarse alrededor de la invocación de rutinas (como se hacía en aplicaciones distribuídas) y se empezaron a intercambiar documentos completos.
 
-Siguiendo el ejemplo anterior,  ```obtenerImporteTotal()``` retornaba simplemente un número con el dinero que gastaría el cliente. En cambio una llamada a la operación ```ObtenerCarritoDeLaCompra``` del webservice correspondiente devolvería todos los datos del carrito (que probablemente ibas a necesitar igualmente) para reducir el número de veces que era necesario ejecutar la petición al servidor. 
+Siguiendo el ejemplo anterior,  ```obtenerImporteTotal()``` retornaba simplemente un número con el dinero que gastaría el cliente. En cambio una llamada a la operación ```ObtenerCarritoDeLaCompra``` del webservice correspondiente devolvería todos los datos del carrito (que probablemente ibas a necesitar igualmente) para reducir el número de veces que era necesario ejecutar la petición al servidor.
 
 Además un documento es independiente de la plataforma en la que se genera o se consume por lo que sistemas desarrollados en .net, java, cobol o *pon_aquí_tu_veneno_favorito* podrían integrarse mucho más fácilmente. En teoría.
 
 > Los de *marketing* se pusieron a trabajar y hey, esta gente cumplió: acuñaron el término *web services*.
 
-Los de *marketing* se pusieron a trabajar y hey, esta gente cumplió: acuñaron el término *web services*. Hasta la basura más grande podría venderse bien con un nombre tan bueno como ese y de hecho eso es exactamente lo que pasó. Porque como se hacía todo en esos momentos **en lugar de crear un producto y probar su viabilidad en batalla se decidió que había que montar un comité para escribir una especificación**. ¿Qué podía salir mal? Como siempre, todo el mundo intentó meter cucharada: IBM, Microsoft, Verisign... el resultado fue una sopa de siglas y tecnologías (SOAP, UDDI, WSDL y un sinfín de ws-*) realmente complejas cuyas implentaciones fueron desquiciantemente incompatibles durante años. Y XML. XML everywhere, maldita sea. 
+Los de *marketing* se pusieron a trabajar y hey, esta gente cumplió: acuñaron el término *web services*. Hasta la basura más grande podría venderse bien con un nombre tan bueno como ese y de hecho eso es exactamente lo que pasó. Porque como se hacía todo en esos momentos **en lugar de crear un producto y probar su viabilidad en batalla se decidió que había que montar un comité para escribir una especificación**. ¿Qué podía salir mal? Como siempre, todo el mundo intentó meter cucharada: IBM, Microsoft, Verisign... el resultado fue una sopa de siglas y tecnologías (SOAP, UDDI, WSDL y un sinfín de ws-*) realmente complejas cuyas implentaciones fueron desquiciantemente incompatibles durante años. Y XML. XML everywhere, maldita sea.
 
 > Hasta la basura más grande podría venderse bien con un nombre tan bueno como ese, y de hecho eso es exactamente lo que pasó.
 
-Pero al menos esa primera generación de web services trajo algo muy bueno. Como he dicho antes **surgieron una serie de patrones de arquitectura que se basaban en interconectar aplicaciones independientes, no componentes de una única aplicación**. 
+Pero al menos esa primera generación de web services trajo algo muy bueno. Como he dicho antes **surgieron una serie de patrones de arquitectura que se basaban en interconectar aplicaciones independientes, no componentes de una única aplicación**.
 
 En aquella época se llamó a este patrón *Service Oriented Architecture* y con el tiempo demostró ser la forma más eficiente de abrir los sistemas de información al exterior. Habían nacido las *web APIs* tal y como las conocemos: un conjunto coherente de operaciones invocables mediante HTTP.
 
-¡Pero volvamos a la historia de Marc! Está claro que aunque no se dedicase ya a programar nunca dejó de llevar un techie dentro y que estaba muy al tanto de cómo se organizaba la arquitectura de un software complejo. Quería montar su propio negocio y quería hacerlo como una empresa diseñada desde el principio para operar en internet, con lo que pidió pasta a un grupo de amigos (incluyendo al inefable [Larry](//www.expansion.com/economia-digital/protagonistas/2016/09/01/57c6f20be2704e34778b45b1.html), que aportó unos cuantos millones de su propio bolsillo) y arrancó su aventura. 
+¡Pero volvamos a la historia de Marc! Está claro que aunque no se dedicase ya a programar nunca dejó de llevar un techie dentro y que estaba muy al tanto de cómo se organizaba la arquitectura de un software complejo. Quería montar su propio negocio y quería hacerlo como una empresa diseñada desde el principio para operar en internet, con lo que pidió pasta a un grupo de amigos (incluyendo al inefable [Larry](//www.expansion.com/economia-digital/protagonistas/2016/09/01/57c6f20be2704e34778b45b1.html), que aportó unos cuantos millones de su propio bolsillo) y arrancó su aventura.
 
 Estábamos en 1999, en plena *burbuja .com* y aunque supongo que sabes cómo terminó todo (o si quieres, un día te lo cuento) en retrospectiva está claro que algunas de las personas que se encontraban detrás de las empresas que protagonizaron esa bacanal tenían una visión muy clara de hacia dónde iba a evolucionar el mundo de la tecnología. De alguna manera eran pioneros en un territorio nuevo en el que el acceso a internet se había democratizado. Y sí, creo que Marc se encontraba entre ese grupo de personas.
 
@@ -100,9 +100,9 @@ Estábamos en 1999, en plena *burbuja .com* y aunque supongo que sabes cómo ter
 
 A Marc no le gustaba el software que se utilizaba para gestionar el perfil de los clientes por parte de los comerciales, el llamado CRM. En esos años el movimiento Open Source no tenía la fuerza ideológica de hoy en día y muchas empresas **buscaban la fidelización del cliente básicamente atándolo** a su tecnología (Oracle sigue haciéndolo hoy en día, pero hey, esa es historia para otro momento). En cualquier caso debido a esta táctica de secuestro resultaba que integrar un *Customer Relationship Manager* con el workflow natural de la empresa era muy complicado cuando, si te lo paras a pensarlo, resulta que es una parte esencial del mismo: una acción comercial puede necesitar programar reuniones (en el calendario) que se celebrarán en salas (que deben de estar libres), enviar avisos al resto de miembros involucrados (usando correo o mensajería), requerir la aprobación de condiciones de venta (por parte del responsable correspondiente), etc, etc.
 
-Nuestro protagonista decidió montar una alternativa basada en web que se pagase por suscripción. Solo esto ya fue una revolución y en cierto sentido **dio el impulso definitivo al primer tipo de cloud público que se popularizó**: el *Software as a Service* en el que te cobran por uso. Como modelo de negocio se había aplicado al correo electrónico y poco más pero ahora estábamos hablando de un producto de software clásico, una aplicación que englobaba mucho más que una funcionalidad concreta. 
+Nuestro protagonista decidió montar una alternativa basada en web que se pagase por suscripción. Solo esto ya fue una revolución y en cierto sentido **dio el impulso definitivo al primer tipo de cloud público que se popularizó**: el *Software as a Service* en el que te cobran por uso. Como modelo de negocio se había aplicado al correo electrónico y poco más pero ahora estábamos hablando de un producto de software clásico, una aplicación que englobaba mucho más que una funcionalidad concreta.
 
-Pero la *killer feature* de su producto fue la facilidad que aportaba para enlazarlo con cualquier otro sistema que tuviese la empresa: **a principios del año 2000 [anunciaron](//www.prnewswire.com/news-releases/salesforcecom-launches-at-demo-with-over-150-customers-72423997.html) la publicación de su Application Program Interface, es decir, la lista y especificación de los web services soportados**. Mediante ellos cualquier programa que fuese capaz de invocar HTTP podía interactuar con este sistema intercambiando datos y ejecutando acciones sin tener que instalar nada en el código del CRM. 
+Pero la *killer feature* de su producto fue la facilidad que aportaba para enlazarlo con cualquier otro sistema que tuviese la empresa: **a principios del año 2000 [anunciaron](//www.prnewswire.com/news-releases/salesforcecom-launches-at-demo-with-over-150-customers-72423997.html) la publicación de su Application Program Interface, es decir, la lista y especificación de los web services soportados**. Mediante ellos cualquier programa que fuese capaz de invocar HTTP podía interactuar con este sistema intercambiando datos y ejecutando acciones sin tener que instalar nada en el código del CRM.
 
 Rápidamente surgió un ecosistema de funcionalidades creadas por terceros que enriqueció las que la criatura de Marc implementaba. El resto es eso, historia: se me había olvidado comentarte que el nombre de la empresa es *Salesforce* y que hoy en día tiene un valor de 49.000 millones de euros. No los pillo todos los días. Aquí tienes una foto reciente del bueno de Marc sacada de la Wikipedia:
 
