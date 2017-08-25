@@ -31,14 +31,14 @@ disqus_url: "https://programar.cloud/post/persistir-el-estado-en-la-base-de-dato
 
 *TL;DR: Tienes a tu disposición una enorme variedad de productos de almacenamiento con características específicas. Usa todos los que necesites para alcanzar tus objetivos de rendimiento y expresividad pero ni uno más.*
 
-{{% archive "como-documentar-con-spring-rest-docs" %}}
+{{% archive "" %}}
 
-Cuando pasas varios años de tu vida recibiendo martillazos al final siempre te acuerdas del martillo cuando tienes un dolor de cabeza. El martillo es la base de datos relacional, claro: estamos tan condicionados que ni siquiera solemos usar el adjetivo, simplemente nos referimos a ella como *la base de datos*.
+Cuando pasas varios años de tu vida recibiendo martillazos al final siempre te acuerdas del martillo cuando tienes un dolor de cabeza. El martillo es la base de datos relacional: estamos tan condicionados que ni siquiera solemos usar el adjetivo, simplemente nos referimos a ella como *la base de datos*.
 
 Y es un error, claro. Porque es una tecnología que se diseñó [hace cuarenta años](TODO!) en un mundo muy diferente al nuestro en el que (por ejemplo) el juego más sofisticado que existía era [Asteroids](TODO!). Amigo, amiga: prueba a compararlo con el [Witcher III](TODO!). No, en serio, párate a pensar durante diez segundos en todo lo que hemos recorrido durante este tiempo y verás claro que hay que aprender nuevas herramientas y nuevas formas de pensar. Ahora te explico algunos patrones para que te sea más fácil.
 <!--more-->
 
-Está claro que quieres guardar tu información de manera fiable ¿verdad? No quieres, bajo ninguna circunstancia, perder ni uno solo de esos preciosos bits que recibes ¿No? Cueste lo que cueste, si han  llegado hasta nosotros es porque queremos acumularlos, tiene sentido, es lo que siempre nos han enseñado.
+Está claro que siempre quieres guardar tu información de manera fiable ¿verdad? No quieres, bajo ninguna circunstancia, perder ni uno solo de esos preciosos bits que recibes ¿No? Cueste lo que cueste, si han  llegado hasta nosotros es porque queremos acumularlos. Tiene sentido, es lo que siempre nos han enseñado.
 
 Pues claro que no tiene sentido. Acumular bits a cualquier precio independientemente de su valor de negocio no tiene ni pies ni cabeza, es el Diógenes de nuestra época. Cada vez que quieras guardar un dato pregúntate cómo lo vas a utilizar, qué importancia tiene a corto y a largo plazo.
 

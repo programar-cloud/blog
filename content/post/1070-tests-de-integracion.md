@@ -84,7 +84,7 @@ Un pequeño disclaimer: si quieres hacer [TDD](https://es.wikipedia.org/wiki/Des
 
 ## Taxonomía de las pruebas
 
-Pero hey, mi intención hoy no era solo darte la brasa. ¡Quieres código y código vas a tener! Seguramente estás al tanto de que existen varios tipos de test y varias maneras de enfocarlos. Una clasificación ampliamente aceptada que a mi me gusta bastante los divide en unitarios, de integración, de interfaz de usuario/end-to-end/funcionales/comoquierasllamarlos (¡he escrito "interfaz"!) y de carga. Hay muchas otras clases de pruebas pero a *grosso modo* esta categorización te servirá.
+Pero hey, mi intención hoy no era solo darte la brasa. ¡Quieres código y código vas a tener! Seguramente estás al tanto de que existen varios tipos de test y varias maneras de enfocarlos. Una clasificación ampliamente aceptada que a mi me gusta bastante los divide en unitarios, de integración, de interfaz de usuario/end-to-end/funcionales/comoquierasllamarlos (¡he escrito "interfaz"!) y de carga. Hay muchas otras clases de pruebas pero *grosso modo* esta categorización te servirá.
 
 Te iba a explicar con detalle cada uno de estos tipos pero a la que he empezado a escribir me he dado cuenta de que no cabría en las tres mil palabras que me he puesto como límite en los posts. Así que vamos a centrarnos en el caso que podemos aplicar ya utilizando el código del post sobre {{%ilink "como-crear-un-api-rest" "creación de APIs"  %}} y dejaremos los demás para más adelante.
 
