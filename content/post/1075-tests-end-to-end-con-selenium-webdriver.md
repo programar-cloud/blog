@@ -25,6 +25,7 @@ disqus_identifier: tests-end-to-end-con-selenium-webdriver
 disqus_title: Tests end-to-end con Selenium Webdriver
 disqus_url: "https://programar.cloud/post/tests-end-to-end-con-selenium-webdriver"
 ---
+{{% github "https://github.com/programar-cloud/selenium-webdriver-demo" %}}
 
 Vale, vale: no he llegado a tiempo para publicaros el post sobre escalabilidad en el que estoy trabajando pero calma porque no os voy a dejar sin turrón: republico un screencast que monté justo antes de empezar programar.cloud sobre test end-to-end con Selenium. He vuelto a verlo y todo lo explicado en él sigue estando vigente. Además quedó bastante entretenido, sobre todo si lo pones a x1.25. Siempre soy más divertido a x1.25.
 
@@ -32,7 +33,9 @@ Vale, vale: no he llegado a tiempo para publicaros el post sobre escalabilidad e
 
 Recordad que los podcasters y bloggers nos alimentamos de *likes* y *retuits* así que sed buenos y dadle a los botoncitos que aparecen en la izquierda para que el mayor número de gente posible conozca el proyecto.<!--more-->
 
-Nos vemos dentro de nada en programar.cloud!
+¡Ah! Y el código fuente del proyecto en [la cuenta de github de programar.cloud](https://github.com/programar-cloud/selenium-webdriver-demo).
+
+Nos vemos dentro de nada ¡en programar.cloud!
 
 jv
 
