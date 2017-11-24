@@ -1179,16 +1179,27 @@ body>footer p {
     display: block;
 }
 
-.important {
-  border-radius: 4px;
-  background-color: black;
-  color: #fff;
-  text-shadow: 0 0 2px #fff,
-               0 0 4px #ff0080,
-               0 0 8px #ff0080;
-  padding: 0px 4px;
+.remark p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
 }
 
+.remark p {
+    border-left: 4px solid rgb(255, 230, 0);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+  .important {
+    border-radius: 4px;
+    background-color: black;
+    color: #fff;
+    text-shadow: 0 0 2px #fff,
+                 0 0 4px #ff0080,
+                 0 0 8px #ff0080;
+    padding: 0px 4px;
+  }
+    
 .important.centered {
   text-align: center;
 }
