@@ -15,10 +15,10 @@ temas:
 niveles:
 - Intermedio
 
-episode : "29"
-video : ""
-media_bytes : ""
-media_duration : ""
+episode : "30"
+audio : "https://archive.org/download/escalando-a-un-millon-de-usuarios/escalando-a-un-millon-de-usuarios.mp3"
+media_bytes : "25729121"
+media_duration : "35:53"
 images : ["https://programar.cloud/media/1150-rabbits.jpg"]
 explicit : "no"
 
@@ -30,7 +30,7 @@ disqus_title: "Instagram: Escalando a un millón de usuarios"
 
 *TL;DR: El truco básico para conseguir escalar es añadir más hierro, no hierro más grande. Y cuando lo haces la forma más sencilla de distribuir el tráfico es utilizar balanceadores de carga.*
 
-{{% archive %}}
+{{% archive "escalando-a-un-millon-de-usuarios" %}}
 
 Venga, voy a contarte una historia, que hace tiempo que no te explico ninguna. Tiene moraleja, claro: que esto no deja de ser un curso y por lo tanto vas a tener un diablillo detrás de la oreja diciéndote lo que no tienes que hacer y cómo solucionar tus problemas de arquitectura. ¡Pero no se gana el trivial y se triunfa en la tertulia de los amiguetes hablando de escalabilidad horizontal y balanceadores de carga sin más! Así que vamos a hablar un rato de Kevin, Mike y su pequeño proyecto.<!--more-->
 
@@ -48,7 +48,7 @@ Lo curioso es que después de la resaca se pusieron a ello. Si copiar a Foursqua
 
 **Gastaron $3000 en comprar unos cuantos servidores y pizzas antes de darse cuenta de que no iban a ningún sitio.**
 
-El plan B consistió en que tras pasar un fin de semana de vacaciones con la novia Kevin le diría a los inversores que había sido un placer conocerles y que aquí tenían los 497.000 dólares que habían sobrado. Que muchas gracias y un abrazo.
+El plan B consistía en que tras pasar un fin de semana de vacaciones con la novia Kevin le diría a los inversores que había sido un placer conocerles y que aquí tenían los 497.000 dólares que habían sobrado. Que muchas gracias y un abrazo.
 
 El caso es que ese fin de semana obviamente estuvo dándole vueltas a qué había funcionado y qué había fallado con su proyecto.
 
@@ -56,7 +56,7 @@ El caso es que ese fin de semana obviamente estuvo dándole vueltas a qué habí
 
 Su compañera le contestó que con la basura de fotos que ella era capaz de hacer en la vida se le ocurriría compartirlas con nadie. Que las suyas no eran como las de su colega Richie, que él sí sabía hacer fotos con el móvil. Ya está: *Richie*. Otra vez el pesado de *Richie*. Ligeramente muy irritado Kevin contestó:
 
-—Oh, pero si no tiene ni idea: las fotos le quedan resultonas porque se antes de mandarlas les pasa como diez filtros difer... Umh... espera un momento.
+—Oh, pero si no tiene ni idea: las fotos le quedan resultonas porque antes de mandarlas les pasa como diez filtros difer... Umh... espera un momento.
 
 Y así es exactamente [cómo nació Instagram](https://techcrunch.com/2010/09/20/instagram/).
 
