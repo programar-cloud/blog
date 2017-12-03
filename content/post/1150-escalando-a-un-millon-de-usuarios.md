@@ -237,8 +237,19 @@ Volveremos a hablar más adelante de cada uno de los temas que han salido aquí,
 
 Nos vemos dentro de poco ¡en programar.cloud!
 
+## Addendum
 
+¡Wow! Estoy súper feliz con la acogida que ha tenido el post, en serio :D Muchas gracias por todas la menciones y comentarios. Mención especial a [Pau](https://twitter.com/paxpuig) por su revisión ortográfica: lo sé, lo sé, tengo que actualizar el plugin del corrector en el VSCode :). BTW a ver si le convencéis para que escriba un blog sobre marketing modernito porque no encontraréis profesionales que sepan organizar las campañas de una empresa de servicios digitales como lo hacen él y [Emma](https://twitter.com/whiskyemms).
 
+Gracias también a [Mathieu](https://twitter.com/Kedare), que ha escritos algunos comentarios en su tuiter sobre los que merece la pena reflexionar:
+
+{{% tweet 936957366892941312 %}}
+
+{{% tweet 936956994275115008 %}}
+
+Y en general a todos los que habéis dejado un mensaje cariñoso, un retuit o un fav. ¡Dais energía!
+
+{{% imgur twKIJJN "Who is awesome?" %}}
 jv
 
 
