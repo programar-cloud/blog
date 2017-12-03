@@ -79,7 +79,7 @@ No te preocupes que en un rato sigo contándote cómo le fue a estos dos. Pero d
 
 Para ello necesitarás un sistema de monitorización que recolecte métricas y logs para poder programar reacciones automáticas o incluso predecir futuros problemas. Pero de esto hablamos otro día ¿de acuerdo? Algo que te quería contar hoy es lo poco glamuroso que puede llegar a ser un problema de rendimiento cuando enfrentas tu maravillosa y súper testeada aplicación a tus primeros *usuarios reales* (tm).
 
-Porque inicialmente la arquitectura que habían diseñado nuestros amigos tenía algún problema no totalmente obvio. ¿Sabes qué consumió una cantida de recursos absurda en el lanzamiento de Instagram? El `favicon.ico`. Sí, ese icono que aparece en la barra de navegación cuando se visita un site y que el navegador pide automáticamente cuando entra en un dominio. O mejor dicho: la ausencia de ese fichero. Que generó una enorme cantidad de entradas en log reportando el correspondiente 404 impactando en el rendimiento de la aplicación.
+Porque inicialmente la arquitectura que habían diseñado nuestros amigos tenía algún problema no totalmente obvio. ¿Sabes qué consumió una cantidad de recursos absurda en el lanzamiento de Instagram? El `favicon.ico`. Sí, ese icono que aparece en la barra de navegación cuando se visita un site y que el navegador pide automáticamente cuando entra en un dominio. O mejor dicho: la ausencia de ese fichero. Que generó una enorme cantidad de entradas en log reportando el correspondiente 404 impactando en el rendimiento de la aplicación.
 
 {{% remark %}}
 Segunda regla de escalabilidad: son los pequeños detalles los que hacen tu vida miserable, los que no salen en tu diagrama de arquitectura. Prueba con tráfico real tu sistema tan pronto como puedas para tenerlos controlados.
@@ -118,7 +118,7 @@ En serio, échale un vistazo serio al punto marcado por la etiqueta *dolor*. ¿S
 * Puedes aplicar parches y hacer despliegues sin afectar a todos los usuarios
 * Es más difícil crear acoplamientos fuertes
 
-Lo sé, lo sé: ahora mismo hay una corriente que aboga por hacer las cosas sencillas al principio y no añadir la complejidad de un diseño distribuído hasta que es necesaria. Pero en realidad siguiendo las normas que te he ido explicando (y explicaré) en este blog no resulta tan difícil implementarlo. De hecho te diría que es más o menos igual de complicado. Pero son decisiones estructurales que tienen eco a lo largo de todo tu código así que modificarlas cuando ya has invertido miles de horas en él es muy (muy) costoso.
+Lo sé, lo sé: ahora mismo hay una corriente que aboga por hacer las cosas sencillas al principio y no añadir la complejidad de un diseño distribuido hasta que es necesaria. Pero en realidad siguiendo las normas que te he ido explicando (y explicaré) en este blog no resulta tan difícil implementarlo. De hecho te diría que es más o menos igual de complicado. Pero son decisiones estructurales que tienen eco a lo largo de todo tu código así que modificarlas cuando ya has invertido miles de horas en él es muy (muy) costoso.
 
 Por suerte Kevin y Mike habían pensado en esto desde el principio así que pudieron agregar de forma más o menos sencillas replicas adicionales. Pero eso supone un problema: cada máquina tenía ahora su propia dirección IP, su propio punto de entrada en el sistema. ¿Cómo íban a repartir las conexiones de los usuarios entre ellas? Debían balancear la carga.
 
@@ -142,7 +142,7 @@ Vale, vale. Pero hace un rato te había dicho que los usuarios en sí alcanzaban
 
 Otra cosa es que quieras utilizar un DNS interno como registro de servicios en tu sistema, es decir, si lo que quieres es poder abrir conexiones simplemente refiriéndote a un nombre de dominio (por ejemplo, estableciendo una conexión a `controlstock.internal`). Dado que en ese caso eres tú quien controla el tiempo de vida efectivo del registro DNS es una opción perfectamente válida aunque puede tener la limitación de no permitir seleccionar el puerto de destino. Bueno, apunta también este tema del *service registry* para más adelante.
 
-Y ojo, que la siguiente pregunta no es trivial: ¿qué necesita una máquina para que un balanceador de carga que se ejecute en ella sea feliz? ¿CPU? ¿RAM? Venga, piénsalo un segundo. ... ... ... ... ... ... ... ... ... ... ... ... Exacto: red. Necesita red. El típico recurso en el que no caes cuando dimensionas infraestructura pensando en máquinas virtuales. No le escatimes ancho de banda a tus balancedores de carga.
+Y ojo, que la siguiente pregunta no es trivial: ¿qué necesita una máquina para que un balanceador de carga que se ejecute en ella sea feliz? ¿CPU? ¿RAM? Venga, piénsalo un segundo. ... ... ... ... ... ... ... ... ... ... ... ... Exacto: red. Necesita red. El típico recurso en el que no caes cuando dimensionas infraestructura pensando en máquinas virtuales. No le escatimes ancho de banda a tus balanceadores de carga.
 
 ## Aplicaciones stateless
 
@@ -176,7 +176,7 @@ Cuarta regla del escalado: prioriza el uso eficiente de tus recursos más escaso
 
 Casi siempre que pensamos en crecimiento exponencial nos quedamos mirando hacia el infinito, con ojos vidriosos, imaginando cientos y cientos de máquinas solucionando nuestros problemas de CPU. Pero Instagram tenía otros factores limitantes: siendo una red social basada en fotografías rápidamente se encontraron conque [tenían que almacenar 100TB](https://www.quora.com/How-much-did-it-cost-Instagram-originally-to-store-their-photos-and-videos-on-amazon-S3) de manera fiable, disponible y que no complicase los backups. Vale, vale: seguramente sabes que eso es exactamente lo que proporciona el servicio [S3](https://aws.amazon.com/s3/) de Amazon. Apunta también este tema para otro día.
 
-En cualquier caso inicialmente no guardaban en el cloud las fotografías originales: **solo una versión con una calidad mínima suficiente para verse bien en el móvil**. Chicos listos ¿eh? Así era más fácil transmitirlas por la red teléfonica y ocupaban solo un 5% del tamaño original.
+En cualquier caso inicialmente no guardaban en el cloud las fotografías originales: **solo una versión con una calidad mínima suficiente para verse bien en el móvil**. Chicos listos ¿eh? Así era más fácil transmitirlas por la red telefónica y ocupaban solo un 5% del tamaño original.
 
 {{% remark %}}
 Quinta regla de la escalabilidad: la experiencia de usuario es mucho más importante que la perfección técnica. Si la gente es feliz con una fotografía de 600x600 píxeles no te obligues a almacenar un *raw* de 4 megas.
@@ -215,7 +215,7 @@ Por cierto, en 2014 [migraron de Redis a Cassandra](https://www.datastax.com/dev
 
 ## Empollones con ojeras y pasta gansa
 
-Y así fueron peleando y luchando hasta que Larry Page de Google les llamó para decirles que quería comprarles la empresa por un dineral. Kevin y Mike respondieron que necesitaban unos días para pensarlo, colgaron, se miraron el uno al otro durante unos segundos **e inmediatamente llamaron a Mark Zuckerberg para pedirle mil millones de dólares por la empresa**. Mil millones. 1.000.000.000 de gita, cash, billetes verdes, presidentes muertos. Y de esta manera Instagram pasó a formar parte de Facebook.
+Y así fueron peleando y luchando hasta que Larry Page de Google les llamó para decirles que quería comprarles la empresa por un dineral. Kevin y Mike respondieron que necesitaban unos días para pensarlo, colgaron, se miraron el uno al otro durante unos segundos **e inmediatamente llamaron a Mark Zuckerberg para pedirle mil millones de dólares por la empresa**. Mil millones. 1.000.000.000 de guita, cash, billetes verdes, presidentes muertos. Y de esta manera Instagram pasó a formar parte de Facebook.
 
 Habían transcurrido 536 días desde ese fin de semana de vacaciones con la pareja.
 
@@ -223,7 +223,7 @@ Habían transcurrido 536 días desde ese fin de semana de vacaciones con la pare
 
 ## Epílogo: escalar con financiación infinita
 
-Facebook no tiene problemas de liquidez, al contrario. A mi me gusta imaginarme a Mark nadando entre monedas de oro como tío Gilito. Y el core de su negocio es muy tecnológico: es cierto que el software es un medio para vender publicidad pero es **el medio**. Por ello no escatiman ni intentan ser especialmente eficientes en el uso de recursos.
+Facebook no tiene problemas de liquidez, al contrario. A mí me gusta imaginarme a Mark nadando entre monedas de oro como tío Gilito. Y el core de su negocio es muy tecnológico: es cierto que el software es un medio para vender publicidad pero es **el medio**. Por ello no escatiman ni intentan ser especialmente eficientes en el uso de recursos.
 
 Cualquier ingeniero o ingeniera que trabaje allí tiene un portátil con 64GB de RAM. ¿Las necesita? Fuck no, en general. Pero lo tiene. Tampoco intenta exprimir los servidores y limitan el número de procesos que cada máquina virtual ejecuta a uno incluso cuando utilizan contenedores. ¿Por qué? Otra vez por lo mismo: porque lo que más cuesta escalar son las personas capacitadas y en estos entornos se intenta que no encuentren barreras a la hora de ser lo más productivas posibles.
 
@@ -236,6 +236,8 @@ Y Facebook tiene datacenters. Sus propios datacenters, un gran cloud privado. Po
 Volveremos a hablar más adelante de cada uno de los temas que han salido aquí, con detalle. Si te fijas este es uno de los primeros posts en los que me he centrado en infraestructura que no deja de ser el campo en el que estoy trabajando estos últimos años en Capside. Es mucho más interesante de lo que te pueda parecer si no te has dedicado nunca y gracias a los clouds públicos también es mucho más fácil de aprender. Ya verás, de repente te vas a sentir en Disneylandia.
 
 Nos vemos dentro de poco ¡en programar.cloud!
+
+
 
 jv
 
