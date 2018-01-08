@@ -239,7 +239,7 @@ Nos vemos dentro de poco ¡en programar.cloud!
 
 ## Addendum
 
-¡Wow! Estoy súper feliz con la acogida que ha tenido el post, en serio :D Muchas gracias por todas la menciones y comentarios. Mención especial a [Pau](https://twitter.com/paxpuig) por su revisión ortográfica: lo sé, lo sé, tengo que actualizar el plugin del corrector en el VSCode :). BTW a ver si le convencéis para que escriba un blog sobre marketing modernito porque no encontraréis profesionales que sepan organizar las campañas de una empresa de servicios digitales como lo hacen él y [Emma](https://twitter.com/whiskyemms).
+¡Wow! Estoy súper feliz con la acogida que ha tenido el post, en serio :D Muchas gracias por todos los retuits, favs y comentarios. Mención especial a [Pau](https://twitter.com/paxpuig) por su revisión ortográfica: lo sé, lo sé, tengo que actualizar el plugin del corrector en el VSCode :). BTW a ver si le convencéis para que escriba un blog sobre marketing modernito porque no encontraréis profesionales que sepan organizar las campañas de una empresa de servicios digitales como lo hacen él y [Emma](https://twitter.com/whiskyemms).
 
 Gracias también a [Mathieu](https://twitter.com/Kedare), que ha escritos algunos comentarios en su tuiter sobre los que merece la pena reflexionar:
 
