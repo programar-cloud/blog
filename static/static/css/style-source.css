@@ -1550,83 +1550,68 @@ body>footer p {
     }
 }
 
+
 @font-face {
-    font-family: 'icons';
-    src: url("../fonts/icons.eot");
-    src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icomoon") format("svg");
+    font-family: 'icomoon';
+    src:  url('../fonts/icons.eot?b07h0a');
+    src:  url('../fonts/icons.eot?b07h0a#iefix') format('embedded-opentype'),
+      url('../fonts/icons.ttf?b07h0a') format('truetype'),
+      url('../fonts/icons.woff?b07h0a') format('woff'),
+      url('../fonts/icons.svg?b07h0a#icomoon') format('svg');
     font-weight: normal;
-    font-style: normal
-}
-
-
-[data-icon]:before {
-    font-family: 'icons';
-    content: attr(data-icon);
-    speak: none;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased
-}
-
-.icon-cloud,
-.icon-library,
-.icon-pencil,
-.icon-github,
-.icon-youtube,
-.icon-linkedin,
-.icon-twitter,
-.icon-facebook,
-.icon-share,
-.icon-rss,
-.icon-quote-left,
-.icon-quote-right,
-.icon-tag,
-.icon-download,
-.icon-heart,
-.icon-user,
-.icon-mail{
-    font-family: 'icons';
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased
-}
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-lightbulb-o:before {
+    content: "\e900";
+  }
+  .icon-pencil:before {
+    content: "\e905";
+  }
+  .icon-library:before {
+    content: "\e921";
+  }
+  .icon-envelop:before {
+    content: "\e945";
+  }
+  .icon-user:before {
+    content: "\e971";
+  }
+  .icon-cloud:before {
+    content: "\e9c1";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-rss:before {
+    content: "\ea9b";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  .icon-linkedin2:before {
+    content: "\eaca";
+  }
+  
 
-.icon-cloud:before {
-  content: "\e900";
-}
-.icon-library:before {
-  content: "\e901";
-}
-.icon-pencil:before {
-  content: "\e902";
-}
-.icon-linkedin:before {
-  content: "\e903";
-}
-.icon-github:before {
-  content: "\e904";
-}
-.icon-youtube:before {
-  content: "\e905";
-}
-.icon-rss:before {
-  content: "\e906";
-}
-.icon-twitter:before {
-  content: "\e907";
-}
-.icon-mail:before {
-  content: "\e908";
-}
-.icon-user:before {
-  content: "\e909";
-}
 
 html.loading  p {
     background-image: linear-gradient(transparent 50%, rgba(24, 101, 165, 0.10) 50%);
