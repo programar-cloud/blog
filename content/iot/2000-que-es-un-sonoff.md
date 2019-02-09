@@ -23,7 +23,7 @@ explicit : "no"
 
 disqus_identifier: que-es-un-sonoff
 disqus_title: "¿Qué es un Sonoff? IoT fácil"
-disqus_url: "https://programar.cloud/post/que-es-un-sonoff"
+disqus_url: "https://programar.cloud/iot/que-es-un-sonoff"
 ---      
 
 {{% youtube "-XHoPYOTPuQ" %}}

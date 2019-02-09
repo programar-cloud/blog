@@ -240,7 +240,7 @@ h1 {
 
 h2 {
     font-size: 1.625em;
-    line-height: 1.38462em
+    line-height: 1.38462em;
 }
 
 h3 {
@@ -811,7 +811,7 @@ span.subcount {
 }
 
 .post h2 {
-    margin: 0
+    margin: 1em 0
 }
 
 #main>div>article.post {
