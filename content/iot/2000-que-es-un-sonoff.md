@@ -1,5 +1,5 @@
 ---
-title: "¿Qué es un Sonoff? IoT fácil"
+title: "¿Qué es un Sonoff? IoT"
 date: "2018-09-15"
 description: "Te presento la nueva serie del blog sobre IoT. En esta pequeña introducción te enseño qué puedes conseguir con unos pequeños relés llamados Sonoff."
 slug: que-es-un-sonoff
@@ -22,7 +22,7 @@ images : ["https://programar.cloud/media/2000-blue-bulbs.jpg"]
 explicit : "no"
 
 disqus_identifier: que-es-un-sonoff
-disqus_title: "¿Qué es un Sonoff? IoT fácil"
+disqus_title: "¿Qué es un Sonoff? IoT"
 disqus_url: "https://programar.cloud/iot/que-es-un-sonoff"
 ---      
 

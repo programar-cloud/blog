@@ -1,5 +1,5 @@
 ---
-title: "Instalar firmware Espurna en Sonoff sin soldar - IoT fácil"
+title: "Instalar firmware Espurna en Sonoff sin soldar - IoT"
 date: "2019-02-09"
 description: "Si ya has usado la app de eWeLink no podrás flashear tu Sonoff mediante la wifi. Pero calma: no hace falta que saques el soldador. Te cuento cómo actualizarlo a Espurna fácilmente."
 slug: cambiar-firmware-sonoff-por-cable
@@ -25,7 +25,7 @@ images : ["https://programar.cloud/media/2000-blue-bulbs.jpg"]
 explicit : "no"
 
 disqus_identifier: cambiar-firmware-sonoff-por-cable
-disqus_title: "Instalar firmware Espurna en Sonoff sin soldar - IoT fácil"
+disqus_title: "Instalar firmware Espurna en Sonoff sin soldar - IoT"
 disqus_url: "https://programar.cloud/iot/cambiar-firmware-sonoff-por-cable"
 ---      
 

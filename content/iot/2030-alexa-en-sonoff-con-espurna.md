@@ -1,5 +1,5 @@
 ---
-title: "Integrar Sonoff con Alexa mediante Espurna - IoT fácil"
+title: "Integrar Sonoff con Alexa mediante Espurna - IoT"
 date: "2018-10-26"
 description: "En el más accidentado capítulo ever te cuento cómo puedes encender y apagar tus sonoff gritándole a Alexa gracias flashear el firmware de Xose Pérez Espurna."
 slug: integrar-sonoff-alexa-espurna
@@ -25,7 +25,7 @@ images : ["https://programar.cloud/media/2000-blue-bulbs.jpg"]
 explicit : "no"
 
 disqus_identifier: integrar-sonoff-alexa-espurna
-disqus_title: "Integrar Sonoff con Alexa mediante Espurna - IoT fácil"
+disqus_title: "Integrar Sonoff con Alexa mediante Espurna - IoT"
 disqus_url: "https://programar.cloud/iot/integrar-sonoff-alexa-espurna"
 ---      
 

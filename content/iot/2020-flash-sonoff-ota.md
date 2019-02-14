@@ -1,5 +1,5 @@
 ---
-title: "Cambiar firmware de Sonoff por wifi - IoT fácil"
+title: "Cambiar firmware de Sonoff por wifi - IoT"
 date: "2018-09-28"
 description: "¡Por fin! Cómo flashear el firmware de tus dispositivos sonoff de la forma más sencilla posible sin necesidad de soldar."
 slug: cambiar-firmware-sonoff-wifi
@@ -23,7 +23,7 @@ images : ["https://programar.cloud/media/2000-blue-bulbs.jpg"]
 explicit : "no"
 
 disqus_identifier: cambiar-firmware-sonoff-wifi
-disqus_title: "Cambiar firmware de Sonoff por wifi - IoT fácil"
+disqus_title: "Cambiar firmware de Sonoff por wifi - IoT"
 disqus_url: "https://programar.cloud/iot/cambiar-firmware-sonoff-wifi"
 ---      
 

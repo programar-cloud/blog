@@ -1,5 +1,5 @@
 ---
-title: "Electricidad for dummies - IoT fácil"
+title: "Electricidad for dummies - IoT"
 date: "2018-09-21"
 description: "Cuatro ideas sobre electricidad para los que (como yo) no lo tenéis claro."
 slug: electricidad-for-dummies
@@ -25,7 +25,7 @@ images : ["https://programar.cloud/media/2000-blue-bulbs.jpg"]
 explicit : "no"
 
 disqus_identifier: electricidad-for-dummies
-disqus_title: "Electricidad for dummies - IoT fácil"
+disqus_title: "Electricidad for dummies - IoT"
 disqus_url: "https://programar.cloud/iot/electricidad-for-dummies"
 ---      
 
